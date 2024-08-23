@@ -23,4 +23,5 @@ RUN pip install --upgrade pandas==2.2.2
 RUN pip install --upgrade gradio==4.42.0
 
 EXPOSE 7860
-CMD ["gradio", "gradio_demo.py"]
+CMD ["python", "gradio_demo.py"]
+# CMD ["gradio", "gradio_demo.py"]
