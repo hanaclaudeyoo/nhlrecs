@@ -1,0 +1,1401 @@
+,game_date,game_id,home_name,away_name,total_goals,final_goal_diff,streak_changes,max_streak,last_streak,lead_changes,tied_not_led,max_winner_lead,max_loser_lead
+332,2023-10-10,2023020002,Pittsburgh Penguins,Chicago Blackhawks,6,2,1,4,4,1,0,2,2
+651,2023-10-10,2023020001,Tampa Bay Lightning,Nashville Predators,8,2,4,2,2,2,1,2,1
+967,2023-10-10,2023020003,Vegas Golden Knights,Seattle Kraken,5,3,2,3,1,0,0,3,0
+1252,2023-10-11,2023020006,Boston Bruins,Chicago Blackhawks,4,2,1,3,3,1,0,2,1
+1597,2023-10-11,2023020007,Calgary Flames,Winnipeg Jets,8,2,6,2,2,0,3,2,0
+1946,2023-10-11,2023020004,Carolina Hurricanes,Ottawa Senators,8,2,3,3,2,1,1,2,1
+2287,2023-10-11,2023020008,Los Angeles Kings,Colorado Avalanche,7,3,2,3,2,0,0,3,0
+2585,2023-10-11,2023020009,Vancouver Canucks,Edmonton Oilers,9,7,2,4,4,0,0,7,0
+2942,2023-10-11,2023020005,Toronto Maple Leafs,Montreal Canadiens,10,0,3,3,3,3,0,1,2
+3241,2023-10-12,2023020010,Buffalo Sabres,New York Rangers,6,4,2,3,2,0,0,4,0
+3545,2023-10-12,2023020011,Columbus Blue Jackets,Philadelphia Flyers,6,2,4,2,1,0,1,2,0
+3884,2023-10-12,2023020013,Dallas Stars,St. Louis Blues,2,0,4,1,1,0,2,1,0
+4235,2023-10-12,2023020012,New Jersey Devils,Detroit Red Wings,7,1,4,2,1,1,1,2,1
+4552,2023-10-12,2023020014,Minnesota Wild,Florida Panthers,2,2,0,2,2,0,0,2,0
+4866,2023-10-12,2023020015,Nashville Predators,Seattle Kraken,3,3,0,3,3,0,0,3,0
+5151,2023-10-12,2023020016,San Jose Sharks,Vegas Golden Knights,5,3,2,3,3,0,1,3,0
+5471,2023-10-13,2023020017,New Jersey Devils,Arizona Coyotes,6,0,2,3,3,2,0,2,1
+5803,2023-10-13,2023020018,Washington Capitals,Pittsburgh Penguins,4,4,0,4,4,0,0,4,0
+6123,2023-10-14,2023020031,Vegas Golden Knights,Anaheim Ducks,5,3,2,3,1,0,0,3,0
+6473,2023-10-14,2023020021,Boston Bruins,Nashville Predators,5,1,3,2,1,1,1,1,1
+6814,2023-10-14,2023020027,New York Islanders,Buffalo Sabres,5,1,2,2,1,0,1,2,0
+7123,2023-10-14,2023020025,Pittsburgh Penguins,Calgary Flames,7,3,3,4,1,1,0,3,1
+7460,2023-10-14,2023020032,Los Angeles Kings,Carolina Hurricanes,10,0,8,4,2,2,1,3,1
+7767,2023-10-14,2023020024,Montreal Canadiens,Chicago Blackhawks,5,1,1,3,2,0,0,3,0
+8143,2023-10-14,2023020030,San Jose Sharks,Colorado Avalanche,2,0,1,2,2,1,0,1,1
+8448,2023-10-14,2023020022,Columbus Blue Jackets,New York Rangers,8,2,4,4,1,1,0,3,1
+8726,2023-10-14,2023020023,Detroit Red Wings,Tampa Bay Lightning,10,2,6,2,1,2,1,2,1
+9085,2023-10-14,2023020029,Edmonton Oilers,Vancouver Canucks,7,1,5,2,1,1,2,1,1
+9408,2023-10-14,2023020020,Winnipeg Jets,Florida Panthers,10,2,4,4,1,2,0,3,1
+9761,2023-10-14,2023020026,Toronto Maple Leafs,Minnesota Wild,11,3,4,4,1,1,0,4,1
+10064,2023-10-14,2023020019,Ottawa Senators,Philadelphia Flyers,7,3,4,2,2,0,0,3,0
+10382,2023-10-14,2023020028,St. Louis Blues,Seattle Kraken,2,0,1,2,2,1,0,1,1
+10676,2023-10-15,2023020034,Anaheim Ducks,Carolina Hurricanes,9,3,4,3,2,0,0,3,0
+10971,2023-10-15,2023020033,Ottawa Senators,Tampa Bay Lightning,7,3,4,3,3,0,2,3,0
+11264,2023-10-16,2023020037,New York Rangers,Arizona Coyotes,3,1,2,1,1,0,1,1,0
+11599,2023-10-16,2023020039,Washington Capitals,Calgary Flames,4,0,1,3,3,1,0,1,2
+11974,2023-10-16,2023020038,Toronto Maple Leafs,Chicago Blackhawks,5,3,2,3,3,0,1,3,0
+12230,2023-10-16,2023020035,Columbus Blue Jackets,Detroit Red Wings,4,4,0,4,4,0,0,4,0
+12555,2023-10-16,2023020036,New Jersey Devils,Florida Panthers,7,1,1,4,3,0,0,4,0
+12841,2023-10-17,2023020043,New York Islanders,Arizona Coyotes,1,1,0,1,1,0,0,1,0
+13126,2023-10-17,2023020040,Buffalo Sabres,Tampa Bay Lightning,5,1,2,2,1,0,1,2,0
+13428,2023-10-17,2023020047,San Jose Sharks,Carolina Hurricanes,9,3,3,4,4,3,0,3,1
+13738,2023-10-17,2023020046,Seattle Kraken,Colorado Avalanche,5,3,1,4,4,1,0,3,1
+14094,2023-10-17,2023020048,Vegas Golden Knights,Dallas Stars,4,0,5,2,1,1,2,1,1
+14436,2023-10-17,2023020044,Nashville Predators,Edmonton Oilers,7,5,2,4,2,0,0,5,0
+14731,2023-10-17,2023020045,Winnipeg Jets,Los Angeles Kings,6,4,1,5,1,0,0,5,0
+15044,2023-10-17,2023020041,Montreal Canadiens,Minnesota Wild,7,3,3,3,1,0,0,4,0
+15330,2023-10-17,2023020042,Philadelphia Flyers,Vancouver Canucks,2,2,0,2,2,0,0,2,0
+15613,2023-10-18,2023020050,Detroit Red Wings,Pittsburgh Penguins,9,3,3,4,2,1,0,3,1
+15886,2023-10-18,2023020049,Ottawa Senators,Washington Capitals,7,5,2,4,4,0,0,5,0
+16167,2023-10-19,2023020059,Anaheim Ducks,Dallas Stars,5,1,3,2,1,1,1,1,1
+16499,2023-10-19,2023020057,St. Louis Blues,Arizona Coyotes,8,4,4,3,1,0,0,4,0
+16795,2023-10-19,2023020062,San Jose Sharks,Boston Bruins,4,2,1,3,1,0,0,3,0
+17123,2023-10-19,2023020051,Buffalo Sabres,Calgary Flames,7,1,6,1,1,0,3,1,0
+17437,2023-10-19,2023020060,Seattle Kraken,Carolina Hurricanes,11,3,6,3,1,0,1,3,0
+17693,2023-10-19,2023020061,Colorado Avalanche,Chicago Blackhawks,4,4,0,4,4,0,0,4,0
+17980,2023-10-19,2023020054,Philadelphia Flyers,Edmonton Oilers,5,3,2,2,2,0,0,3,0
+18319,2023-10-19,2023020052,Florida Panthers,Toronto Maple Leafs,4,2,2,2,1,0,0,2,0
+18619,2023-10-19,2023020056,Minnesota Wild,Los Angeles Kings,10,4,4,4,2,2,0,4,1
+18889,2023-10-19,2023020053,New York Rangers,Nashville Predators,5,3,1,4,1,0,0,4,0
+19169,2023-10-19,2023020055,Tampa Bay Lightning,Vancouver Canucks,7,1,3,3,1,2,0,2,1
+19475,2023-10-19,2023020058,Winnipeg Jets,Vegas Golden Knights,8,2,3,3,2,1,1,2,1
+19769,2023-10-20,2023020063,Columbus Blue Jackets,Calgary Flames,4,2,2,2,1,0,0,2,0
+20081,2023-10-20,2023020064,New York Islanders,New Jersey Devils,9,1,7,2,1,1,3,1,1
+20388,2023-10-21,2023020066,Arizona Coyotes,Anaheim Ducks,3,1,1,2,1,0,0,2,0
+20730,2023-10-21,2023020079,Los Angeles Kings,Boston Bruins,6,2,3,3,1,0,1,3,0
+21055,2023-10-21,2023020067,Buffalo Sabres,New York Islanders,4,2,1,3,1,0,0,3,0
+21331,2023-10-21,2023020076,Colorado Avalanche,Carolina Hurricanes,10,2,4,4,1,3,0,3,1
+21632,2023-10-21,2023020071,Chicago Blackhawks,Vegas Golden Knights,8,2,4,3,1,1,1,3,1
+21959,2023-10-21,2023020073,Minnesota Wild,Columbus Blue Jackets,9,1,4,3,1,2,1,2,1
+22288,2023-10-21,2023020072,Dallas Stars,Philadelphia Flyers,9,1,4,2,1,0,2,2,0
+22593,2023-10-21,2023020065,Ottawa Senators,Detroit Red Wings,7,3,2,5,1,1,0,4,1
+22935,2023-10-21,2023020077,Edmonton Oilers,Winnipeg Jets,5,1,1,3,3,1,0,1,2
+23240,2023-10-21,2023020068,Florida Panthers,Vancouver Canucks,8,2,4,2,2,0,2,2,0
+23556,2023-10-21,2023020069,Montreal Canadiens,Washington Capitals,5,1,2,2,1,0,1,2,0
+23859,2023-10-21,2023020074,Nashville Predators,San Jose Sharks,6,4,2,4,1,0,0,4,0
+24138,2023-10-21,2023020078,Seattle Kraken,New York Rangers,5,3,1,4,4,1,0,3,1
+24423,2023-10-21,2023020075,St. Louis Blues,Pittsburgh Penguins,6,2,3,3,1,0,1,3,0
+24736,2023-10-21,2023020070,Tampa Bay Lightning,Toronto Maple Leafs,7,1,2,3,3,2,0,1,2
+25022,2023-10-22,2023020081,Anaheim Ducks,Boston Bruins,4,2,1,3,3,1,0,2,1
+25293,2023-10-22,2023020080,Detroit Red Wings,Calgary Flames,8,4,4,3,2,0,0,4,0
+25599,2023-10-23,2023020082,Buffalo Sabres,Montreal Canadiens,4,2,2,2,2,0,1,2,0
+25898,2023-10-24,2023020084,Columbus Blue Jackets,Anaheim Ducks,5,1,3,2,2,1,1,1,1
+26209,2023-10-24,2023020097,Los Angeles Kings,Arizona Coyotes,9,3,5,3,2,1,0,3,1
+26513,2023-10-24,2023020092,Chicago Blackhawks,Boston Bruins,3,3,0,3,3,0,0,3,0
+26825,2023-10-24,2023020085,Ottawa Senators,Buffalo Sabres,10,2,4,3,1,0,0,4,0
+27073,2023-10-24,2023020096,Calgary Flames,New York Rangers,4,2,1,3,3,1,0,2,1
+27332,2023-10-24,2023020086,Tampa Bay Lightning,Carolina Hurricanes,3,3,0,3,3,0,0,3,0
+27645,2023-10-24,2023020090,New York Islanders,Colorado Avalanche,11,3,6,3,3,2,2,3,1
+27969,2023-10-24,2023020088,Pittsburgh Penguins,Dallas Stars,5,3,1,4,4,1,0,3,1
+28294,2023-10-24,2023020091,Detroit Red Wings,Seattle Kraken,9,1,3,3,2,3,0,2,1
+28588,2023-10-24,2023020094,Minnesota Wild,Edmonton Oilers,11,3,7,3,2,1,2,3,1
+28885,2023-10-24,2023020089,Florida Panthers,San Jose Sharks,4,2,1,3,3,1,0,2,1
+29216,2023-10-24,2023020087,Montreal Canadiens,New Jersey Devils,7,3,3,4,1,1,0,3,1
+29497,2023-10-24,2023020095,Nashville Predators,Vancouver Canucks,5,1,3,2,1,0,1,2,0
+29813,2023-10-24,2023020098,Vegas Golden Knights,Philadelphia Flyers,5,1,2,2,2,2,0,1,1
+30080,2023-10-24,2023020093,Winnipeg Jets,St. Louis Blues,6,2,4,2,1,0,0,2,0
+30333,2023-10-24,2023020083,Washington Capitals,Toronto Maple Leafs,5,3,1,4,1,0,0,4,0
+30614,2023-10-25,2023020099,New Jersey Devils,Washington Capitals,10,2,2,4,3,2,0,3,1
+30941,2023-10-26,2023020100,Boston Bruins,Anaheim Ducks,7,1,2,3,3,2,0,1,2
+31242,2023-10-26,2023020109,Calgary Flames,St. Louis Blues,3,3,0,3,3,0,0,3,0
+31590,2023-10-26,2023020101,Carolina Hurricanes,Seattle Kraken,5,1,1,3,3,1,0,1,2
+31889,2023-10-26,2023020105,Pittsburgh Penguins,Colorado Avalanche,4,4,0,4,4,0,0,4,0
+32221,2023-10-26,2023020103,Montreal Canadiens,Columbus Blue Jackets,7,1,3,3,3,1,0,1,2
+32522,2023-10-26,2023020108,Dallas Stars,Toronto Maple Leafs,5,3,2,3,3,0,1,3,0
+32805,2023-10-26,2023020102,Detroit Red Wings,Winnipeg Jets,5,3,2,2,2,0,0,3,0
+33110,2023-10-26,2023020110,Edmonton Oilers,New York Rangers,3,3,0,3,3,0,0,3,0
+33392,2023-10-26,2023020104,Philadelphia Flyers,Minnesota Wild,8,4,2,3,3,0,0,4,0
+33752,2023-10-26,2023020107,New York Islanders,Ottawa Senators,5,1,2,2,1,0,1,2,0
+34034,2023-10-26,2023020106,Tampa Bay Lightning,San Jose Sharks,6,6,0,6,6,0,0,6,0
+34354,2023-10-27,2023020115,Arizona Coyotes,Los Angeles Kings,9,1,3,4,4,1,1,1,3
+34630,2023-10-27,2023020113,New Jersey Devils,Buffalo Sabres,9,1,7,2,1,1,3,1,1
+34960,2023-10-27,2023020112,Carolina Hurricanes,San Jose Sharks,3,3,0,3,3,0,0,3,0
+35247,2023-10-27,2023020111,Vegas Golden Knights,Chicago Blackhawks,7,1,3,3,1,1,1,1,2
+35576,2023-10-27,2023020114,Washington Capitals,Minnesota Wild,4,0,3,2,1,1,1,1,1
+35852,2023-10-27,2023020116,Vancouver Canucks,St. Louis Blues,5,5,0,5,5,0,0,5,0
+36145,2023-10-28,2023020117,Philadelphia Flyers,Anaheim Ducks,11,3,5,4,1,0,0,4,0
+36433,2023-10-28,2023020119,Boston Bruins,Detroit Red Wings,5,3,2,2,2,0,0,3,0
+36699,2023-10-28,2023020120,Columbus Blue Jackets,New York Islanders,2,2,0,2,2,0,0,2,0
+37017,2023-10-28,2023020118,Florida Panthers,Seattle Kraken,5,1,1,3,3,1,0,1,2
+37360,2023-10-28,2023020125,Los Angeles Kings,Vegas Golden Knights,6,0,3,3,1,1,1,1,2
+37675,2023-10-28,2023020121,Montreal Canadiens,Winnipeg Jets,6,0,3,3,3,1,1,1,2
+38002,2023-10-28,2023020122,Nashville Predators,Toronto Maple Leafs,5,1,3,2,2,1,1,1,1
+38296,2023-10-28,2023020124,Vancouver Canucks,New York Rangers,7,1,4,2,1,2,1,1,1
+38609,2023-10-28,2023020123,Pittsburgh Penguins,Ottawa Senators,7,3,3,3,1,0,0,4,0
+38895,2023-10-29,2023020126,Buffalo Sabres,Colorado Avalanche,4,4,0,4,4,0,0,4,0
+39232,2023-10-29,2023020129,Edmonton Oilers,Calgary Flames,7,3,4,2,2,0,0,3,0
+39492,2023-10-29,2023020127,New Jersey Devils,Minnesota Wild,7,1,3,3,1,2,0,2,1
+39835,2023-10-29,2023020128,Washington Capitals,San Jose Sharks,4,2,1,3,3,1,0,2,1
+40147,2023-10-30,2023020132,Pittsburgh Penguins,Anaheim Ducks,7,1,3,2,2,3,0,1,1
+40463,2023-10-30,2023020137,Arizona Coyotes,Chicago Blackhawks,9,7,1,8,8,1,0,7,1
+40774,2023-10-30,2023020130,Boston Bruins,Florida Panthers,5,1,1,3,3,1,0,1,2
+41049,2023-10-30,2023020131,Philadelphia Flyers,Carolina Hurricanes,5,1,2,2,2,2,0,1,1
+41346,2023-10-30,2023020136,Dallas Stars,Columbus Blue Jackets,8,2,3,4,1,2,0,3,1
+41673,2023-10-30,2023020134,New York Islanders,Detroit Red Wings,7,1,3,3,1,1,1,1,2
+42028,2023-10-30,2023020138,Vegas Golden Knights,Montreal Canadiens,4,0,4,2,2,2,1,1,1
+42329,2023-10-30,2023020135,Winnipeg Jets,New York Rangers,5,1,2,2,2,2,0,1,1
+42633,2023-10-30,2023020133,Tampa Bay Lightning,Seattle Kraken,7,1,4,2,1,0,1,2,0
+42934,2023-10-31,2023020139,Toronto Maple Leafs,Los Angeles Kings,5,3,2,3,1,0,0,3,0
+43202,2023-10-31,2023020140,Vancouver Canucks,Nashville Predators,7,3,2,4,4,2,0,3,1
+43486,2023-11-01,2023020144,Anaheim Ducks,Arizona Coyotes,7,1,2,3,2,2,0,2,1
+43788,2023-11-01,2023020141,Philadelphia Flyers,Buffalo Sabres,7,3,3,3,3,1,1,3,1
+44130,2023-11-01,2023020142,Calgary Flames,Dallas Stars,7,1,4,3,1,1,1,2,1
+44431,2023-11-01,2023020143,Colorado Avalanche,St. Louis Blues,5,3,2,2,2,0,0,3,0
+44749,2023-11-02,2023020153,Arizona Coyotes,Montreal Canadiens,5,1,4,1,1,0,2,1,0
+45105,2023-11-02,2023020145,Boston Bruins,Toronto Maple Leafs,4,0,2,2,2,0,1,2,0
+45394,2023-11-02,2023020148,New York Rangers,Carolina Hurricanes,3,1,2,1,1,0,1,1,0
+45701,2023-11-02,2023020146,Columbus Blue Jackets,Tampa Bay Lightning,6,2,2,3,3,2,0,2,1
+46094,2023-11-02,2023020152,Edmonton Oilers,Dallas Stars,7,1,3,3,2,0,1,3,0
+46377,2023-11-02,2023020147,Detroit Red Wings,Florida Panthers,2,2,0,2,2,0,0,2,0
+46697,2023-11-02,2023020149,Ottawa Senators,Los Angeles Kings,5,1,1,3,2,0,0,3,0
+46983,2023-11-02,2023020151,Minnesota Wild,New Jersey Devils,8,2,4,3,1,0,0,3,0
+47258,2023-11-02,2023020154,Seattle Kraken,Nashville Predators,6,2,3,2,2,1,1,2,1
+47556,2023-11-02,2023020150,Washington Capitals,New York Islanders,3,3,0,3,3,0,0,3,0
+47849,2023-11-02,2023020156,San Jose Sharks,Vancouver Canucks,11,9,1,10,1,0,0,10,0
+48143,2023-11-02,2023020155,Vegas Golden Knights,Winnipeg Jets,7,3,4,2,2,0,1,3,0
+48401,2023-11-03,2023020157,Buffalo Sabres,Philadelphia Flyers,6,4,2,4,1,0,0,4,0
+48704,2023-11-03,2023020158,St. Louis Blues,New Jersey Devils,5,3,2,2,2,0,0,3,0
+48952,2023-11-04,2023020160,Arizona Coyotes,Winnipeg Jets,8,2,3,3,3,1,1,2,2
+49266,2023-11-04,2023020161,Detroit Red Wings,Boston Bruins,9,1,4,3,1,1,1,2,2
+49592,2023-11-04,2023020165,Toronto Maple Leafs,Buffalo Sabres,10,2,7,2,2,1,3,2,1
+49829,2023-11-04,2023020170,Seattle Kraken,Calgary Flames,9,3,5,3,2,1,1,3,1
+50166,2023-11-04,2023020167,New York Islanders,Carolina Hurricanes,7,1,1,4,4,1,0,1,3
+50471,2023-11-04,2023020168,Chicago Blackhawks,Florida Panthers,7,3,2,4,1,0,0,4,0
+50838,2023-11-04,2023020173,Vegas Golden Knights,Colorado Avalanche,7,7,0,7,7,0,0,7,0
+51171,2023-11-04,2023020166,Washington Capitals,Columbus Blue Jackets,3,1,1,2,1,0,0,2,0
+51456,2023-11-04,2023020172,Vancouver Canucks,Dallas Stars,2,2,0,2,2,0,0,2,0
+51797,2023-11-04,2023020159,Edmonton Oilers,Nashville Predators,7,3,3,3,2,1,0,3,1
+52074,2023-11-04,2023020163,Philadelphia Flyers,Los Angeles Kings,5,5,0,5,5,0,0,5,0
+52359,2023-11-04,2023020169,Minnesota Wild,New York Rangers,8,0,5,4,1,1,2,1,3
+52674,2023-11-04,2023020164,St. Louis Blues,Montreal Canadiens,9,3,5,3,1,0,1,4,0
+53008,2023-11-04,2023020162,Ottawa Senators,Tampa Bay Lightning,10,2,6,4,1,1,0,3,1
+53313,2023-11-04,2023020171,San Jose Sharks,Pittsburgh Penguins,12,8,4,4,2,0,0,8,0
+53574,2023-11-05,2023020175,Anaheim Ducks,Vegas Golden Knights,6,2,1,4,4,1,0,2,2
+53904,2023-11-05,2023020174,Chicago Blackhawks,New Jersey Devils,6,2,3,3,1,1,0,2,1
+54229,2023-11-06,2023020178,Dallas Stars,Boston Bruins,5,1,3,2,1,0,0,2,0
+54561,2023-11-06,2023020176,Florida Panthers,Columbus Blue Jackets,9,1,2,4,2,2,0,3,1
+54915,2023-11-06,2023020179,Vancouver Canucks,Edmonton Oilers,8,4,3,3,3,1,0,4,1
+55238,2023-11-06,2023020177,Toronto Maple Leafs,Tampa Bay Lightning,11,1,4,4,1,2,1,1,3
+55552,2023-11-07,2023020187,Anaheim Ducks,Pittsburgh Penguins,2,2,0,2,2,0,0,2,0
+55892,2023-11-07,2023020185,Arizona Coyotes,Seattle Kraken,6,0,3,2,2,3,0,1,1
+56182,2023-11-07,2023020180,Carolina Hurricanes,Buffalo Sabres,5,1,4,1,1,0,2,1,0
+56507,2023-11-07,2023020186,Calgary Flames,Nashville Predators,6,2,1,4,4,1,0,2,2
+56811,2023-11-07,2023020188,Colorado Avalanche,New Jersey Devils,9,3,5,3,3,1,2,3,1
+57095,2023-11-07,2023020183,New York Rangers,Detroit Red Wings,8,2,1,5,3,0,0,5,0
+57418,2023-11-07,2023020182,New York Islanders,Minnesota Wild,6,2,2,3,3,2,0,2,1
+57727,2023-11-07,2023020181,Montreal Canadiens,Tampa Bay Lightning,8,2,3,4,1,0,0,4,0
+58014,2023-11-07,2023020189,San Jose Sharks,Philadelphia Flyers,3,1,1,2,1,0,0,2,0
+58279,2023-11-07,2023020184,St. Louis Blues,Winnipeg Jets,7,3,4,2,1,0,0,3,0
+58583,2023-11-08,2023020191,Washington Capitals,Florida Panthers,7,1,3,2,2,3,0,1,1
+58903,2023-11-08,2023020192,Vegas Golden Knights,Los Angeles Kings,5,3,2,3,1,0,0,3,0
+59233,2023-11-08,2023020190,Toronto Maple Leafs,Ottawa Senators,9,3,5,3,3,1,2,3,1
+59542,2023-11-09,2023020199,St. Louis Blues,Arizona Coyotes,3,1,2,1,1,0,1,1,0
+59835,2023-11-09,2023020193,Boston Bruins,New York Islanders,7,3,4,3,3,0,2,3,0
+60147,2023-11-09,2023020198,Tampa Bay Lightning,Chicago Blackhawks,8,2,4,4,1,1,1,3,1
+60438,2023-11-09,2023020201,Colorado Avalanche,Seattle Kraken,7,1,4,2,1,0,1,2,0
+60722,2023-11-09,2023020194,Columbus Blue Jackets,Dallas Stars,7,3,1,5,5,1,0,3,2
+61023,2023-11-09,2023020195,Detroit Red Wings,Montreal Canadiens,5,1,4,1,1,0,2,1,0
+61342,2023-11-09,2023020203,San Jose Sharks,Edmonton Oilers,5,1,3,2,1,0,1,2,0
+61647,2023-11-09,2023020202,Los Angeles Kings,Pittsburgh Penguins,7,1,4,2,1,2,1,1,1
+61904,2023-11-09,2023020196,New York Rangers,Minnesota Wild,5,3,2,3,3,0,1,3,0
+62183,2023-11-09,2023020200,Winnipeg Jets,Nashville Predators,9,3,6,3,1,0,1,3,0
+62467,2023-11-09,2023020197,Ottawa Senators,Vancouver Canucks,7,3,2,3,3,0,1,3,0
+62783,2023-11-10,2023020208,Anaheim Ducks,Philadelphia Flyers,9,3,6,3,1,0,0,3,0
+63093,2023-11-10,2023020204,Buffalo Sabres,Minnesota Wild,5,1,3,2,1,0,1,2,0
+63442,2023-11-10,2023020207,Toronto Maple Leafs,Calgary Flames,8,0,4,4,2,2,1,3,1
+63781,2023-11-10,2023020205,Florida Panthers,Carolina Hurricanes,7,3,3,3,2,1,0,3,1
+64068,2023-11-10,2023020206,New Jersey Devils,Washington Capitals,6,2,2,3,1,0,0,3,0
+64358,2023-11-10,2023020209,Vegas Golden Knights,San Jose Sharks,5,5,0,5,5,0,0,5,0
+64653,2023-11-11,2023020218,Nashville Predators,Arizona Coyotes,12,2,5,3,2,1,2,2,2
+64957,2023-11-11,2023020212,Montreal Canadiens,Boston Bruins,5,1,3,2,1,1,1,1,1
+65234,2023-11-11,2023020217,Pittsburgh Penguins,Buffalo Sabres,4,4,0,4,4,0,0,4,0
+65560,2023-11-11,2023020213,Ottawa Senators,Calgary Flames,5,3,2,2,2,0,0,3,0
+65839,2023-11-11,2023020214,Tampa Bay Lightning,Carolina Hurricanes,4,4,0,4,4,0,0,4,0
+66175,2023-11-11,2023020219,Colorado Avalanche,St. Louis Blues,10,6,3,4,1,0,0,7,0
+66450,2023-11-11,2023020210,Detroit Red Wings,Columbus Blue Jackets,9,1,3,3,1,2,0,2,1
+66746,2023-11-11,2023020211,Winnipeg Jets,Dallas Stars,5,1,3,2,1,0,0,2,0
+67014,2023-11-11,2023020220,Seattle Kraken,Edmonton Oilers,5,3,1,4,1,0,0,4,0
+67306,2023-11-11,2023020221,Los Angeles Kings,Philadelphia Flyers,6,2,3,3,1,0,0,3,0
+67628,2023-11-11,2023020216,New York Islanders,Washington Capitals,5,3,2,3,3,0,1,3,0
+67929,2023-11-11,2023020215,Toronto Maple Leafs,Vancouver Canucks,7,3,3,4,4,1,1,3,1
+68227,2023-11-12,2023020226,Anaheim Ducks,San Jose Sharks,5,3,2,3,3,0,1,3,0
+68527,2023-11-12,2023020222,Florida Panthers,Chicago Blackhawks,7,1,6,1,1,0,3,1,0
+68877,2023-11-12,2023020225,New York Rangers,Columbus Blue Jackets,6,0,3,2,2,3,0,1,1
+69171,2023-11-12,2023020223,Minnesota Wild,Dallas Stars,11,5,6,3,3,0,0,5,0
+69456,2023-11-12,2023020224,Montreal Canadiens,Vancouver Canucks,7,3,4,3,1,0,0,3,0
+69754,2023-11-13,2023020228,Seattle Kraken,Colorado Avalanche,6,4,1,5,5,1,0,4,1
+70126,2023-11-13,2023020227,Edmonton Oilers,New York Islanders,5,3,1,4,4,1,0,3,1
+70416,2023-11-14,2023020234,Nashville Predators,Anaheim Ducks,5,1,1,3,3,1,0,1,2
+70704,2023-11-14,2023020233,Dallas Stars,Arizona Coyotes,7,1,3,2,2,3,0,1,1
+70986,2023-11-14,2023020229,Buffalo Sabres,Boston Bruins,7,3,1,5,2,0,0,5,0
+71310,2023-11-14,2023020231,Montreal Canadiens,Calgary Flames,3,1,2,1,1,0,1,1,0
+71585,2023-11-14,2023020230,Columbus Blue Jackets,Pittsburgh Penguins,8,2,4,2,2,2,1,2,1
+71842,2023-11-14,2023020237,San Jose Sharks,Florida Panthers,8,2,4,3,3,2,1,2,1
+72140,2023-11-14,2023020236,Winnipeg Jets,New Jersey Devils,9,3,4,3,1,0,1,3,0
+72441,2023-11-14,2023020235,St. Louis Blues,Tampa Bay Lightning,5,5,0,5,5,0,0,5,0
+72745,2023-11-14,2023020232,Washington Capitals,Vegas Golden Knights,3,3,0,3,3,0,0,3,0
+73018,2023-11-15,2023020240,Colorado Avalanche,Anaheim Ducks,10,6,4,3,3,0,0,6,0
+73308,2023-11-15,2023020238,Carolina Hurricanes,Philadelphia Flyers,4,2,1,3,1,0,0,3,0
+73674,2023-11-15,2023020239,Edmonton Oilers,Seattle Kraken,7,1,2,3,3,2,0,1,2
+74027,2023-11-15,2023020241,Vancouver Canucks,New York Islanders,7,1,3,3,3,1,0,1,2
+74322,2023-11-16,2023020243,Columbus Blue Jackets,Arizona Coyotes,5,1,2,3,1,1,0,2,1
+74658,2023-11-16,2023020247,Calgary Flames,Vancouver Canucks,7,3,3,4,1,1,0,3,1
+74967,2023-11-16,2023020246,Chicago Blackhawks,Tampa Bay Lightning,6,2,3,2,2,1,1,2,1
+75285,2023-11-16,2023020242,Ottawa Senators,Detroit Red Wings,9,1,2,4,1,0,1,4,0
+75605,2023-11-16,2023020249,Los Angeles Kings,Florida Panthers,3,1,1,2,1,0,0,2,0
+75965,2023-11-16,2023020244,Montreal Canadiens,Vegas Golden Knights,11,1,6,3,1,1,1,2,2
+76232,2023-11-16,2023020245,Pittsburgh Penguins,New Jersey Devils,7,3,3,4,4,1,1,3,1
+76550,2023-11-16,2023020248,Seattle Kraken,New York Islanders,6,0,7,2,1,3,2,1,1
+76850,2023-11-16,2023020250,San Jose Sharks,St. Louis Blues,6,4,1,5,1,0,0,5,0
+77182,2023-11-17,2023020253,Anaheim Ducks,Florida Panthers,3,1,1,2,1,0,0,2,0
+77459,2023-11-17,2023020252,Winnipeg Jets,Buffalo Sabres,5,1,3,2,1,0,0,2,0
+77760,2023-11-17,2023020251,Detroit Red Wings,Toronto Maple Leafs,5,1,1,3,3,1,0,1,2
+78042,2023-11-18,2023020262,Winnipeg Jets,Arizona Coyotes,7,3,3,3,3,1,1,3,1
+78341,2023-11-18,2023020258,Boston Bruins,Montreal Canadiens,7,3,3,3,1,0,0,4,0
+78670,2023-11-18,2023020260,Calgary Flames,New York Islanders,8,0,5,3,2,3,1,2,1
+78961,2023-11-18,2023020259,Carolina Hurricanes,Pittsburgh Penguins,6,2,3,2,2,1,1,2,1
+79278,2023-11-18,2023020256,Nashville Predators,Chicago Blackhawks,6,2,4,2,1,0,0,2,0
+79571,2023-11-18,2023020264,Dallas Stars,Colorado Avalanche,9,3,1,6,6,1,0,3,3
+79928,2023-11-18,2023020263,Washington Capitals,Columbus Blue Jackets,7,1,4,3,1,1,0,2,1
+80233,2023-11-18,2023020257,Tampa Bay Lightning,Edmonton Oilers,10,2,5,3,3,1,2,2,2
+80528,2023-11-18,2023020266,Los Angeles Kings,St. Louis Blues,6,4,1,5,1,0,0,5,0
+80816,2023-11-18,2023020254,Ottawa Senators,Minnesota Wild,2,0,1,2,2,1,0,1,1
+81144,2023-11-18,2023020261,New Jersey Devils,New York Rangers,8,2,4,3,3,2,1,2,1
+81468,2023-11-18,2023020255,Philadelphia Flyers,Vegas Golden Knights,7,1,4,2,1,0,2,2,0
+81749,2023-11-18,2023020265,Vancouver Canucks,Seattle Kraken,7,1,4,2,1,1,1,2,1
+82005,2023-11-19,2023020271,Anaheim Ducks,St. Louis Blues,4,2,1,3,1,0,0,3,0
+82283,2023-11-19,2023020270,Chicago Blackhawks,Buffalo Sabres,5,1,4,1,1,0,2,1,0
+82582,2023-11-19,2023020268,Philadelphia Flyers,Columbus Blue Jackets,7,3,4,2,2,0,1,3,0
+82884,2023-11-19,2023020267,Minnesota Wild,Toronto Maple Leafs,7,1,3,3,1,1,1,2,1
+83224,2023-11-19,2023020269,Pittsburgh Penguins,Vegas Golden Knights,3,3,0,3,3,0,0,3,0
+83540,2023-11-20,2023020276,Arizona Coyotes,Los Angeles Kings,5,3,2,3,1,0,0,3,0
+83867,2023-11-20,2023020273,Tampa Bay Lightning,Boston Bruins,9,1,6,2,2,2,2,1,1
+84182,2023-11-20,2023020277,Seattle Kraken,Calgary Flames,7,1,4,2,2,2,1,1,1
+84480,2023-11-20,2023020275,Nashville Predators,Colorado Avalanche,7,1,3,2,2,3,0,1,1
+84786,2023-11-20,2023020274,Dallas Stars,New York Rangers,9,3,2,6,1,1,0,4,2
+85131,2023-11-20,2023020272,Florida Panthers,Edmonton Oilers,8,2,3,3,3,1,1,2,2
+85414,2023-11-20,2023020278,Vancouver Canucks,San Jose Sharks,4,2,2,2,1,0,0,2,0
+85720,2023-11-22,2023020290,Anaheim Ducks,Montreal Canadiens,7,1,4,2,1,0,1,2,0
+86028,2023-11-22,2023020287,Arizona Coyotes,St. Louis Blues,11,1,6,2,2,4,1,1,1
+86315,2023-11-22,2023020282,Florida Panthers,Boston Bruins,4,2,2,2,2,0,1,2,0
+86608,2023-11-22,2023020285,Washington Capitals,Buffalo Sabres,7,1,3,2,2,1,1,1,2
+86950,2023-11-22,2023020288,Nashville Predators,Calgary Flames,6,2,3,3,1,0,1,3,0
+87251,2023-11-22,2023020279,Carolina Hurricanes,Edmonton Oilers,9,3,4,4,1,0,0,4,0
+87518,2023-11-22,2023020280,Columbus Blue Jackets,Chicago Blackhawks,10,4,3,4,2,0,0,6,0
+87786,2023-11-22,2023020291,Colorado Avalanche,Vancouver Canucks,7,3,3,3,3,1,1,3,1
+88081,2023-11-22,2023020289,Dallas Stars,Vegas Golden Knights,3,1,2,1,1,0,1,1,0
+88326,2023-11-22,2023020281,Detroit Red Wings,New Jersey Devils,4,4,0,4,4,0,0,4,0
+88637,2023-11-22,2023020286,New York Islanders,Philadelphia Flyers,5,1,3,2,1,0,0,2,0
+88961,2023-11-22,2023020283,Pittsburgh Penguins,New York Rangers,1,1,0,1,1,0,0,1,0
+89230,2023-11-22,2023020292,Seattle Kraken,San Jose Sharks,8,6,2,6,1,0,0,6,0
+89519,2023-11-22,2023020284,Tampa Bay Lightning,Winnipeg Jets,5,1,2,2,1,0,1,2,0
+89830,2023-11-24,2023020299,Anaheim Ducks,Los Angeles Kings,7,3,3,4,1,0,0,4,0
+90111,2023-11-24,2023020293,Boston Bruins,Detroit Red Wings,7,3,4,2,2,0,0,3,0
+90433,2023-11-24,2023020301,Buffalo Sabres,Pittsburgh Penguins,5,1,1,3,3,1,0,1,2
+90713,2023-11-24,2023020305,Dallas Stars,Calgary Flames,11,3,5,5,5,1,2,3,2
+90993,2023-11-24,2023020303,Carolina Hurricanes,Tampa Bay Lightning,10,6,3,5,5,1,0,6,1
+91317,2023-11-24,2023020295,Chicago Blackhawks,Toronto Maple Leafs,7,1,3,3,3,1,1,1,2
+91570,2023-11-24,2023020306,Minnesota Wild,Colorado Avalanche,5,1,2,2,1,0,1,2,0
+91893,2023-11-24,2023020296,New Jersey Devils,Columbus Blue Jackets,3,1,2,1,1,0,1,1,0
+92178,2023-11-24,2023020298,Washington Capitals,Edmonton Oilers,5,5,0,5,5,0,0,5,0
+92477,2023-11-24,2023020304,Florida Panthers,Winnipeg Jets,3,3,0,3,3,0,0,3,0
+92769,2023-11-24,2023020300,San Jose Sharks,Montreal Canadiens,4,0,3,2,2,1,1,1,2
+93036,2023-11-24,2023020297,St. Louis Blues,Nashville Predators,11,5,6,3,1,0,0,5,0
+93354,2023-11-24,2023020302,Ottawa Senators,New York Islanders,8,2,3,4,1,1,0,3,1
+93640,2023-11-24,2023020294,Philadelphia Flyers,New York Rangers,4,2,1,3,1,0,0,3,0
+93932,2023-11-24,2023020307,Seattle Kraken,Vancouver Canucks,6,4,2,3,3,0,0,4,0
+94178,2023-11-25,2023020315,Vegas Golden Knights,Arizona Coyotes,2,2,0,2,2,0,0,2,0
+94514,2023-11-25,2023020308,New York Rangers,Boston Bruins,11,3,6,3,1,0,2,3,0
+94803,2023-11-25,2023020310,New Jersey Devils,Buffalo Sabres,9,5,4,4,1,0,0,5,0
+95110,2023-11-25,2023020313,Colorado Avalanche,Calgary Flames,4,2,2,2,1,0,0,2,0
+95373,2023-11-25,2023020309,Los Angeles Kings,Montreal Canadiens,4,4,0,4,4,0,0,4,0
+95741,2023-11-25,2023020312,New York Islanders,Philadelphia Flyers,0,0,0,1,1,0,0,1,0
+96062,2023-11-25,2023020311,Pittsburgh Penguins,Toronto Maple Leafs,5,1,3,2,2,1,1,1,1
+96369,2023-11-25,2023020314,San Jose Sharks,Vancouver Canucks,7,1,5,2,1,0,2,2,0
+96670,2023-11-26,2023020320,Edmonton Oilers,Anaheim Ducks,10,6,3,7,7,1,1,6,1
+96978,2023-11-26,2023020318,Carolina Hurricanes,Columbus Blue Jackets,5,1,1,3,3,1,0,1,2
+97285,2023-11-26,2023020317,Chicago Blackhawks,St. Louis Blues,6,2,3,2,1,0,0,3,0
+97557,2023-11-26,2023020316,Detroit Red Wings,Minnesota Wild,5,3,2,3,3,0,1,3,0
+97898,2023-11-26,2023020319,Nashville Predators,Winnipeg Jets,5,1,1,3,2,0,0,3,0
+98215,2023-11-27,2023020321,Columbus Blue Jackets,Boston Bruins,7,3,3,4,1,0,0,4,0
+98484,2023-11-27,2023020322,New York Rangers,Buffalo Sabres,6,4,2,3,3,0,0,4,0
+98811,2023-11-27,2023020325,Calgary Flames,Vegas Golden Knights,3,1,1,2,2,1,0,1,1
+99127,2023-11-27,2023020324,Colorado Avalanche,Tampa Bay Lightning,5,3,2,3,1,0,0,3,0
+99464,2023-11-27,2023020323,Ottawa Senators,Florida Panthers,5,5,0,5,5,0,0,5,0
+99766,2023-11-27,2023020326,San Jose Sharks,Washington Capitals,3,1,2,1,1,0,1,1,0
+100053,2023-11-28,2023020336,Vancouver Canucks,Anaheim Ducks,4,2,2,2,2,0,1,2,0
+100332,2023-11-28,2023020334,Arizona Coyotes,Tampa Bay Lightning,4,2,2,2,1,0,0,2,0
+100615,2023-11-28,2023020328,Philadelphia Flyers,Carolina Hurricanes,5,3,2,3,3,0,1,3,0
+100946,2023-11-28,2023020333,Chicago Blackhawks,Seattle Kraken,7,1,3,2,1,0,1,2,0
+101197,2023-11-28,2023020332,Winnipeg Jets,Dallas Stars,2,2,0,2,2,0,0,2,0
+101582,2023-11-28,2023020335,Edmonton Oilers,Vegas Golden Knights,8,0,6,2,2,0,3,2,0
+101990,2023-11-28,2023020329,Toronto Maple Leafs,Florida Panthers,2,0,3,2,1,1,1,1,1
+102297,2023-11-28,2023020330,Minnesota Wild,St. Louis Blues,4,2,2,2,2,0,1,2,0
+102605,2023-11-28,2023020331,Nashville Predators,Pittsburgh Penguins,5,1,2,2,1,0,1,2,0
+102883,2023-11-28,2023020327,New Jersey Devils,New York Islanders,9,1,3,3,3,3,0,1,2
+103144,2023-11-29,2023020337,Columbus Blue Jackets,Montreal Canadiens,6,2,3,3,3,1,1,2,1
+103436,2023-11-29,2023020338,New York Rangers,Detroit Red Wings,5,1,2,2,2,2,0,1,1
+103699,2023-11-29,2023020339,Los Angeles Kings,Washington Capitals,3,1,1,2,2,1,0,1,1
+104010,2023-11-30,2023020352,Anaheim Ducks,Washington Capitals,9,1,5,3,1,2,0,2,1
+104298,2023-11-30,2023020350,Arizona Coyotes,Colorado Avalanche,7,1,5,2,1,1,2,1,1
+104606,2023-11-30,2023020340,Boston Bruins,San Jose Sharks,3,3,0,3,3,0,0,3,0
+104899,2023-11-30,2023020348,St. Louis Blues,Buffalo Sabres,10,2,3,3,1,0,1,3,0
+105190,2023-11-30,2023020351,Calgary Flames,Dallas Stars,7,1,3,2,2,3,0,1,1
+105519,2023-11-30,2023020341,Carolina Hurricanes,New York Islanders,9,1,7,2,1,1,3,1,1
+105777,2023-11-30,2023020342,Detroit Red Wings,Chicago Blackhawks,6,4,2,4,4,0,1,4,0
+106091,2023-11-30,2023020349,Winnipeg Jets,Edmonton Oilers,4,2,1,3,3,1,0,2,1
+106394,2023-11-30,2023020343,Montreal Canadiens,Florida Panthers,6,4,2,4,1,0,0,4,0
+106692,2023-11-30,2023020347,Nashville Predators,Minnesota Wild,7,5,2,5,1,0,0,5,0
+107030,2023-11-30,2023020344,Philadelphia Flyers,New Jersey Devils,7,1,4,2,1,0,1,2,0
+107318,2023-11-30,2023020345,Tampa Bay Lightning,Pittsburgh Penguins,6,2,1,4,4,1,0,2,2
+107666,2023-11-30,2023020346,Toronto Maple Leafs,Seattle Kraken,6,0,4,2,2,0,1,2,0
+107939,2023-11-30,2023020353,Vancouver Canucks,Vegas Golden Knights,5,3,1,4,1,0,0,4,0
+108210,2023-12-01,2023020354,Columbus Blue Jackets,Ottawa Senators,6,2,1,4,4,1,0,2,2
+108533,2023-12-01,2023020355,New Jersey Devils,San Jose Sharks,9,3,6,2,2,0,1,3,0
+108915,2023-12-02,2023020366,Anaheim Ducks,Colorado Avalanche,6,0,3,3,3,1,0,1,2
+109230,2023-12-02,2023020365,Arizona Coyotes,St. Louis Blues,5,3,2,3,1,0,0,3,0
+109622,2023-12-02,2023020364,Toronto Maple Leafs,Boston Bruins,7,1,4,2,1,0,2,2,0
+109925,2023-12-02,2023020360,Carolina Hurricanes,Buffalo Sabres,8,4,3,5,1,0,0,5,0
+110214,2023-12-02,2023020367,Calgary Flames,Vancouver Canucks,7,1,5,2,1,0,0,2,0
+110501,2023-12-02,2023020357,Winnipeg Jets,Chicago Blackhawks,4,2,1,3,3,1,0,2,1
+110797,2023-12-02,2023020356,Dallas Stars,Tampa Bay Lightning,9,7,2,5,5,0,0,7,0
+111121,2023-12-02,2023020361,Montreal Canadiens,Detroit Red Wings,9,1,4,3,1,0,1,3,0
+111453,2023-12-02,2023020359,Florida Panthers,New York Islanders,7,1,5,2,1,0,1,2,0
+111826,2023-12-02,2023020358,Nashville Predators,New York Rangers,7,1,3,3,3,1,0,1,2
+112155,2023-12-02,2023020362,Ottawa Senators,Seattle Kraken,2,2,0,2,2,0,0,2,0
+112535,2023-12-02,2023020363,Pittsburgh Penguins,Philadelphia Flyers,6,0,5,2,1,1,2,1,1
+112821,2023-12-02,2023020368,Vegas Golden Knights,Washington Capitals,5,3,2,3,1,0,0,3,0
+113112,2023-12-03,2023020371,Boston Bruins,Columbus Blue Jackets,4,2,1,3,3,1,0,2,1
+113406,2023-12-03,2023020372,Buffalo Sabres,Nashville Predators,3,1,1,2,1,0,0,2,0
+113704,2023-12-03,2023020369,Minnesota Wild,Chicago Blackhawks,5,3,1,4,1,0,0,4,0
+113984,2023-12-03,2023020373,Los Angeles Kings,Colorado Avalanche,5,3,1,4,4,1,0,3,1
+114274,2023-12-03,2023020370,New York Rangers,San Jose Sharks,11,1,6,3,2,1,2,3,1
+114563,2023-12-04,2023020378,Arizona Coyotes,Washington Capitals,6,6,0,6,6,0,0,6,0
+114881,2023-12-04,2023020377,Winnipeg Jets,Carolina Hurricanes,3,1,1,2,1,0,0,2,0
+115172,2023-12-04,2023020375,Tampa Bay Lightning,Dallas Stars,4,4,0,4,4,0,0,4,0
+115452,2023-12-04,2023020376,Montreal Canadiens,Seattle Kraken,6,2,2,3,1,0,0,3,0
+115754,2023-12-04,2023020374,Philadelphia Flyers,Pittsburgh Penguins,3,1,1,2,2,1,0,1,1
+116075,2023-12-04,2023020379,Vegas Golden Knights,St. Louis Blues,3,1,2,1,1,0,1,1,0
+116358,2023-12-05,2023020386,Colorado Avalanche,Anaheim Ducks,5,1,1,3,2,0,0,3,0
+116622,2023-12-05,2023020380,Buffalo Sabres,Detroit Red Wings,8,2,2,4,1,0,0,4,0
+116940,2023-12-05,2023020385,Calgary Flames,Minnesota Wild,7,3,4,3,1,0,0,3,0
+117240,2023-12-05,2023020384,Chicago Blackhawks,Nashville Predators,6,0,5,2,2,3,1,2,1
+117538,2023-12-05,2023020381,Columbus Blue Jackets,Los Angeles Kings,7,1,1,4,4,1,0,1,3
+117847,2023-12-05,2023020387,Vancouver Canucks,New Jersey Devils,11,1,6,3,1,0,2,3,0
+118198,2023-12-05,2023020383,New York Islanders,San Jose Sharks,9,1,3,4,4,1,1,1,3
+118513,2023-12-05,2023020382,Ottawa Senators,New York Rangers,8,4,4,3,3,0,0,4,0
+118871,2023-12-06,2023020391,Edmonton Oilers,Carolina Hurricanes,7,5,2,5,1,0,0,5,0
+119177,2023-12-06,2023020388,Florida Panthers,Dallas Stars,9,1,5,2,1,0,2,2,0
+119480,2023-12-06,2023020389,Tampa Bay Lightning,Pittsburgh Penguins,4,2,1,3,1,0,0,3,0
+119814,2023-12-06,2023020390,St. Louis Blues,Vegas Golden Knights,9,3,2,5,5,2,0,3,2
+120090,2023-12-07,2023020399,Chicago Blackhawks,Anaheim Ducks,1,1,0,1,1,0,0,1,0
+120377,2023-12-07,2023020400,Arizona Coyotes,Philadelphia Flyers,5,3,2,2,2,0,0,3,0
+120681,2023-12-07,2023020392,Boston Bruins,Buffalo Sabres,4,2,2,2,1,0,0,2,0
+120986,2023-12-07,2023020401,Calgary Flames,Carolina Hurricanes,5,1,1,3,3,1,0,1,2
+121229,2023-12-07,2023020402,Colorado Avalanche,Winnipeg Jets,6,2,4,2,1,0,0,2,0
+121550,2023-12-07,2023020397,New York Islanders,Columbus Blue Jackets,10,4,4,3,3,2,0,4,1
+121878,2023-12-07,2023020396,Washington Capitals,Dallas Stars,8,0,5,2,2,1,2,1,2
+122176,2023-12-07,2023020393,Detroit Red Wings,San Jose Sharks,11,1,3,4,2,1,1,1,4
+122488,2023-12-07,2023020394,Montreal Canadiens,Los Angeles Kings,4,4,0,4,4,0,0,4,0
+122793,2023-12-07,2023020404,Vancouver Canucks,Minnesota Wild,2,2,0,2,2,0,0,2,0
+123105,2023-12-07,2023020398,Nashville Predators,Tampa Bay Lightning,6,4,1,5,5,1,0,4,1
+123394,2023-12-07,2023020403,Seattle Kraken,New Jersey Devils,3,1,2,1,1,0,1,1,0
+123682,2023-12-07,2023020395,Ottawa Senators,Toronto Maple Leafs,7,1,4,3,1,1,0,2,1
+123965,2023-12-08,2023020405,Columbus Blue Jackets,St. Louis Blues,7,3,4,3,1,0,1,3,0
+124274,2023-12-08,2023020407,Edmonton Oilers,Minnesota Wild,7,1,4,2,2,2,1,1,1
+124551,2023-12-08,2023020406,Florida Panthers,Pittsburgh Penguins,4,2,1,3,3,1,0,2,1
+124870,2023-12-09,2023020408,Boston Bruins,Arizona Coyotes,8,2,4,3,1,0,0,3,0
+125177,2023-12-09,2023020411,Buffalo Sabres,Montreal Canadiens,4,0,4,3,2,2,1,2,1
+125477,2023-12-09,2023020409,Calgary Flames,New Jersey Devils,6,2,3,3,1,1,0,2,1
+125744,2023-12-09,2023020419,Vancouver Canucks,Carolina Hurricanes,7,1,4,2,1,0,1,2,0
+126058,2023-12-09,2023020416,Chicago Blackhawks,St. Louis Blues,4,2,1,3,1,0,0,3,0
+126404,2023-12-09,2023020417,Colorado Avalanche,Philadelphia Flyers,7,3,4,2,2,0,1,3,0
+126660,2023-12-09,2023020410,Dallas Stars,Vegas Golden Knights,7,5,2,4,4,0,0,5,0
+126984,2023-12-09,2023020412,Detroit Red Wings,Ottawa Senators,6,4,2,4,4,0,1,4,0
+127313,2023-12-09,2023020415,New York Islanders,Los Angeles Kings,5,1,1,3,3,1,0,1,2
+127645,2023-12-09,2023020413,Toronto Maple Leafs,Nashville Predators,4,4,0,4,4,0,0,4,0
+127939,2023-12-09,2023020414,Washington Capitals,New York Rangers,4,4,0,4,4,0,0,4,0
+128240,2023-12-09,2023020418,Seattle Kraken,Tampa Bay Lightning,7,1,2,3,2,2,0,2,1
+128517,2023-12-10,2023020425,Anaheim Ducks,Winnipeg Jets,6,2,1,4,4,1,0,2,2
+128817,2023-12-10,2023020422,Chicago Blackhawks,Washington Capitals,6,2,2,4,1,1,0,3,1
+129090,2023-12-10,2023020420,Columbus Blue Jackets,Florida Panthers,7,3,4,2,2,0,1,3,0
+129392,2023-12-10,2023020421,Edmonton Oilers,New Jersey Devils,5,3,2,3,1,0,0,3,0
+129657,2023-12-10,2023020424,New York Rangers,Los Angeles Kings,5,3,2,2,2,0,0,3,0
+129963,2023-12-10,2023020426,Seattle Kraken,Minnesota Wild,3,3,0,3,3,0,0,3,0
+130294,2023-12-10,2023020423,Montreal Canadiens,Nashville Predators,3,1,1,2,1,0,0,2,0
+130614,2023-12-10,2023020427,Vegas Golden Knights,San Jose Sharks,8,0,5,3,2,1,1,2,1
+130896,2023-12-11,2023020428,Buffalo Sabres,Arizona Coyotes,7,3,4,3,1,0,1,3,0
+131237,2023-12-11,2023020431,Colorado Avalanche,Calgary Flames,11,1,5,3,3,3,1,1,2
+131515,2023-12-11,2023020430,Dallas Stars,Detroit Red Wings,9,3,3,4,2,1,0,3,1
+131827,2023-12-11,2023020429,New York Islanders,Toronto Maple Leafs,7,1,3,3,1,1,1,2,1
+132177,2023-12-12,2023020434,Pittsburgh Penguins,Arizona Coyotes,6,2,2,3,3,2,0,2,1
+132480,2023-12-12,2023020440,Vegas Golden Knights,Calgary Flames,9,1,7,2,1,1,3,1,1
+132797,2023-12-12,2023020433,Ottawa Senators,Carolina Hurricanes,5,3,1,4,4,1,0,3,1
+133110,2023-12-12,2023020437,Edmonton Oilers,Chicago Blackhawks,5,3,1,4,4,1,0,3,1
+133417,2023-12-12,2023020436,St. Louis Blues,Detroit Red Wings,10,2,5,3,3,3,1,2,1
+133718,2023-12-12,2023020438,Seattle Kraken,Florida Panthers,4,4,0,4,4,0,0,4,0
+134044,2023-12-12,2023020435,Nashville Predators,Philadelphia Flyers,5,1,2,2,1,0,1,2,0
+134348,2023-12-12,2023020432,New York Rangers,Toronto Maple Leafs,10,4,4,3,3,0,0,4,0
+134654,2023-12-12,2023020441,San Jose Sharks,Winnipeg Jets,3,1,2,1,1,0,1,1,0
+134930,2023-12-12,2023020439,Vancouver Canucks,Tampa Bay Lightning,5,3,1,4,4,1,0,3,1
+135242,2023-12-13,2023020444,New York Islanders,Anaheim Ducks,7,1,2,3,2,2,0,2,1
+135548,2023-12-13,2023020443,New Jersey Devils,Boston Bruins,3,1,1,2,2,1,0,1,1
+135864,2023-12-13,2023020445,Colorado Avalanche,Buffalo Sabres,6,4,2,3,2,0,0,4,0
+136160,2023-12-13,2023020446,Los Angeles Kings,Winnipeg Jets,7,3,1,5,5,1,0,3,2
+136533,2023-12-13,2023020442,Montreal Canadiens,Pittsburgh Penguins,6,0,9,2,2,1,3,1,2
+136858,2023-12-14,2023020450,Minnesota Wild,Calgary Flames,4,0,4,2,1,2,1,1,1
+137148,2023-12-14,2023020447,Detroit Red Wings,Carolina Hurricanes,3,1,2,1,1,0,1,1,0
+137421,2023-12-14,2023020453,Seattle Kraken,Chicago Blackhawks,8,6,2,5,5,0,0,6,0
+137811,2023-12-14,2023020449,Toronto Maple Leafs,Columbus Blue Jackets,11,1,2,5,1,0,1,5,0
+138189,2023-12-14,2023020452,Edmonton Oilers,Tampa Bay Lightning,11,3,4,3,2,2,0,3,1
+138476,2023-12-14,2023020454,Vancouver Canucks,Florida Panthers,4,4,0,4,4,0,0,4,0
+138762,2023-12-14,2023020451,St. Louis Blues,Ottawa Senators,6,2,3,3,1,0,0,3,0
+139084,2023-12-14,2023020448,Philadelphia Flyers,Washington Capitals,6,0,6,2,1,2,2,1,1
+139395,2023-12-15,2023020456,New York Rangers,Anaheim Ducks,6,4,1,5,5,1,0,4,1
+139689,2023-12-15,2023020459,Arizona Coyotes,San Jose Sharks,1,1,0,1,1,0,0,1,0
+140059,2023-12-15,2023020457,New York Islanders,Boston Bruins,8,0,7,2,1,1,3,1,2
+140373,2023-12-15,2023020460,Vegas Golden Knights,Buffalo Sabres,7,3,2,4,4,2,0,3,1
+140676,2023-12-15,2023020455,Carolina Hurricanes,Nashville Predators,11,1,6,3,3,2,1,1,2
+140961,2023-12-15,2023020458,Dallas Stars,Ottawa Senators,9,1,5,3,3,1,0,1,2
+141233,2023-12-16,2023020470,Arizona Coyotes,Buffalo Sabres,2,2,0,2,2,0,0,2,0
+141535,2023-12-16,2023020462,Boston Bruins,New York Rangers,3,1,1,2,2,1,0,1,1
+141835,2023-12-16,2023020471,Calgary Flames,Tampa Bay Lightning,6,2,2,3,1,0,0,3,0
+142140,2023-12-16,2023020467,Winnipeg Jets,Colorado Avalanche,8,4,4,3,1,0,0,4,0
+142388,2023-12-16,2023020463,Columbus Blue Jackets,New Jersey Devils,9,3,6,2,1,0,0,3,0
+142710,2023-12-16,2023020469,St. Louis Blues,Dallas Stars,7,1,3,3,1,1,1,1,2
+143024,2023-12-16,2023020465,Philadelphia Flyers,Detroit Red Wings,1,1,0,1,1,0,0,1,0
+143374,2023-12-16,2023020472,Edmonton Oilers,Florida Panthers,6,4,2,3,2,0,0,4,0
+143689,2023-12-16,2023020473,Seattle Kraken,Los Angeles Kings,4,0,7,2,2,3,2,1,1
+144007,2023-12-16,2023020461,Minnesota Wild,Vancouver Canucks,2,0,2,1,1,0,1,1,0
+144306,2023-12-16,2023020464,Montreal Canadiens,New York Islanders,8,2,2,4,1,0,0,4,0
+144603,2023-12-16,2023020468,Nashville Predators,Washington Capitals,4,2,2,2,2,0,1,2,0
+144953,2023-12-16,2023020466,Toronto Maple Leafs,Pittsburgh Penguins,7,7,0,7,7,0,0,7,0
+145212,2023-12-17,2023020476,New Jersey Devils,Anaheim Ducks,6,4,2,3,3,0,0,4,0
+145495,2023-12-17,2023020475,Carolina Hurricanes,Washington Capitals,2,0,1,2,2,1,0,1,1
+145754,2023-12-17,2023020474,Chicago Blackhawks,Vancouver Canucks,7,1,4,3,1,1,1,2,1
+146064,2023-12-17,2023020477,Colorado Avalanche,San Jose Sharks,8,4,4,4,1,0,0,4,0
+146379,2023-12-17,2023020478,Vegas Golden Knights,Ottawa Senators,9,3,3,5,1,2,0,4,1
+146688,2023-12-18,2023020479,Detroit Red Wings,Anaheim Ducks,7,1,1,4,3,0,0,4,0
+146996,2023-12-18,2023020483,Calgary Flames,Florida Panthers,4,2,2,2,2,0,1,2,0
+147289,2023-12-18,2023020482,Dallas Stars,Seattle Kraken,7,1,4,2,1,0,1,2,0
+147573,2023-12-18,2023020480,Pittsburgh Penguins,Minnesota Wild,7,1,2,3,1,0,1,3,0
+147890,2023-12-18,2023020481,Winnipeg Jets,Montreal Canadiens,5,1,2,2,1,0,1,2,0
+148209,2023-12-19,2023020493,Arizona Coyotes,Ottawa Senators,7,1,1,4,4,1,0,1,3
+148548,2023-12-19,2023020484,Boston Bruins,Minnesota Wild,7,1,4,2,1,2,1,1,1
+148845,2023-12-19,2023020485,Buffalo Sabres,Columbus Blue Jackets,13,5,3,7,2,1,0,6,1
+149178,2023-12-19,2023020486,Carolina Hurricanes,Vegas Golden Knights,9,3,3,5,2,0,1,5,0
+149463,2023-12-19,2023020492,Chicago Blackhawks,Colorado Avalanche,5,1,2,2,2,2,0,1,1
+149742,2023-12-19,2023020490,New York Islanders,Edmonton Oilers,4,2,1,3,3,1,0,2,1
+150010,2023-12-19,2023020494,San Jose Sharks,Los Angeles Kings,5,3,1,4,1,0,0,4,0
+150322,2023-12-19,2023020491,Nashville Predators,Vancouver Canucks,7,3,3,3,1,0,0,4,0
+150647,2023-12-19,2023020487,New Jersey Devils,Philadelphia Flyers,5,1,3,2,2,1,1,1,1
+150964,2023-12-19,2023020489,Toronto Maple Leafs,New York Rangers,7,3,4,3,3,0,2,3,0
+151242,2023-12-19,2023020488,Tampa Bay Lightning,St. Louis Blues,7,5,1,6,1,0,0,6,0
+151556,2023-12-20,2023020495,Winnipeg Jets,Detroit Red Wings,7,3,4,3,1,0,1,3,0
+151886,2023-12-20,2023020497,Los Angeles Kings,Seattle Kraken,3,1,1,2,1,0,0,2,0
+152169,2023-12-20,2023020496,Washington Capitals,New York Islanders,5,1,4,1,1,0,2,1,0
+152456,2023-12-21,2023020508,Anaheim Ducks,Calgary Flames,3,3,0,3,3,0,0,3,0
+152727,2023-12-21,2023020509,San Jose Sharks,Arizona Coyotes,7,3,4,2,2,0,1,3,0
+153013,2023-12-21,2023020498,Buffalo Sabres,Toronto Maple Leafs,12,6,4,5,5,2,0,6,1
+153354,2023-12-21,2023020503,Pittsburgh Penguins,Carolina Hurricanes,2,0,2,1,1,0,1,1,0
+153687,2023-12-21,2023020507,Colorado Avalanche,Ottawa Senators,10,2,4,4,4,2,1,2,2
+153966,2023-12-21,2023020499,Columbus Blue Jackets,Washington Capitals,5,1,4,1,1,0,2,1,0
+154259,2023-12-21,2023020505,Dallas Stars,Vancouver Canucks,7,1,3,2,2,3,0,1,1
+154564,2023-12-21,2023020501,New Jersey Devils,Edmonton Oilers,9,3,2,4,4,2,0,3,1
+154844,2023-12-21,2023020500,Florida Panthers,St. Louis Blues,5,3,2,2,2,0,0,3,0
+155128,2023-12-21,2023020506,Minnesota Wild,Montreal Canadiens,7,1,4,2,1,0,2,2,0
+155404,2023-12-21,2023020502,Philadelphia Flyers,Nashville Predators,6,2,3,3,3,1,1,2,1
+155717,2023-12-21,2023020504,Tampa Bay Lightning,Vegas Golden Knights,9,1,3,4,1,1,1,2,2
+156053,2023-12-22,2023020512,Winnipeg Jets,Boston Bruins,6,4,2,4,1,0,0,4,0
+156338,2023-12-22,2023020513,Chicago Blackhawks,Montreal Canadiens,7,3,1,5,5,1,0,3,2
+156659,2023-12-22,2023020510,Detroit Red Wings,Philadelphia Flyers,12,0,4,5,3,2,0,4,1
+156943,2023-12-22,2023020511,New York Rangers,Edmonton Oilers,7,1,2,4,2,1,0,3,1
+157262,2023-12-23,2023020523,Anaheim Ducks,Seattle Kraken,5,1,3,2,1,0,0,2,0
+157499,2023-12-23,2023020525,Colorado Avalanche,Arizona Coyotes,5,3,1,4,1,0,0,4,0
+157793,2023-12-23,2023020518,Minnesota Wild,Boston Bruins,5,1,2,3,1,1,0,2,1
+158103,2023-12-23,2023020522,New York Rangers,Buffalo Sabres,7,1,4,2,1,0,2,2,0
+158450,2023-12-23,2023020526,Los Angeles Kings,Calgary Flames,8,2,6,2,1,0,2,2,0
+158767,2023-12-23,2023020516,Carolina Hurricanes,New York Islanders,9,1,7,2,1,0,1,2,0
+159079,2023-12-23,2023020524,St. Louis Blues,Chicago Blackhawks,12,2,4,5,5,2,0,2,3
+159337,2023-12-23,2023020517,Columbus Blue Jackets,Toronto Maple Leafs,5,3,2,3,3,0,1,3,0
+159642,2023-12-23,2023020515,Nashville Predators,Dallas Stars,5,1,1,3,3,1,0,1,2
+159887,2023-12-23,2023020519,New Jersey Devils,Detroit Red Wings,5,1,3,2,2,1,1,1,1
+160232,2023-12-23,2023020514,Florida Panthers,Vegas Golden Knights,6,2,3,2,2,1,1,2,1
+160546,2023-12-23,2023020520,Ottawa Senators,Pittsburgh Penguins,9,1,6,2,1,0,2,2,0
+160834,2023-12-23,2023020527,Vancouver Canucks,San Jose Sharks,11,3,6,2,2,0,1,3,0
+161150,2023-12-23,2023020521,Washington Capitals,Tampa Bay Lightning,2,0,2,2,2,2,0,1,1
+161438,2023-12-27,2023020540,Anaheim Ducks,Vegas Golden Knights,7,3,2,4,1,0,0,4,0
+161734,2023-12-27,2023020537,Arizona Coyotes,Colorado Avalanche,9,1,1,5,5,1,0,1,4
+162021,2023-12-27,2023020532,Buffalo Sabres,Boston Bruins,5,3,1,4,1,0,0,4,0
+162331,2023-12-27,2023020539,Calgary Flames,Seattle Kraken,3,1,2,1,1,0,1,1,0
+162624,2023-12-27,2023020535,Nashville Predators,Carolina Hurricanes,7,3,4,2,2,0,0,3,0
+162957,2023-12-27,2023020538,Chicago Blackhawks,Winnipeg Jets,3,1,2,1,1,0,1,1,0
+163278,2023-12-27,2023020528,New Jersey Devils,Columbus Blue Jackets,7,1,5,2,2,1,2,1,1
+163611,2023-12-27,2023020536,St. Louis Blues,Dallas Stars,3,1,1,2,1,0,0,2,0
+163884,2023-12-27,2023020534,Minnesota Wild,Detroit Red Wings,9,3,6,3,1,0,2,3,0
+164196,2023-12-27,2023020530,Tampa Bay Lightning,Florida Panthers,5,1,3,2,1,0,0,2,0
+164508,2023-12-27,2023020541,Los Angeles Kings,San Jose Sharks,6,4,1,5,5,1,0,4,1
+164806,2023-12-27,2023020533,New York Islanders,Pittsburgh Penguins,7,7,0,7,7,0,0,7,0
+165055,2023-12-27,2023020529,New York Rangers,Washington Capitals,6,4,1,5,5,1,0,4,1
+165420,2023-12-27,2023020531,Toronto Maple Leafs,Ottawa Senators,6,2,1,4,4,1,0,2,2
+165748,2023-12-28,2023020542,Carolina Hurricanes,Montreal Canadiens,8,2,4,2,2,0,2,2,0
+166017,2023-12-28,2023020545,San Jose Sharks,Edmonton Oilers,5,5,0,5,5,0,0,5,0
+166361,2023-12-28,2023020544,Vegas Golden Knights,Los Angeles Kings,5,1,3,2,1,0,0,2,0
+166634,2023-12-28,2023020543,Vancouver Canucks,Philadelphia Flyers,5,3,2,3,1,0,0,3,0
+166969,2023-12-29,2023020553,Anaheim Ducks,Arizona Coyotes,2,2,0,2,2,0,0,2,0
+167322,2023-12-29,2023020551,Dallas Stars,Chicago Blackhawks,9,1,3,4,1,1,1,2,2
+167581,2023-12-29,2023020552,St. Louis Blues,Colorado Avalanche,3,1,2,1,1,0,1,1,0
+167867,2023-12-29,2023020546,Columbus Blue Jackets,Toronto Maple Leafs,11,1,7,2,2,1,2,1,2
+168189,2023-12-29,2023020547,Detroit Red Wings,Nashville Predators,9,1,6,2,1,2,2,1,1
+168517,2023-12-29,2023020548,Florida Panthers,New York Rangers,7,1,4,2,1,0,2,2,0
+168828,2023-12-29,2023020549,Ottawa Senators,New Jersey Devils,8,4,3,5,1,1,0,4,1
+169111,2023-12-29,2023020550,New York Islanders,Washington Capitals,6,4,1,5,1,0,0,5,0
+169402,2023-12-29,2023020554,Seattle Kraken,Philadelphia Flyers,3,1,1,2,2,1,0,1,1
+169722,2023-12-30,2023020555,Winnipeg Jets,Minnesota Wild,6,2,2,3,1,0,0,3,0
+170006,2023-12-30,2023020556,Buffalo Sabres,Columbus Blue Jackets,5,1,3,2,2,1,1,1,1
+170309,2023-12-30,2023020557,Boston Bruins,New Jersey Devils,7,3,1,5,5,1,0,3,2
+170606,2023-12-30,2023020558,Florida Panthers,Montreal Canadiens,5,3,2,3,3,0,1,3,0
+170920,2023-12-30,2023020559,Pittsburgh Penguins,St. Louis Blues,6,2,4,2,1,0,1,2,0
+171227,2023-12-30,2023020560,Tampa Bay Lightning,New York Rangers,6,4,2,3,3,0,0,4,0
+171552,2023-12-30,2023020561,Toronto Maple Leafs,Carolina Hurricanes,5,1,3,2,1,0,0,2,0
+171902,2023-12-30,2023020562,Washington Capitals,Nashville Predators,4,0,2,2,2,0,1,2,0
+172216,2023-12-30,2023020563,Los Angeles Kings,Edmonton Oilers,4,0,5,2,2,1,2,1,2
+172532,2023-12-31,2023020564,Minnesota Wild,Winnipeg Jets,5,1,3,2,2,1,1,1,1
+172812,2023-12-31,2023020565,Detroit Red Wings,Boston Bruins,8,2,4,2,1,0,1,2,0
+173168,2023-12-31,2023020566,Ottawa Senators,Buffalo Sabres,6,4,2,3,3,0,0,4,0
+173524,2023-12-31,2023020567,Pittsburgh Penguins,New York Islanders,4,2,2,2,1,0,0,2,0
+173836,2023-12-31,2023020568,Tampa Bay Lightning,Montreal Canadiens,7,1,2,4,1,1,0,2,2
+174130,2023-12-31,2023020569,Anaheim Ducks,Edmonton Oilers,9,5,4,4,2,0,1,5,0
+174456,2023-12-31,2023020570,Calgary Flames,Philadelphia Flyers,7,1,4,3,1,1,0,2,1
+174761,2023-12-31,2023020571,Colorado Avalanche,San Jose Sharks,4,2,2,2,2,0,1,2,0
+175060,2023-12-31,2023020572,Dallas Stars,Chicago Blackhawks,9,7,2,5,3,0,0,7,0
+175403,2024-01-01,2023020573,Seattle Kraken,Vegas Golden Knights,3,3,0,3,3,0,0,3,0
+175672,2024-01-02,2023020574,Columbus Blue Jackets,Boston Bruins,5,3,2,3,3,0,1,3,0
+175948,2024-01-02,2023020575,New York Rangers,Carolina Hurricanes,7,5,2,4,4,0,0,5,0
+176276,2024-01-02,2023020576,Pittsburgh Penguins,Washington Capitals,7,1,1,4,3,0,0,4,0
+176574,2024-01-02,2023020577,Dallas Stars,Montreal Canadiens,7,1,2,4,2,1,0,3,1
+176882,2024-01-02,2023020578,Minnesota Wild,Calgary Flames,4,2,2,2,1,0,0,2,0
+177199,2024-01-02,2023020579,Nashville Predators,Chicago Blackhawks,3,3,0,3,3,0,0,3,0
+177502,2024-01-02,2023020580,Winnipeg Jets,Tampa Bay Lightning,6,2,2,4,1,1,0,3,1
+177837,2024-01-02,2023020581,Arizona Coyotes,Florida Panthers,5,3,2,3,3,0,1,3,0
+178155,2024-01-02,2023020582,Colorado Avalanche,New York Islanders,9,1,5,2,2,1,2,1,2
+178422,2024-01-02,2023020583,Edmonton Oilers,Philadelphia Flyers,7,3,2,3,3,0,1,3,0
+178730,2024-01-02,2023020584,Vancouver Canucks,Ottawa Senators,9,3,2,5,1,0,0,5,0
+179067,2024-01-02,2023020585,Los Angeles Kings,Toronto Maple Leafs,3,3,0,3,3,0,0,3,0
+179388,2024-01-02,2023020586,San Jose Sharks,Detroit Red Wings,8,2,4,3,3,2,1,2,1
+179725,2024-01-03,2023020587,Washington Capitals,New Jersey Devils,9,3,4,3,3,0,1,3,0
+180104,2024-01-03,2023020588,Anaheim Ducks,Toronto Maple Leafs,3,1,1,2,2,1,0,1,1
+180411,2024-01-04,2023020589,Boston Bruins,Pittsburgh Penguins,11,1,5,3,1,1,2,3,1
+180768,2024-01-04,2023020590,Montreal Canadiens,Buffalo Sabres,7,5,2,4,4,0,0,5,0
+181026,2024-01-04,2023020591,New York Rangers,Chicago Blackhawks,5,3,2,2,2,0,0,3,0
+181362,2024-01-04,2023020592,Philadelphia Flyers,Columbus Blue Jackets,4,0,1,3,3,1,0,1,2
+181690,2024-01-04,2023020593,Dallas Stars,Colorado Avalanche,9,1,5,3,3,1,1,1,2
+181973,2024-01-04,2023020594,Minnesota Wild,Tampa Bay Lightning,5,3,2,3,1,0,0,3,0
+182358,2024-01-04,2023020595,Nashville Predators,Calgary Flames,9,3,6,2,1,0,0,3,0
+182638,2024-01-04,2023020596,St. Louis Blues,Vancouver Canucks,3,1,1,2,2,1,0,1,1
+182922,2024-01-04,2023020597,Arizona Coyotes,New York Islanders,6,4,2,3,3,0,0,4,0
+183227,2024-01-04,2023020598,Seattle Kraken,Ottawa Senators,5,3,2,3,1,0,0,3,0
+183584,2024-01-04,2023020599,Vegas Golden Knights,Florida Panthers,5,3,1,4,4,1,0,3,1
+183893,2024-01-04,2023020600,Los Angeles Kings,Detroit Red Wings,6,0,3,3,2,1,1,2,2
+184171,2024-01-04,2023020601,San Jose Sharks,Winnipeg Jets,3,1,1,2,2,1,0,1,1
+184467,2024-01-05,2023020602,New Jersey Devils,Chicago Blackhawks,6,2,3,3,3,1,1,2,1
+184758,2024-01-05,2023020603,Washington Capitals,Carolina Hurricanes,8,4,1,6,6,1,0,4,2
+185088,2024-01-05,2023020604,Anaheim Ducks,Winnipeg Jets,4,2,1,3,3,1,0,2,1
+185431,2024-01-06,2023020605,Philadelphia Flyers,Calgary Flames,5,1,3,2,2,1,1,1,1
+185687,2024-01-06,2023020606,Colorado Avalanche,Florida Panthers,12,4,4,4,4,0,2,4,0
+185984,2024-01-06,2023020607,Boston Bruins,Tampa Bay Lightning,10,4,5,3,3,1,0,4,1
+186293,2024-01-06,2023020609,Columbus Blue Jackets,Minnesota Wild,7,1,5,2,2,1,2,1,1
+186646,2024-01-06,2023020610,Montreal Canadiens,New York Rangers,6,0,2,3,1,0,1,3,0
+186941,2024-01-06,2023020611,New Jersey Devils,Vancouver Canucks,10,2,4,3,1,0,0,3,0
+187300,2024-01-06,2023020612,Pittsburgh Penguins,Buffalo Sabres,4,2,2,2,2,0,1,2,0
+187594,2024-01-06,2023020613,San Jose Sharks,Toronto Maple Leafs,5,3,2,3,1,0,0,3,0
+187895,2024-01-06,2023020608,Carolina Hurricanes,St. Louis Blues,2,0,2,2,2,2,0,1,1
+188218,2024-01-06,2023020614,Dallas Stars,Nashville Predators,7,1,3,2,1,0,1,2,0
+188538,2024-01-06,2023020615,Edmonton Oilers,Ottawa Senators,4,2,2,2,1,0,0,2,0
+188863,2024-01-06,2023020616,Vegas Golden Knights,New York Islanders,7,3,4,3,1,0,1,3,0
+189165,2024-01-07,2023020617,Chicago Blackhawks,Calgary Flames,7,1,3,3,1,2,0,2,1
+189527,2024-01-07,2023020618,Washington Capitals,Los Angeles Kings,7,1,4,2,2,2,1,1,1
+189850,2024-01-07,2023020619,Arizona Coyotes,Winnipeg Jets,8,4,4,2,2,0,0,4,0
+190140,2024-01-07,2023020620,Anaheim Ducks,Detroit Red Wings,5,1,3,2,1,1,1,1,1
+190442,2024-01-08,2023020621,New York Rangers,Vancouver Canucks,9,3,5,3,1,1,0,3,1
+190786,2024-01-08,2023020622,Philadelphia Flyers,Pittsburgh Penguins,5,3,2,2,2,0,0,3,0
+191092,2024-01-08,2023020623,Minnesota Wild,Dallas Stars,4,4,0,4,4,0,0,4,0
+191470,2024-01-08,2023020624,Colorado Avalanche,Boston Bruins,6,0,5,2,1,1,2,1,1
+191780,2024-01-09,2023020625,Buffalo Sabres,Seattle Kraken,7,3,3,3,3,1,1,3,1
+192099,2024-01-09,2023020626,Tampa Bay Lightning,Los Angeles Kings,5,1,1,3,3,1,0,1,2
+192435,2024-01-09,2023020627,Toronto Maple Leafs,San Jose Sharks,8,6,2,4,3,0,0,6,0
+192725,2024-01-09,2023020628,New York Islanders,Vancouver Canucks,7,3,4,3,1,0,0,3,0
+193093,2024-01-09,2023020629,Nashville Predators,Anaheim Ducks,8,2,1,5,3,0,0,5,0
+193389,2024-01-09,2023020630,St. Louis Blues,Florida Panthers,6,4,1,5,5,1,0,4,1
+193679,2024-01-09,2023020631,Winnipeg Jets,Columbus Blue Jackets,5,5,0,5,5,0,0,5,0
+193949,2024-01-09,2023020632,Chicago Blackhawks,Edmonton Oilers,3,1,1,2,2,1,0,1,1
+194296,2024-01-09,2023020633,Arizona Coyotes,Boston Bruins,7,1,5,2,1,1,2,1,1
+194610,2024-01-09,2023020634,Calgary Flames,Ottawa Senators,9,3,5,4,4,1,2,3,1
+194927,2024-01-10,2023020635,Philadelphia Flyers,Montreal Canadiens,4,0,1,3,3,1,0,1,2
+195262,2024-01-10,2023020636,Dallas Stars,Minnesota Wild,9,5,4,3,2,0,0,5,0
+195565,2024-01-10,2023020637,Colorado Avalanche,Vegas Golden Knights,3,3,0,3,3,0,0,3,0
+195874,2024-01-11,2023020638,Buffalo Sabres,Ottawa Senators,8,2,4,3,1,0,1,3,0
+196167,2024-01-11,2023020639,Carolina Hurricanes,Anaheim Ducks,9,3,4,3,3,0,1,3,0
+196464,2024-01-11,2023020640,Detroit Red Wings,Edmonton Oilers,5,1,3,2,1,1,1,1,1
+196833,2024-01-11,2023020641,Florida Panthers,Los Angeles Kings,5,1,3,2,2,1,1,1,1
+197172,2024-01-11,2023020642,Montreal Canadiens,San Jose Sharks,5,1,3,2,1,0,0,2,0
+197509,2024-01-11,2023020643,Pittsburgh Penguins,Vancouver Canucks,7,1,4,2,1,0,1,2,0
+197787,2024-01-11,2023020644,Tampa Bay Lightning,New Jersey Devils,7,1,3,3,1,1,1,2,1
+198079,2024-01-11,2023020645,Washington Capitals,Seattle Kraken,5,3,2,2,2,0,0,3,0
+198401,2024-01-11,2023020646,New York Islanders,Toronto Maple Leafs,7,1,2,3,3,2,0,1,2
+198695,2024-01-11,2023020647,St. Louis Blues,New York Rangers,7,3,3,4,1,1,0,3,1
+198990,2024-01-11,2023020648,Winnipeg Jets,Chicago Blackhawks,3,1,1,2,2,1,0,1,1
+199298,2024-01-11,2023020649,Arizona Coyotes,Calgary Flames,8,4,4,3,2,0,0,4,0
+199611,2024-01-11,2023020650,Vegas Golden Knights,Boston Bruins,3,1,2,1,1,0,1,1,0
+199953,2024-01-12,2023020651,Dallas Stars,Nashville Predators,9,3,6,2,2,0,0,3,0
+200274,2024-01-12,2023020652,Minnesota Wild,Philadelphia Flyers,7,1,3,3,3,1,1,1,2
+200595,2024-01-13,2023020653,Washington Capitals,New York Rangers,5,1,3,2,2,1,1,1,1
+200884,2024-01-13,2023020654,Buffalo Sabres,Vancouver Canucks,1,1,0,1,1,0,0,1,0
+201215,2024-01-13,2023020655,Ottawa Senators,San Jose Sharks,9,1,4,3,1,2,1,2,1
+201521,2024-01-13,2023020656,Florida Panthers,New Jersey Devils,5,3,2,3,1,0,0,3,0
+201849,2024-01-13,2023020657,Carolina Hurricanes,Pittsburgh Penguins,5,1,2,2,1,0,1,2,0
+202145,2024-01-13,2023020658,Columbus Blue Jackets,Seattle Kraken,11,3,7,4,1,1,2,3,1
+202451,2024-01-13,2023020659,Detroit Red Wings,Los Angeles Kings,8,2,3,4,2,0,1,4,0
+202785,2024-01-13,2023020660,Montreal Canadiens,Edmonton Oilers,3,1,1,2,2,1,0,1,1
+203090,2024-01-13,2023020661,Tampa Bay Lightning,Anaheim Ducks,6,4,2,3,3,0,0,4,0
+203433,2024-01-13,2023020662,Toronto Maple Leafs,Colorado Avalanche,8,2,1,5,5,1,0,2,3
+203778,2024-01-13,2023020663,Winnipeg Jets,Philadelphia Flyers,2,2,0,2,2,0,0,2,0
+204107,2024-01-13,2023020664,Chicago Blackhawks,Dallas Stars,4,2,1,3,3,1,0,2,1
+204433,2024-01-13,2023020665,Minnesota Wild,Arizona Coyotes,6,6,0,6,6,0,0,6,0
+204789,2024-01-13,2023020666,Nashville Predators,New York Islanders,4,2,1,3,3,1,0,2,1
+205068,2024-01-13,2023020667,St. Louis Blues,Boston Bruins,7,1,6,1,1,0,3,1,0
+205426,2024-01-13,2023020668,Vegas Golden Knights,Calgary Flames,4,2,1,3,1,0,0,3,0
+205735,2024-01-14,2023020669,New York Rangers,Washington Capitals,3,1,1,2,1,0,0,2,0
+206090,2024-01-14,2023020670,Toronto Maple Leafs,Detroit Red Wings,6,2,3,3,3,1,1,2,1
+206399,2024-01-15,2023020672,Buffalo Sabres,San Jose Sharks,3,3,0,3,3,0,0,3,0
+206739,2024-01-15,2023020671,Boston Bruins,New Jersey Devils,3,3,0,3,3,0,0,3,0
+207038,2024-01-15,2023020673,Columbus Blue Jackets,Vancouver Canucks,6,0,5,2,2,1,2,1,1
+207365,2024-01-15,2023020674,Florida Panthers,Anaheim Ducks,9,1,3,3,3,1,1,1,2
+207663,2024-01-15,2023020677,Pittsburgh Penguins,Seattle Kraken,3,3,0,3,3,0,0,3,0
+207965,2024-01-15,2023020675,Carolina Hurricanes,Los Angeles Kings,7,3,4,3,1,0,1,3,0
+208259,2024-01-15,2023020676,Minnesota Wild,New York Islanders,5,5,0,5,5,0,0,5,0
+208611,2024-01-15,2023020680,Vegas Golden Knights,Nashville Predators,5,3,2,2,2,0,0,3,0
+208944,2024-01-15,2023020678,Montreal Canadiens,Colorado Avalanche,7,1,5,2,1,1,2,1,1
+209259,2024-01-15,2023020679,St. Louis Blues,Philadelphia Flyers,6,2,4,2,2,0,2,2,0
+209535,2024-01-16,2023020681,New York Rangers,Seattle Kraken,7,3,4,3,1,0,1,3,0
+209899,2024-01-16,2023020682,Ottawa Senators,Colorado Avalanche,11,3,5,5,5,1,2,3,2
+210191,2024-01-16,2023020683,Washington Capitals,Anaheim Ducks,2,2,0,2,2,0,0,2,0
+210507,2024-01-16,2023020684,Dallas Stars,Los Angeles Kings,6,4,2,3,3,0,0,4,0
+210853,2024-01-16,2023020685,Winnipeg Jets,New York Islanders,6,2,4,2,1,0,1,2,0
+211210,2024-01-16,2023020686,Chicago Blackhawks,San Jose Sharks,2,0,2,2,2,2,0,1,1
+211501,2024-01-16,2023020687,Calgary Flames,Arizona Coyotes,5,1,1,3,3,1,0,1,2
+211842,2024-01-16,2023020688,Edmonton Oilers,Toronto Maple Leafs,6,2,1,4,4,1,0,2,2
+212180,2024-01-17,2023020689,Florida Panthers,Detroit Red Wings,5,1,3,2,2,1,1,1,1
+212428,2024-01-17,2023020690,New Jersey Devils,Montreal Canadiens,5,1,2,2,1,0,1,2,0
+212672,2024-01-18,2023020691,Buffalo Sabres,Chicago Blackhawks,3,3,0,3,3,0,0,3,0
+213015,2024-01-18,2023020692,Boston Bruins,Colorado Avalanche,7,3,4,2,2,0,0,3,0
+213355,2024-01-18,2023020693,Ottawa Senators,Montreal Canadiens,8,4,3,4,1,0,0,5,0
+213661,2024-01-18,2023020694,Philadelphia Flyers,Dallas Stars,6,4,2,3,3,0,0,4,0
+213976,2024-01-18,2023020695,Tampa Bay Lightning,Minnesota Wild,10,4,5,3,3,1,0,4,1
+214230,2024-01-18,2023020696,Washington Capitals,St. Louis Blues,7,3,4,3,1,0,1,3,0
+214564,2024-01-18,2023020697,Calgary Flames,Toronto Maple Leafs,7,1,2,4,1,1,0,2,2
+214873,2024-01-18,2023020698,Edmonton Oilers,Seattle Kraken,6,2,1,4,4,1,0,2,2
+215215,2024-01-18,2023020699,Los Angeles Kings,Nashville Predators,3,1,2,1,1,0,1,1,0
+215487,2024-01-18,2023020700,Vancouver Canucks,Arizona Coyotes,3,1,2,1,1,0,1,1,0
+215780,2024-01-18,2023020701,Vegas Golden Knights,New York Rangers,6,4,2,4,1,0,0,4,0
+216076,2024-01-19,2023020702,Carolina Hurricanes,Detroit Red Wings,6,2,3,2,2,1,1,2,1
+216371,2024-01-19,2023020703,Columbus Blue Jackets,New Jersey Devils,5,3,1,4,4,1,0,3,1
+216709,2024-01-19,2023020704,Florida Panthers,Minnesota Wild,10,2,6,3,1,0,1,3,0
+217038,2024-01-19,2023020705,Chicago Blackhawks,New York Islanders,7,1,3,3,1,1,1,2,1
+217293,2024-01-20,2023020706,Buffalo Sabres,Tampa Bay Lightning,4,2,2,2,1,0,0,2,0
+217606,2024-01-20,2023020707,Philadelphia Flyers,Colorado Avalanche,11,3,6,3,2,0,0,3,0
+217942,2024-01-20,2023020708,Arizona Coyotes,Nashville Predators,5,1,3,2,1,0,0,2,0
+218256,2024-01-20,2023020709,Ottawa Senators,Winnipeg Jets,3,1,2,1,1,0,1,1,0
+218580,2024-01-20,2023020710,Boston Bruins,Montreal Canadiens,13,5,7,4,4,1,2,5,1
+218894,2024-01-20,2023020711,New Jersey Devils,Dallas Stars,8,4,1,6,2,0,0,6,0
+219252,2024-01-20,2023020712,Vancouver Canucks,Toronto Maple Leafs,10,2,4,3,2,0,2,3,0
+219540,2024-01-20,2023020713,St. Louis Blues,Washington Capitals,3,3,0,3,3,0,0,3,0
+219847,2024-01-20,2023020714,Calgary Flames,Edmonton Oilers,4,2,2,2,2,0,1,2,0
+220134,2024-01-20,2023020715,San Jose Sharks,Anaheim Ducks,8,2,6,2,1,0,1,2,0
+220437,2024-01-20,2023020716,Vegas Golden Knights,Pittsburgh Penguins,5,1,1,3,3,1,0,1,2
+220720,2024-01-20,2023020717,Los Angeles Kings,New York Rangers,3,1,2,1,1,0,1,1,0
+221035,2024-01-21,2023020718,Philadelphia Flyers,Ottawa Senators,8,2,3,4,4,1,0,2,2
+221348,2024-01-21,2023020719,Carolina Hurricanes,Minnesota Wild,7,3,3,3,3,1,1,3,1
+221644,2024-01-21,2023020720,Detroit Red Wings,Tampa Bay Lightning,3,1,1,2,2,1,0,1,1
+221985,2024-01-21,2023020721,New York Islanders,Dallas Stars,5,1,2,2,2,2,0,1,1
+222286,2024-01-21,2023020722,Anaheim Ducks,New York Rangers,7,3,1,5,5,1,0,3,2
+222583,2024-01-21,2023020723,Seattle Kraken,Toronto Maple Leafs,4,2,2,2,1,0,0,2,0
+222901,2024-01-22,2023020724,Boston Bruins,Winnipeg Jets,5,3,2,3,3,0,1,3,0
+223183,2024-01-22,2023020725,New Jersey Devils,Vegas Golden Knights,11,1,3,4,3,3,0,2,2
+223566,2024-01-22,2023020726,Nashville Predators,Florida Panthers,5,3,2,3,3,0,1,3,0
+223876,2024-01-22,2023020727,Arizona Coyotes,Pittsburgh Penguins,7,3,4,3,3,0,2,3,0
+224153,2024-01-22,2023020728,Vancouver Canucks,Chicago Blackhawks,2,2,0,2,2,0,0,2,0
+224482,2024-01-22,2023020729,Los Angeles Kings,San Jose Sharks,6,0,4,2,2,0,2,2,0
+224797,2024-01-23,2023020730,Detroit Red Wings,Dallas Stars,9,1,3,4,2,2,0,3,1
+225098,2024-01-23,2023020731,Montreal Canadiens,Ottawa Senators,5,3,2,3,1,0,0,3,0
+225383,2024-01-23,2023020732,Philadelphia Flyers,Tampa Bay Lightning,9,3,4,3,2,0,0,3,0
+225691,2024-01-23,2023020733,New York Islanders,Vegas Golden Knights,5,1,3,2,1,0,1,2,0
+225973,2024-01-23,2023020734,Minnesota Wild,Washington Capitals,8,2,3,3,2,0,0,4,0
+226305,2024-01-23,2023020735,Calgary Flames,St. Louis Blues,7,1,3,3,3,1,1,1,2
+226631,2024-01-23,2023020736,Edmonton Oilers,Columbus Blue Jackets,5,3,2,3,3,0,1,3,0
+226954,2024-01-23,2023020737,Anaheim Ducks,Buffalo Sabres,6,2,2,3,1,0,0,3,0
+227254,2024-01-23,2023020738,San Jose Sharks,New York Rangers,5,1,1,3,3,1,0,1,2
+227621,2024-01-24,2023020739,Florida Panthers,Arizona Coyotes,8,4,1,6,2,0,0,6,0
+227952,2024-01-24,2023020740,Toronto Maple Leafs,Winnipeg Jets,1,1,0,1,1,0,0,1,0
+228264,2024-01-24,2023020741,Boston Bruins,Carolina Hurricanes,5,1,2,2,1,0,1,2,0
+228580,2024-01-24,2023020742,Colorado Avalanche,Washington Capitals,8,4,3,4,1,0,0,5,0
+228888,2024-01-24,2023020743,Seattle Kraken,Chicago Blackhawks,8,4,4,2,2,0,0,4,0
+229184,2024-01-24,2023020744,Vancouver Canucks,St. Louis Blues,7,1,4,2,1,0,1,2,0
+229513,2024-01-24,2023020745,Los Angeles Kings,Buffalo Sabres,8,2,3,4,4,1,1,2,2
+229804,2024-01-25,2023020747,Detroit Red Wings,Philadelphia Flyers,3,3,0,3,3,0,0,3,0
+230118,2024-01-25,2023020748,Montreal Canadiens,New York Islanders,7,1,2,3,1,0,1,3,0
+230448,2024-01-25,2023020749,Ottawa Senators,Boston Bruins,5,1,2,2,1,0,1,2,0
+230747,2024-01-25,2023020750,Tampa Bay Lightning,Arizona Coyotes,9,3,5,4,1,0,1,4,0
+231043,2024-01-25,2023020746,Carolina Hurricanes,New Jersey Devils,5,1,1,3,2,0,0,3,0
+231325,2024-01-25,2023020751,Dallas Stars,Anaheim Ducks,7,1,4,2,2,2,1,1,1
+231642,2024-01-25,2023020752,Minnesota Wild,Nashville Predators,5,1,2,3,1,1,0,2,1
+231953,2024-01-25,2023020753,Calgary Flames,Columbus Blue Jackets,7,3,4,3,3,0,2,3,0
+232264,2024-01-25,2023020754,Edmonton Oilers,Chicago Blackhawks,3,3,0,3,3,0,0,3,0
+232584,2024-01-26,2023020755,New York Rangers,Vegas Golden Knights,7,3,4,3,1,0,1,3,0
+232986,2024-01-26,2023020756,Pittsburgh Penguins,Florida Panthers,4,0,5,2,1,1,2,1,1
+233261,2024-01-26,2023020757,Colorado Avalanche,Los Angeles Kings,6,4,2,3,2,0,0,4,0
+233535,2024-01-26,2023020758,Seattle Kraken,St. Louis Blues,7,1,2,3,3,2,0,1,2
+233828,2024-01-27,2023020759,Philadelphia Flyers,Boston Bruins,8,4,2,5,1,0,0,5,0
+234143,2024-01-27,2023020760,Dallas Stars,Washington Capitals,9,1,5,2,1,1,2,2,1
+234458,2024-01-27,2023020761,Edmonton Oilers,Nashville Predators,5,3,2,3,1,0,0,3,0
+234791,2024-01-27,2023020762,San Jose Sharks,Buffalo Sabres,7,3,1,5,5,1,0,3,2
+235110,2024-01-27,2023020763,Carolina Hurricanes,Arizona Coyotes,4,2,1,3,3,1,0,2,1
+235437,2024-01-27,2023020765,Ottawa Senators,New York Rangers,9,5,1,7,7,1,0,5,2
+235779,2024-01-27,2023020766,Pittsburgh Penguins,Montreal Canadiens,5,1,3,2,2,1,1,1,1
+236109,2024-01-27,2023020767,Tampa Bay Lightning,New Jersey Devils,9,3,6,2,2,0,0,3,0
+236387,2024-01-27,2023020768,Winnipeg Jets,Toronto Maple Leafs,6,2,2,4,1,1,0,3,1
+236706,2024-01-27,2023020769,New York Islanders,Florida Panthers,5,1,4,1,1,0,2,1,0
+236962,2024-01-27,2023020764,Detroit Red Wings,Vegas Golden Knights,7,3,2,3,3,0,1,3,0
+237247,2024-01-27,2023020770,Minnesota Wild,Anaheim Ducks,5,1,3,2,2,1,1,1,1
+237576,2024-01-27,2023020771,Calgary Flames,Chicago Blackhawks,1,1,0,1,1,0,0,1,0
+237898,2024-01-27,2023020772,Vancouver Canucks,Columbus Blue Jackets,9,1,3,4,4,1,0,1,3
+238190,2024-01-28,2023020773,St. Louis Blues,Los Angeles Kings,7,1,5,2,1,1,2,1,1
+238481,2024-01-28,2023020774,Seattle Kraken,Columbus Blue Jackets,6,2,2,3,1,0,0,3,0
+238829,2024-01-29,2023020775,Ottawa Senators,Nashville Predators,7,1,1,4,4,1,0,1,3
+239108,2024-01-30,2023020776,St. Louis Blues,Columbus Blue Jackets,1,1,0,1,1,0,0,1,0
+239402,2024-01-30,2023020777,San Jose Sharks,Seattle Kraken,2,2,0,2,2,0,0,2,0
+239693,2024-01-31,2023020778,Detroit Red Wings,Ottawa Senators,5,1,3,2,1,1,1,1,1
+239989,2024-01-31,2023020779,Nashville Predators,Los Angeles Kings,6,2,4,2,1,0,0,2,0
+240325,2024-01-31,2023020780,Anaheim Ducks,San Jose Sharks,5,1,2,2,2,2,0,1,1
+240606,2024-02-05,2023020781,New York Rangers,Colorado Avalanche,3,1,1,2,2,1,0,1,1
+240963,2024-02-05,2023020782,Toronto Maple Leafs,New York Islanders,5,1,4,1,1,0,2,1,0
+241287,2024-02-06,2023020783,Boston Bruins,Calgary Flames,5,3,2,2,2,0,0,3,0
+241648,2024-02-06,2023020784,Buffalo Sabres,Dallas Stars,3,1,2,1,1,0,1,1,0
+241939,2024-02-06,2023020785,Carolina Hurricanes,Vancouver Canucks,5,1,3,2,1,1,1,1,1
+242253,2024-02-06,2023020786,Florida Panthers,Philadelphia Flyers,3,1,1,2,2,1,0,1,1
+242539,2024-02-06,2023020788,Pittsburgh Penguins,Winnipeg Jets,3,3,0,3,3,0,0,3,0
+242845,2024-02-06,2023020789,Washington Capitals,Montreal Canadiens,7,3,4,3,1,0,0,3,0
+243157,2024-02-06,2023020787,New Jersey Devils,Colorado Avalanche,8,2,3,3,2,1,1,2,1
+243462,2024-02-06,2023020790,Vegas Golden Knights,Edmonton Oilers,4,2,1,3,3,1,0,2,1
+243710,2024-02-07,2023020791,New York Rangers,Tampa Bay Lightning,4,2,2,2,1,0,0,2,0
+244084,2024-02-07,2023020792,Toronto Maple Leafs,Dallas Stars,9,1,5,2,1,2,1,2,1
+244384,2024-02-07,2023020793,Chicago Blackhawks,Minnesota Wild,3,1,2,1,1,0,1,1,0
+244679,2024-02-08,2023020794,Boston Bruins,Vancouver Canucks,4,4,0,4,4,0,0,4,0
+245001,2024-02-08,2023020795,Florida Panthers,Washington Capitals,6,2,3,3,3,1,1,2,1
+245296,2024-02-08,2023020796,New Jersey Devils,Calgary Flames,8,2,5,3,1,1,0,2,1
+245589,2024-02-08,2023020797,Philadelphia Flyers,Winnipeg Jets,5,3,1,4,1,0,0,4,0
+245901,2024-02-08,2023020799,Carolina Hurricanes,Colorado Avalanche,7,3,2,3,2,0,0,3,0
+246198,2024-02-08,2023020798,New York Islanders,Tampa Bay Lightning,8,4,4,3,3,0,1,4,0
+246515,2024-02-08,2023020800,Arizona Coyotes,Vegas Golden Knights,5,1,3,2,1,0,0,2,0
+246844,2024-02-09,2023020801,Minnesota Wild,Pittsburgh Penguins,5,1,4,1,1,0,2,1,0
+247134,2024-02-09,2023020802,Chicago Blackhawks,New York Rangers,7,1,3,3,1,1,1,2,1
+247410,2024-02-09,2023020803,Anaheim Ducks,Edmonton Oilers,8,2,5,3,3,1,2,2,1
+247702,2024-02-10,2023020804,Buffalo Sabres,St. Louis Blues,4,2,2,2,2,0,1,2,0
+248002,2024-02-10,2023020805,Detroit Red Wings,Vancouver Canucks,7,1,2,3,3,2,0,1,2
+248295,2024-02-10,2023020806,Montreal Canadiens,Dallas Stars,5,1,2,3,1,1,0,2,1
+248629,2024-02-10,2023020807,New York Islanders,Calgary Flames,7,3,4,3,1,0,0,3,0
+248920,2024-02-10,2023020808,Boston Bruins,Washington Capitals,3,3,0,3,3,0,0,3,0
+249277,2024-02-10,2023020809,Florida Panthers,Colorado Avalanche,4,4,0,4,4,0,0,4,0
+249654,2024-02-10,2023020810,Carolina Hurricanes,New Jersey Devils,1,1,0,1,1,0,0,1,0
+249940,2024-02-10,2023020811,Columbus Blue Jackets,Tampa Bay Lightning,6,2,2,3,1,0,0,3,0
+250254,2024-02-10,2023020812,Ottawa Senators,Toronto Maple Leafs,8,2,5,2,1,1,1,2,1
+250579,2024-02-10,2023020813,Philadelphia Flyers,Seattle Kraken,5,1,4,1,1,0,2,1,0
+250879,2024-02-10,2023020814,Winnipeg Jets,Pittsburgh Penguins,3,1,1,2,1,0,0,2,0
+251208,2024-02-10,2023020815,Nashville Predators,Arizona Coyotes,9,1,4,3,3,2,1,1,2
+251526,2024-02-10,2023020816,Los Angeles Kings,Edmonton Oilers,4,4,0,4,4,0,0,4,0
+251828,2024-02-11,2023020817,Montreal Canadiens,St. Louis Blues,9,5,4,3,2,0,0,5,0
+252148,2024-02-11,2023020818,Washington Capitals,Vancouver Canucks,5,1,3,2,2,1,1,1,1
+252464,2024-02-12,2023020819,New Jersey Devils,Seattle Kraken,4,2,1,3,1,0,0,3,0
+252772,2024-02-12,2023020820,New York Rangers,Calgary Flames,2,2,0,2,2,0,0,2,0
+253097,2024-02-12,2023020821,Philadelphia Flyers,Arizona Coyotes,8,2,5,3,3,1,2,2,1
+253399,2024-02-12,2023020822,Vegas Golden Knights,Minnesota Wild,8,2,5,2,1,1,1,2,1
+253766,2024-02-13,2023020823,Boston Bruins,Tampa Bay Lightning,4,0,2,2,1,0,1,2,0
+254057,2024-02-13,2023020824,Buffalo Sabres,Los Angeles Kings,7,7,0,7,7,0,0,7,0
+254364,2024-02-13,2023020825,Montreal Canadiens,Anaheim Ducks,5,5,0,5,5,0,0,5,0
+254718,2024-02-13,2023020826,Ottawa Senators,Columbus Blue Jackets,9,3,3,4,2,1,0,3,1
+255044,2024-02-13,2023020827,Toronto Maple Leafs,St. Louis Blues,5,3,2,2,2,0,0,3,0
+255385,2024-02-13,2023020828,Washington Capitals,Colorado Avalanche,9,3,4,2,2,0,1,3,0
+255739,2024-02-13,2023020829,New York Islanders,Seattle Kraken,2,0,2,1,1,0,1,1,0
+256086,2024-02-13,2023020830,Dallas Stars,Carolina Hurricanes,6,2,4,2,2,0,2,2,0
+256464,2024-02-13,2023020831,Nashville Predators,New Jersey Devils,6,2,3,3,3,1,1,2,1
+256752,2024-02-13,2023020832,Chicago Blackhawks,Vancouver Canucks,6,2,3,2,1,0,0,3,0
+257079,2024-02-13,2023020833,Edmonton Oilers,Detroit Red Wings,12,4,6,4,1,0,1,4,0
+257347,2024-02-14,2023020834,Pittsburgh Penguins,Florida Panthers,7,3,3,4,1,0,0,4,0
+257636,2024-02-14,2023020835,Winnipeg Jets,San Jose Sharks,1,1,0,1,1,0,0,1,0
+257980,2024-02-14,2023020836,Arizona Coyotes,Minnesota Wild,4,2,2,2,1,0,0,2,0
+258299,2024-02-15,2023020837,Boston Bruins,Seattle Kraken,5,3,1,4,4,1,0,3,1
+258636,2024-02-15,2023020838,Buffalo Sabres,Florida Panthers,4,4,0,4,4,0,0,4,0
+258918,2024-02-15,2023020839,New Jersey Devils,Los Angeles Kings,3,1,2,1,1,0,1,1,0
+259241,2024-02-15,2023020840,New York Rangers,Montreal Canadiens,11,3,6,4,1,1,0,4,1
+259566,2024-02-15,2023020841,Ottawa Senators,Anaheim Ducks,6,4,2,4,1,0,0,4,0
+259916,2024-02-15,2023020842,Tampa Bay Lightning,Colorado Avalanche,9,3,3,4,4,3,0,3,1
+260309,2024-02-15,2023020843,Toronto Maple Leafs,Philadelphia Flyers,7,1,3,3,1,1,1,2,1
+260621,2024-02-15,2023020844,St. Louis Blues,Edmonton Oilers,9,3,4,4,1,2,0,3,1
+260936,2024-02-15,2023020847,Nashville Predators,Dallas Stars,11,7,4,5,3,0,0,7,0
+261191,2024-02-15,2023020845,Chicago Blackhawks,Pittsburgh Penguins,5,3,2,2,2,0,0,3,0
+261529,2024-02-15,2023020846,Calgary Flames,San Jose Sharks,9,3,4,3,1,1,0,4,1
+261807,2024-02-15,2023020848,Vancouver Canucks,Detroit Red Wings,5,3,2,3,1,0,0,3,0
+262111,2024-02-16,2023020849,Arizona Coyotes,Carolina Hurricanes,6,4,2,3,3,0,0,4,0
+262520,2024-02-17,2023020853,Boston Bruins,Los Angeles Kings,9,1,5,2,2,1,2,1,2
+262859,2024-02-17,2023020850,Dallas Stars,Edmonton Oilers,7,1,5,2,1,1,2,1,1
+263190,2024-02-17,2023020851,Chicago Blackhawks,Ottawa Senators,5,1,2,2,2,2,0,1,1
+263576,2024-02-17,2023020852,Calgary Flames,Detroit Red Wings,5,5,0,5,5,0,0,5,0
+263860,2024-02-17,2023020854,Minnesota Wild,Buffalo Sabres,5,1,2,2,2,2,0,1,1
+264172,2024-02-17,2023020855,St. Louis Blues,Nashville Predators,7,3,4,3,1,0,1,3,0
+264501,2024-02-17,2023020856,Tampa Bay Lightning,Florida Panthers,11,7,2,9,1,1,0,8,1
+264843,2024-02-17,2023020857,Montreal Canadiens,Washington Capitals,7,1,6,1,1,0,3,1,0
+265165,2024-02-17,2023020858,Toronto Maple Leafs,Anaheim Ducks,11,7,4,5,1,0,0,7,0
+265554,2024-02-17,2023020859,New Jersey Devils,Philadelphia Flyers,9,3,6,2,1,0,0,3,0
+265877,2024-02-17,2023020860,Vancouver Canucks,Winnipeg Jets,6,2,3,2,2,1,1,2,1
+266211,2024-02-17,2023020861,San Jose Sharks,Columbus Blue Jackets,7,1,3,3,1,1,1,2,1
+266529,2024-02-17,2023020862,Vegas Golden Knights,Carolina Hurricanes,4,2,1,3,3,1,0,2,1
+266902,2024-02-18,2023020863,New York Islanders,New York Rangers,11,1,4,4,3,2,0,1,3
+267200,2024-02-18,2023020864,Colorado Avalanche,Arizona Coyotes,7,1,4,2,2,2,1,1,1
+267550,2024-02-18,2023020865,Pittsburgh Penguins,Los Angeles Kings,3,1,1,2,2,1,0,1,1
+267810,2024-02-19,2023020866,Buffalo Sabres,Anaheim Ducks,7,1,5,2,1,1,2,1,1
+268214,2024-02-19,2023020867,Boston Bruins,Dallas Stars,6,0,6,2,2,2,2,1,1
+268525,2024-02-19,2023020868,St. Louis Blues,Toronto Maple Leafs,6,2,4,2,1,0,1,2,0
+268821,2024-02-19,2023020869,Minnesota Wild,Vancouver Canucks,17,3,7,6,2,1,0,3,3
+269123,2024-02-19,2023020870,Seattle Kraken,Detroit Red Wings,7,1,6,1,1,0,3,1,0
+269420,2024-02-19,2023020871,Arizona Coyotes,Edmonton Oilers,9,3,4,4,4,2,1,3,1
+269748,2024-02-19,2023020872,Calgary Flames,Winnipeg Jets,9,3,2,5,5,2,0,3,2
+270062,2024-02-19,2023020873,San Jose Sharks,Vegas Golden Knights,4,4,0,4,4,0,0,4,0
+270363,2024-02-19,2023020874,Carolina Hurricanes,Chicago Blackhawks,9,3,4,4,1,0,0,4,0
+270730,2024-02-19,2023020875,Tampa Bay Lightning,Ottawa Senators,6,2,3,3,1,0,0,3,0
+271082,2024-02-20,2023020876,Florida Panthers,Ottawa Senators,5,1,2,2,1,0,1,2,0
+271416,2024-02-20,2023020877,New York Rangers,Dallas Stars,4,2,2,2,1,0,0,2,0
+271753,2024-02-20,2023020878,Pittsburgh Penguins,New York Islanders,9,1,5,3,1,1,1,2,1
+272061,2024-02-20,2023020879,Washington Capitals,New Jersey Devils,8,4,4,4,1,0,1,4,0
+272404,2024-02-20,2023020880,Winnipeg Jets,Minnesota Wild,9,3,4,3,1,0,0,4,0
+272691,2024-02-20,2023020881,Colorado Avalanche,Vancouver Canucks,4,2,1,3,3,1,0,2,1
+273030,2024-02-20,2023020882,Vegas Golden Knights,Nashville Predators,8,2,4,3,1,0,1,3,0
+273316,2024-02-20,2023020883,Los Angeles Kings,Columbus Blue Jackets,6,4,2,3,3,0,0,4,0
+273616,2024-02-21,2023020884,Montreal Canadiens,Buffalo Sabres,5,1,3,2,2,1,1,1,1
+273917,2024-02-21,2023020885,Chicago Blackhawks,Philadelphia Flyers,4,2,2,2,2,0,1,2,0
+274199,2024-02-21,2023020886,Anaheim Ducks,Columbus Blue Jackets,11,3,2,4,3,0,1,4,0
+274529,2024-02-21,2023020887,Arizona Coyotes,Toronto Maple Leafs,9,3,4,3,2,0,0,3,0
+274932,2024-02-21,2023020888,Edmonton Oilers,Boston Bruins,11,1,6,3,1,0,3,3,0
+275254,2024-02-22,2023020889,Carolina Hurricanes,Florida Panthers,1,1,0,1,1,0,0,1,0
+275540,2024-02-22,2023020890,Detroit Red Wings,Colorado Avalanche,3,1,1,2,2,1,0,1,1
+275898,2024-02-22,2023020891,New Jersey Devils,New York Rangers,6,4,1,5,1,0,0,5,0
+276219,2024-02-22,2023020892,Ottawa Senators,Dallas Stars,5,3,2,3,3,0,1,3,0
+276524,2024-02-22,2023020893,Pittsburgh Penguins,Montreal Canadiens,5,3,1,4,4,1,0,3,1
+276803,2024-02-22,2023020894,Tampa Bay Lightning,Washington Capitals,8,2,4,2,2,0,1,2,0
+277093,2024-02-22,2023020895,St. Louis Blues,New York Islanders,4,4,0,4,4,0,0,4,0
+277426,2024-02-22,2023020896,Calgary Flames,Boston Bruins,5,1,4,1,1,0,2,1,0
+277692,2024-02-22,2023020897,Seattle Kraken,Vancouver Canucks,7,3,3,3,3,1,1,3,1
+278020,2024-02-22,2023020898,Vegas Golden Knights,Toronto Maple Leafs,10,4,4,4,1,0,0,5,0
+278307,2024-02-22,2023020899,Los Angeles Kings,Nashville Predators,5,3,2,3,3,0,1,3,0
+278566,2024-02-23,2023020900,Columbus Blue Jackets,Buffalo Sabres,3,1,1,2,2,1,0,1,1
+278864,2024-02-23,2023020901,Chicago Blackhawks,Winnipeg Jets,5,1,2,2,1,0,1,2,0
+279203,2024-02-23,2023020902,Edmonton Oilers,Minnesota Wild,6,2,4,2,1,0,1,2,0
+279479,2024-02-24,2023020909,Detroit Red Wings,St. Louis Blues,7,5,2,4,2,0,0,5,0
+279764,2024-02-24,2023020903,New Jersey Devils,Montreal Canadiens,7,1,4,3,1,1,1,2,1
+280052,2024-02-24,2023020904,New York Islanders,Tampa Bay Lightning,6,2,2,3,1,0,0,3,0
+280403,2024-02-24,2023020905,Philadelphia Flyers,New York Rangers,3,1,2,1,1,0,1,1,0
+280764,2024-02-24,2023020906,Florida Panthers,Washington Capitals,5,1,2,2,2,2,0,1,1
+281052,2024-02-24,2023020908,Colorado Avalanche,Toronto Maple Leafs,7,1,3,3,1,1,1,1,2
+281404,2024-02-24,2023020910,Ottawa Senators,Vegas Golden Knights,6,0,3,3,1,1,1,1,2
+281758,2024-02-24,2023020911,Vancouver Canucks,Boston Bruins,5,1,1,3,3,1,0,1,2
+282058,2024-02-24,2023020907,Carolina Hurricanes,Dallas Stars,3,1,2,1,1,0,1,1,0
+282426,2024-02-24,2023020912,Edmonton Oilers,Calgary Flames,9,3,3,3,1,0,0,4,0
+282750,2024-02-24,2023020913,Seattle Kraken,Minnesota Wild,7,3,2,5,1,1,0,4,1
+283043,2024-02-24,2023020914,San Jose Sharks,Nashville Predators,6,2,4,2,1,0,0,2,0
+283381,2024-02-24,2023020915,Los Angeles Kings,Anaheim Ducks,4,0,4,3,1,1,1,2,1
+283653,2024-02-25,2023020916,New Jersey Devils,Tampa Bay Lightning,5,3,2,2,2,0,0,3,0
+283978,2024-02-25,2023020917,Pittsburgh Penguins,Philadelphia Flyers,13,1,8,2,1,1,2,2,1
+284314,2024-02-25,2023020918,Buffalo Sabres,Carolina Hurricanes,4,0,3,2,2,1,1,1,1
+284652,2024-02-25,2023020919,Columbus Blue Jackets,New York Rangers,6,2,4,2,2,0,2,2,0
+284971,2024-02-25,2023020920,Chicago Blackhawks,Detroit Red Wings,5,1,2,2,2,2,0,1,1
+285292,2024-02-25,2023020921,Winnipeg Jets,Arizona Coyotes,7,1,4,2,1,0,2,2,0
+285623,2024-02-25,2023020922,Anaheim Ducks,Nashville Predators,6,2,4,2,1,0,1,2,0
+285914,2024-02-26,2023020923,Washington Capitals,Ottawa Senators,9,3,4,2,2,0,1,3,0
+286256,2024-02-26,2023020924,Dallas Stars,New York Islanders,5,1,4,1,1,0,2,1,0
+286608,2024-02-26,2023020925,Edmonton Oilers,Los Angeles Kings,6,2,3,3,3,1,1,2,1
+286930,2024-02-26,2023020926,Seattle Kraken,Boston Bruins,6,0,5,2,1,1,2,1,1
+287215,2024-02-27,2023020927,Detroit Red Wings,Washington Capitals,11,5,6,2,2,0,0,5,0
+287586,2024-02-27,2023020928,Florida Panthers,Buffalo Sabres,5,1,2,3,1,1,0,2,1
+287890,2024-02-27,2023020929,Montreal Canadiens,Arizona Coyotes,6,2,4,2,1,0,0,2,0
+288214,2024-02-27,2023020930,Philadelphia Flyers,Tampa Bay Lightning,8,4,4,3,2,0,1,4,0
+288577,2024-02-27,2023020931,Toronto Maple Leafs,Vegas Golden Knights,8,4,4,2,2,0,0,4,0
+288861,2024-02-27,2023020932,Minnesota Wild,Carolina Hurricanes,5,1,3,2,2,1,1,1,1
+289204,2024-02-27,2023020933,Nashville Predators,Ottawa Senators,5,3,2,2,2,0,0,3,0
+289529,2024-02-27,2023020934,Winnipeg Jets,St. Louis Blues,6,2,4,2,1,0,0,2,0
+289870,2024-02-27,2023020935,Calgary Flames,Los Angeles Kings,6,2,3,2,2,1,1,2,1
+290146,2024-02-27,2023020936,Colorado Avalanche,Dallas Stars,6,4,1,5,5,1,0,4,1
+290477,2024-02-27,2023020937,Vancouver Canucks,Pittsburgh Penguins,7,1,3,2,2,1,1,1,2
+290789,2024-02-27,2023020938,San Jose Sharks,New Jersey Devils,9,5,2,7,1,1,0,6,1
+291103,2024-02-28,2023020939,New York Rangers,Columbus Blue Jackets,5,3,2,2,2,0,0,3,0
+291465,2024-02-28,2023020940,Edmonton Oilers,St. Louis Blues,5,1,1,3,3,1,0,1,2
+291838,2024-02-29,2023020941,Boston Bruins,Vegas Golden Knights,9,1,4,3,1,0,1,3,0
+292097,2024-02-29,2023020942,Columbus Blue Jackets,Carolina Hurricanes,6,2,4,2,1,0,0,2,0
+292385,2024-02-29,2023020943,Detroit Red Wings,New York Islanders,8,2,4,2,2,0,2,2,0
+292750,2024-02-29,2023020944,Florida Panthers,Montreal Canadiens,6,0,6,2,1,2,2,1,1
+293032,2024-02-29,2023020945,Tampa Bay Lightning,Buffalo Sabres,5,1,3,2,2,1,1,1,1
+293395,2024-02-29,2023020946,Toronto Maple Leafs,Arizona Coyotes,6,2,2,3,1,0,0,3,0
+293732,2024-02-29,2023020947,Dallas Stars,Winnipeg Jets,5,3,2,3,1,0,0,3,0
+294024,2024-02-29,2023020948,Nashville Predators,Minnesota Wild,7,5,1,6,6,1,0,5,1
+294291,2024-02-29,2023020949,Chicago Blackhawks,Colorado Avalanche,5,5,0,5,5,0,0,5,0
+294592,2024-02-29,2023020950,Seattle Kraken,Pittsburgh Penguins,2,2,0,2,2,0,0,2,0
+294874,2024-02-29,2023020951,Vancouver Canucks,Los Angeles Kings,6,4,2,3,3,0,0,4,0
+295187,2024-02-29,2023020952,San Jose Sharks,Anaheim Ducks,10,2,5,3,1,1,1,2,1
+295554,2024-03-01,2023020953,Ottawa Senators,Arizona Coyotes,8,2,2,3,2,0,1,3,0
+295882,2024-03-01,2023020954,Washington Capitals,Philadelphia Flyers,7,3,1,5,5,1,0,3,2
+296228,2024-03-01,2023020955,Anaheim Ducks,New Jersey Devils,7,1,5,2,1,0,1,2,0
+296557,2024-03-02,2023020956,Carolina Hurricanes,Winnipeg Jets,8,2,1,5,5,1,0,2,3
+296888,2024-03-02,2023020961,Detroit Red Wings,Florida Panthers,4,4,0,4,4,0,0,4,0
+297167,2024-03-02,2023020958,Seattle Kraken,Edmonton Oilers,3,1,1,2,1,0,0,2,0
+297487,2024-03-02,2023020959,Nashville Predators,Colorado Avalanche,6,4,2,4,4,0,1,4,0
+297794,2024-03-02,2023020967,St. Louis Blues,Minnesota Wild,4,2,2,2,2,0,1,2,0
+298124,2024-03-02,2023020960,Buffalo Sabres,Vegas Golden Knights,9,5,2,5,5,0,1,5,0
+298449,2024-03-02,2023020962,Philadelphia Flyers,Ottawa Senators,6,2,4,2,1,0,1,2,0
+298774,2024-03-02,2023020963,Tampa Bay Lightning,Montreal Canadiens,6,0,5,2,2,1,2,1,2
+299195,2024-03-02,2023020964,Toronto Maple Leafs,New York Rangers,6,0,5,2,2,3,1,1,1
+299463,2024-03-02,2023020957,New York Islanders,Boston Bruins,6,4,1,5,1,0,0,5,0
+299730,2024-03-02,2023020965,Chicago Blackhawks,Columbus Blue Jackets,7,3,4,2,1,0,0,3,0
+300116,2024-03-02,2023020966,Dallas Stars,San Jose Sharks,4,0,5,2,1,1,2,1,1
+300450,2024-03-02,2023020968,Calgary Flames,Pittsburgh Penguins,7,1,3,3,3,1,0,1,2
+300786,2024-03-03,2023020969,Washington Capitals,Arizona Coyotes,7,3,4,2,1,0,0,3,0
+301085,2024-03-03,2023020970,Los Angeles Kings,New Jersey Devils,6,4,1,5,5,1,0,4,1
+301385,2024-03-03,2023020971,Buffalo Sabres,Winnipeg Jets,7,3,3,4,4,1,1,3,1
+301662,2024-03-03,2023020972,Minnesota Wild,San Jose Sharks,7,1,3,2,2,1,1,1,2
+301930,2024-03-03,2023020973,Anaheim Ducks,Vancouver Canucks,3,1,2,1,1,0,1,1,0
+302267,2024-03-03,2023020974,Edmonton Oilers,Pittsburgh Penguins,7,5,1,6,1,0,0,6,0
+302575,2024-03-04,2023020975,Columbus Blue Jackets,Vegas Golden Knights,9,3,4,2,2,0,1,3,0
+302882,2024-03-04,2023020976,New York Rangers,Florida Panthers,6,2,3,2,2,1,1,2,1
+303210,2024-03-04,2023020977,Philadelphia Flyers,St. Louis Blues,2,0,3,2,1,1,1,1,1
+303582,2024-03-04,2023020978,Toronto Maple Leafs,Boston Bruins,5,3,2,3,1,0,0,3,0
+303905,2024-03-04,2023020979,Colorado Avalanche,Chicago Blackhawks,5,5,0,5,5,0,0,5,0
+304289,2024-03-04,2023020980,Calgary Flames,Seattle Kraken,6,2,4,2,1,0,1,2,0
+304598,2024-03-05,2023020982,New Jersey Devils,Florida Panthers,8,2,4,2,1,0,1,2,0
+304949,2024-03-05,2023020983,Pittsburgh Penguins,Columbus Blue Jackets,8,2,4,2,2,0,2,2,0
+305256,2024-03-05,2023020981,Boston Bruins,Edmonton Oilers,3,1,1,2,2,1,0,1,1
+305521,2024-03-05,2023020984,New York Islanders,St. Louis Blues,6,2,1,4,4,1,0,2,2
+305827,2024-03-05,2023020985,Nashville Predators,Montreal Canadiens,7,1,3,2,2,1,1,1,2
+306121,2024-03-05,2023020986,Winnipeg Jets,Seattle Kraken,7,1,4,2,2,2,1,1,1
+306463,2024-03-05,2023020987,Arizona Coyotes,Chicago Blackhawks,7,3,4,3,3,0,2,3,0
+306771,2024-03-05,2023020988,Los Angeles Kings,Vancouver Canucks,3,1,1,2,2,1,0,1,1
+307101,2024-03-05,2023020989,San Jose Sharks,Dallas Stars,13,1,5,4,4,1,2,1,3
+307436,2024-03-06,2023020990,Toronto Maple Leafs,Buffalo Sabres,3,1,2,1,1,0,1,1,0
+307773,2024-03-06,2023020991,Colorado Avalanche,Detroit Red Wings,9,5,3,6,6,1,1,5,1
+308067,2024-03-06,2023020992,Anaheim Ducks,Ottawa Senators,3,1,1,2,2,1,0,1,1
+308441,2024-03-07,2023020993,Boston Bruins,Toronto Maple Leafs,5,3,2,2,2,0,0,3,0
+308778,2024-03-07,2023020994,Carolina Hurricanes,Montreal Canadiens,5,3,1,4,4,1,0,3,1
+309063,2024-03-07,2023020995,Columbus Blue Jackets,Edmonton Oilers,6,2,2,3,1,0,0,3,0
+309405,2024-03-07,2023020996,Florida Panthers,Philadelphia Flyers,3,1,2,1,1,0,1,1,0
+309706,2024-03-07,2023020997,New Jersey Devils,St. Louis Blues,5,3,2,2,2,0,0,3,0
+310037,2024-03-07,2023020998,Pittsburgh Penguins,Washington Capitals,6,6,0,6,6,0,0,6,0
+310339,2024-03-07,2023020999,Tampa Bay Lightning,Calgary Flames,9,3,5,3,1,0,1,4,0
+310661,2024-03-07,2023021000,Nashville Predators,Buffalo Sabres,6,2,3,3,1,0,1,3,0
+310991,2024-03-07,2023021001,Arizona Coyotes,Minnesota Wild,7,3,2,4,4,2,0,3,1
+311310,2024-03-07,2023021002,Vegas Golden Knights,Vancouver Canucks,4,2,2,2,1,0,0,2,0
+311636,2024-03-07,2023021003,Los Angeles Kings,Ottawa Senators,7,1,5,2,1,1,2,1,1
+311935,2024-03-07,2023021004,San Jose Sharks,New York Islanders,9,5,4,4,4,0,0,5,0
+312243,2024-03-08,2023021005,Arizona Coyotes,Detroit Red Wings,4,4,0,4,4,0,0,4,0
+312599,2024-03-08,2023021006,Colorado Avalanche,Minnesota Wild,3,1,2,1,1,0,1,1,0
+312918,2024-03-08,2023021007,Anaheim Ducks,Dallas Stars,8,4,4,4,1,0,0,4,0
+313211,2024-03-08,2023021008,Seattle Kraken,Winnipeg Jets,3,3,0,3,3,0,0,3,0
+313510,2024-03-09,2023021009,Buffalo Sabres,Edmonton Oilers,4,0,3,3,1,1,1,1,2
+313835,2024-03-09,2023021010,Columbus Blue Jackets,Nashville Predators,3,1,2,1,1,0,1,1,0
+314143,2024-03-09,2023021011,New Jersey Devils,Carolina Hurricanes,6,2,4,2,1,0,1,2,0
+314506,2024-03-09,2023021012,Boston Bruins,Pittsburgh Penguins,6,4,2,3,2,0,0,4,0
+314869,2024-03-09,2023021013,Florida Panthers,Calgary Flames,6,4,2,4,4,0,1,4,0
+315200,2024-03-09,2023021014,Montreal Canadiens,Toronto Maple Leafs,5,1,3,2,1,1,1,1,1
+315511,2024-03-09,2023021015,San Jose Sharks,Ottawa Senators,3,1,2,1,1,0,1,1,0
+315828,2024-03-09,2023021016,Tampa Bay Lightning,Philadelphia Flyers,7,7,0,7,7,0,0,7,0
+316126,2024-03-09,2023021017,Washington Capitals,Chicago Blackhawks,5,3,1,4,1,0,0,4,0
+316419,2024-03-09,2023021018,New York Rangers,St. Louis Blues,4,4,0,4,4,0,0,4,0
+316715,2024-03-09,2023021019,Vancouver Canucks,Winnipeg Jets,5,5,0,5,5,0,0,5,0
+317049,2024-03-09,2023021020,Vegas Golden Knights,Detroit Red Wings,8,2,4,2,2,0,2,2,0
+317351,2024-03-09,2023021021,Los Angeles Kings,Dallas Stars,5,3,1,4,4,1,0,3,1
+317675,2024-03-10,2023021022,Pittsburgh Penguins,Edmonton Oilers,4,4,0,4,4,0,0,4,0
+317996,2024-03-10,2023021023,Minnesota Wild,Nashville Predators,7,1,4,2,1,2,1,1,1
+318369,2024-03-10,2023021024,Carolina Hurricanes,Calgary Flames,9,5,4,4,1,0,0,5,0
+318702,2024-03-10,2023021025,Chicago Blackhawks,Arizona Coyotes,11,3,5,3,2,1,1,3,2
+318981,2024-03-10,2023021026,Anaheim Ducks,New York Islanders,7,5,2,3,3,0,0,5,0
+319284,2024-03-11,2023021027,Boston Bruins,St. Louis Blues,6,4,2,4,1,0,0,4,0
+319547,2024-03-11,2023021028,New York Rangers,New Jersey Devils,4,2,2,2,1,0,0,2,0
+319890,2024-03-11,2023021029,Winnipeg Jets,Washington Capitals,3,3,0,3,3,0,0,3,0
+320178,2024-03-11,2023021030,Los Angeles Kings,New York Islanders,3,3,0,3,3,0,0,3,0
+320496,2024-03-12,2023021031,Buffalo Sabres,Detroit Red Wings,10,4,5,4,1,0,0,5,0
+320824,2024-03-12,2023021032,Carolina Hurricanes,New York Rangers,1,1,0,1,1,0,0,1,0
+321153,2024-03-12,2023021033,Montreal Canadiens,Columbus Blue Jackets,3,3,0,3,3,0,0,3,0
+321490,2024-03-12,2023021034,Ottawa Senators,Pittsburgh Penguins,3,1,2,1,1,0,1,1,0
+321829,2024-03-12,2023021035,Philadelphia Flyers,San Jose Sharks,5,1,4,1,1,0,2,1,0
+322172,2024-03-12,2023021036,Dallas Stars,Florida Panthers,7,1,1,4,4,1,0,1,3
+322472,2024-03-12,2023021037,Minnesota Wild,Arizona Coyotes,5,3,2,3,3,0,1,3,0
+322756,2024-03-12,2023021038,Chicago Blackhawks,Anaheim Ducks,9,5,3,6,6,1,1,5,1
+323115,2024-03-12,2023021039,Calgary Flames,Colorado Avalanche,8,4,2,5,5,2,0,4,1
+323456,2024-03-12,2023021040,Seattle Kraken,Vegas Golden Knights,9,1,3,3,3,3,0,1,2
+323793,2024-03-13,2023021041,St. Louis Blues,Los Angeles Kings,4,2,1,3,1,0,0,3,0
+324149,2024-03-13,2023021042,Winnipeg Jets,Nashville Predators,6,2,1,4,2,0,0,4,0
+324471,2024-03-13,2023021043,Edmonton Oilers,Washington Capitals,9,5,2,5,5,0,1,5,0
+324754,2024-03-13,2023021044,Vancouver Canucks,Colorado Avalanche,7,1,1,4,4,1,0,1,3
+325048,2024-03-14,2023021045,Buffalo Sabres,New York Islanders,4,4,0,4,4,0,0,4,0
+325375,2024-03-14,2023021046,Carolina Hurricanes,Florida Panthers,4,4,0,4,4,0,0,4,0
+325709,2024-03-14,2023021047,Columbus Blue Jackets,Ottawa Senators,4,0,3,3,1,1,1,1,2
+326017,2024-03-14,2023021048,Detroit Red Wings,Arizona Coyotes,5,3,2,3,3,0,1,3,0
+326286,2024-03-14,2023021049,Montreal Canadiens,Boston Bruins,3,1,2,1,1,0,1,1,0
+326642,2024-03-14,2023021051,Pittsburgh Penguins,San Jose Sharks,9,3,4,3,3,2,1,3,1
+326969,2024-03-14,2023021052,Tampa Bay Lightning,New York Rangers,9,3,3,4,4,1,1,3,2
+327329,2024-03-14,2023021050,Philadelphia Flyers,Toronto Maple Leafs,8,4,3,3,1,0,0,5,0
+327651,2024-03-14,2023021053,Dallas Stars,New Jersey Devils,8,4,3,5,5,1,1,4,1
+327883,2024-03-14,2023021054,Minnesota Wild,Anaheim Ducks,2,2,0,2,2,0,0,2,0
+328243,2024-03-14,2023021055,Calgary Flames,Vegas Golden Knights,5,3,1,4,4,1,0,3,1
+328525,2024-03-14,2023021056,Seattle Kraken,Washington Capitals,3,1,2,1,1,0,1,1,0
+328811,2024-03-15,2023021057,Winnipeg Jets,Anaheim Ducks,6,6,0,6,6,0,0,6,0
+329119,2024-03-15,2023021058,Chicago Blackhawks,Los Angeles Kings,5,5,0,5,5,0,0,5,0
+329429,2024-03-16,2023021059,Detroit Red Wings,Buffalo Sabres,5,3,1,4,4,1,0,3,1
+329751,2024-03-16,2023021060,New York Islanders,Ottawa Senators,7,1,5,2,1,1,2,1,1
+330056,2024-03-16,2023021061,Pittsburgh Penguins,New York Rangers,11,3,7,3,1,1,2,3,1
+330362,2024-03-16,2023021062,Arizona Coyotes,New Jersey Devils,5,3,2,3,1,0,0,3,0
+330718,2024-03-16,2023021063,Florida Panthers,Tampa Bay Lightning,8,2,2,4,1,0,0,4,0
+331068,2024-03-16,2023021064,Boston Bruins,Philadelphia Flyers,11,1,6,4,1,1,1,3,1
+331366,2024-03-16,2023021065,Columbus Blue Jackets,San Jose Sharks,6,2,4,2,1,0,0,2,0
+331705,2024-03-16,2023021066,Calgary Flames,Montreal Canadiens,7,3,2,3,2,0,0,3,0
+332104,2024-03-16,2023021067,Toronto Maple Leafs,Carolina Hurricanes,8,0,3,3,3,1,0,1,3
+332430,2024-03-16,2023021068,Dallas Stars,Los Angeles Kings,5,3,1,4,1,0,0,4,0
+332775,2024-03-16,2023021069,St. Louis Blues,Minnesota Wild,4,0,4,2,1,0,2,2,0
+333149,2024-03-16,2023021070,Edmonton Oilers,Colorado Avalanche,5,1,2,2,2,2,0,1,1
+333458,2024-03-16,2023021071,Seattle Kraken,Nashville Predators,5,3,2,3,3,0,1,3,0
+333743,2024-03-16,2023021072,Vancouver Canucks,Washington Capitals,3,1,1,2,2,1,0,1,1
+334047,2024-03-17,2023021073,New York Rangers,New York Islanders,7,3,3,3,3,1,1,3,1
+334346,2024-03-17,2023021074,Vegas Golden Knights,New Jersey Devils,4,2,1,3,3,1,0,2,1
+334613,2024-03-17,2023021075,Columbus Blue Jackets,Winnipeg Jets,7,5,2,5,1,0,0,5,0
+334913,2024-03-17,2023021076,Chicago Blackhawks,San Jose Sharks,7,3,1,5,5,1,0,3,2
+335219,2024-03-17,2023021077,Ottawa Senators,Carolina Hurricanes,9,5,4,5,5,0,2,5,0
+335538,2024-03-17,2023021078,Pittsburgh Penguins,Detroit Red Wings,9,3,6,3,1,0,1,3,0
+335834,2024-03-17,2023021079,St. Louis Blues,Anaheim Ducks,6,2,2,4,1,1,0,3,1
+336184,2024-03-18,2023021080,Calgary Flames,Washington Capitals,7,3,4,3,1,0,0,3,0
+336503,2024-03-18,2023021081,Seattle Kraken,Buffalo Sabres,8,4,3,3,3,1,0,4,1
+336843,2024-03-19,2023021082,Boston Bruins,Ottawa Senators,8,4,4,3,3,0,0,4,0
+337142,2024-03-19,2023021083,Detroit Red Wings,Columbus Blue Jackets,7,1,3,2,2,1,1,1,2
+337461,2024-03-19,2023021084,New Jersey Devils,Pittsburgh Penguins,7,3,3,4,1,0,1,4,0
+337756,2024-03-19,2023021085,New York Rangers,Winnipeg Jets,6,2,4,2,1,0,1,2,0
+338082,2024-03-19,2023021086,Philadelphia Flyers,Toronto Maple Leafs,7,1,3,3,1,0,0,3,0
+338369,2024-03-19,2023021087,New York Islanders,Carolina Hurricanes,5,3,2,3,1,0,0,3,0
+338662,2024-03-19,2023021088,Nashville Predators,San Jose Sharks,10,6,2,7,7,2,0,6,1
+339001,2024-03-19,2023021089,St. Louis Blues,Colorado Avalanche,7,1,4,2,2,2,1,1,1
+339322,2024-03-19,2023021090,Edmonton Oilers,Montreal Canadiens,5,1,2,2,1,0,1,2,0
+339612,2024-03-19,2023021091,Anaheim Ducks,Minnesota Wild,4,4,0,4,4,0,0,4,0
+339883,2024-03-19,2023021092,Los Angeles Kings,Chicago Blackhawks,8,4,4,4,1,0,1,4,0
+340199,2024-03-19,2023021093,Vancouver Canucks,Buffalo Sabres,5,1,3,2,1,0,0,2,0
+340473,2024-03-19,2023021094,Vegas Golden Knights,Tampa Bay Lightning,8,2,5,2,2,1,2,2,1
+340807,2024-03-20,2023021095,Washington Capitals,Toronto Maple Leafs,10,4,6,3,3,0,0,4,0
+341109,2024-03-20,2023021096,Dallas Stars,Arizona Coyotes,7,3,2,5,1,1,0,4,1
+341391,2024-03-20,2023021097,Los Angeles Kings,Minnesota Wild,6,6,0,6,6,0,0,6,0
+341724,2024-03-21,2023021098,Boston Bruins,New York Rangers,7,3,3,3,3,1,1,3,1
+342043,2024-03-21,2023021099,Carolina Hurricanes,Philadelphia Flyers,5,1,4,1,1,0,2,1,0
+342351,2024-03-21,2023021100,Detroit Red Wings,New York Islanders,9,3,4,4,1,0,1,4,0
+342646,2024-03-21,2023021102,New Jersey Devils,Winnipeg Jets,5,3,2,3,3,0,1,3,0
+342946,2024-03-21,2023021103,Ottawa Senators,St. Louis Blues,7,3,4,2,2,0,0,3,0
+343312,2024-03-21,2023021101,Florida Panthers,Nashville Predators,3,3,0,3,3,0,0,3,0
+343648,2024-03-21,2023021104,Edmonton Oilers,Buffalo Sabres,11,5,3,6,6,1,1,5,2
+343965,2024-03-21,2023021105,Anaheim Ducks,Chicago Blackhawks,4,4,0,4,4,0,0,4,0
+344271,2024-03-21,2023021106,Vancouver Canucks,Montreal Canadiens,5,3,2,3,1,0,0,3,0
+344593,2024-03-21,2023021107,Vegas Golden Knights,Seattle Kraken,4,2,2,2,2,0,1,2,0
+344860,2024-03-21,2023021108,San Jose Sharks,Tampa Bay Lightning,5,3,2,3,3,0,1,3,0
+345260,2024-03-22,2023021109,Washington Capitals,Carolina Hurricanes,12,0,9,2,1,3,3,1,1
+345553,2024-03-22,2023021110,Dallas Stars,Pittsburgh Penguins,6,2,2,4,1,1,0,3,1
+345878,2024-03-22,2023021111,Colorado Avalanche,Columbus Blue Jackets,7,5,1,6,6,1,0,5,1
+346184,2024-03-22,2023021112,Arizona Coyotes,Seattle Kraken,3,1,1,2,2,1,0,1,1
+346528,2024-03-23,2023021113,New York Islanders,Winnipeg Jets,9,3,3,4,2,0,0,5,0
+346846,2024-03-23,2023021114,Philadelphia Flyers,Boston Bruins,5,1,4,1,1,0,2,1,0
+347139,2024-03-23,2023021115,Minnesota Wild,St. Louis Blues,9,1,6,2,1,2,2,1,1
+347459,2024-03-23,2023021116,Nashville Predators,Detroit Red Wings,1,1,0,1,1,0,0,1,0
+347714,2024-03-23,2023021117,New Jersey Devils,Ottawa Senators,7,3,2,4,4,2,0,3,1
+348070,2024-03-23,2023021118,Toronto Maple Leafs,Edmonton Oilers,9,3,2,5,1,0,0,5,0
+348380,2024-03-23,2023021119,New York Rangers,Florida Panthers,6,0,5,2,1,1,2,1,2
+348676,2024-03-23,2023021120,Vancouver Canucks,Calgary Flames,6,2,3,2,1,0,0,3,0
+348972,2024-03-23,2023021121,Los Angeles Kings,Tampa Bay Lightning,7,1,4,2,1,0,2,2,0
+349284,2024-03-23,2023021122,San Jose Sharks,Chicago Blackhawks,9,1,1,5,5,1,0,1,4
+349599,2024-03-23,2023021123,Vegas Golden Knights,Columbus Blue Jackets,6,2,2,4,1,1,0,3,1
+349905,2024-03-24,2023021124,Washington Capitals,Winnipeg Jets,3,3,0,3,3,0,0,3,0
+350214,2024-03-24,2023021125,Colorado Avalanche,Pittsburgh Penguins,9,1,1,5,5,1,0,1,4
+350542,2024-03-24,2023021126,New York Islanders,New Jersey Devils,4,4,0,4,4,0,0,4,0
+350875,2024-03-24,2023021127,Carolina Hurricanes,Toronto Maple Leafs,3,1,1,2,1,0,0,2,0
+351175,2024-03-24,2023021128,Ottawa Senators,Edmonton Oilers,8,2,3,4,4,1,1,2,2
+351481,2024-03-24,2023021129,Philadelphia Flyers,Florida Panthers,5,3,2,3,1,0,0,3,0
+351821,2024-03-24,2023021130,Arizona Coyotes,Dallas Stars,6,2,4,2,2,0,2,2,0
+352135,2024-03-24,2023021131,Anaheim Ducks,Tampa Bay Lightning,5,1,3,2,1,1,1,1,1
+352433,2024-03-24,2023021132,Calgary Flames,Buffalo Sabres,5,3,2,3,3,0,1,3,0
+352726,2024-03-24,2023021133,Seattle Kraken,Montreal Canadiens,6,4,2,4,1,0,0,4,0
+353039,2024-03-25,2023021134,St. Louis Blues,Vegas Golden Knights,3,1,2,1,1,0,1,1,0
+353322,2024-03-25,2023021135,Vancouver Canucks,Los Angeles Kings,5,1,3,2,1,0,1,2,0
+353667,2024-03-26,2023021136,Florida Panthers,Boston Bruins,7,1,5,2,2,1,2,1,1
+353980,2024-03-26,2023021137,New York Rangers,Philadelphia Flyers,11,1,7,3,1,1,3,1,2
+354336,2024-03-26,2023021138,Pittsburgh Penguins,Carolina Hurricanes,5,3,2,3,3,0,1,3,0
+354688,2024-03-26,2023021140,Washington Capitals,Detroit Red Wings,7,1,4,2,1,2,1,1,1
+355018,2024-03-26,2023021139,Toronto Maple Leafs,New Jersey Devils,9,3,3,4,4,3,0,3,1
+355355,2024-03-26,2023021141,Nashville Predators,Vegas Golden Knights,9,1,3,4,4,1,0,1,3
+355678,2024-03-26,2023021142,Winnipeg Jets,Edmonton Oilers,7,1,3,3,1,1,1,2,1
+355960,2024-03-26,2023021143,Chicago Blackhawks,Calgary Flames,4,2,1,3,1,0,0,3,0
+356251,2024-03-26,2023021144,Colorado Avalanche,Montreal Canadiens,3,1,1,2,2,1,0,1,1
+356571,2024-03-26,2023021145,Arizona Coyotes,Columbus Blue Jackets,8,4,3,4,4,1,1,4,1
+356866,2024-03-26,2023021146,Seattle Kraken,Anaheim Ducks,4,4,0,4,4,0,0,4,0
+357189,2024-03-26,2023021147,San Jose Sharks,Dallas Stars,9,3,4,3,2,0,0,3,0
+357537,2024-03-27,2023021148,Buffalo Sabres,Ottawa Senators,8,4,2,5,1,0,0,5,0
+357829,2024-03-27,2023021149,Tampa Bay Lightning,Boston Bruins,4,2,2,2,2,0,1,2,0
+358165,2024-03-28,2023021151,Florida Panthers,New York Islanders,5,1,3,2,2,1,1,1,1
+358481,2024-03-28,2023021152,Montreal Canadiens,Philadelphia Flyers,5,3,2,3,1,0,0,3,0
+358789,2024-03-28,2023021153,Ottawa Senators,Chicago Blackhawks,2,2,0,2,2,0,0,2,0
+359082,2024-03-28,2023021154,Pittsburgh Penguins,Columbus Blue Jackets,5,1,3,2,2,1,1,1,1
+359422,2024-03-28,2023021155,Toronto Maple Leafs,Washington Capitals,6,4,2,3,3,0,0,4,0
+359708,2024-03-28,2023021150,Carolina Hurricanes,Detroit Red Wings,4,4,0,4,4,0,0,4,0
+359985,2024-03-28,2023021156,Minnesota Wild,San Jose Sharks,4,2,2,2,2,0,1,2,0
+360287,2024-03-28,2023021157,St. Louis Blues,Calgary Flames,8,2,4,2,2,2,1,2,1
+360668,2024-03-28,2023021158,Winnipeg Jets,Vegas Golden Knights,5,3,2,3,3,0,1,3,0
+361015,2024-03-28,2023021159,Colorado Avalanche,New York Rangers,4,0,3,2,2,1,1,2,1
+361359,2024-03-28,2023021160,Edmonton Oilers,Los Angeles Kings,5,3,2,3,1,0,0,3,0
+361722,2024-03-28,2023021161,Arizona Coyotes,Nashville Predators,12,4,5,4,1,1,0,4,2
+362013,2024-03-28,2023021162,Seattle Kraken,Anaheim Ducks,6,2,2,3,3,2,0,2,1
+362336,2024-03-28,2023021163,Vancouver Canucks,Dallas Stars,4,2,2,2,2,0,1,2,0
+362643,2024-03-29,2023021164,Buffalo Sabres,New Jersey Devils,7,3,1,5,5,1,0,3,2
+363020,2024-03-30,2023021165,Florida Panthers,Detroit Red Wings,4,0,3,2,1,1,1,1,1
+363322,2024-03-30,2023021166,Minnesota Wild,Vegas Golden Knights,3,1,1,2,2,1,0,1,1
+363653,2024-03-30,2023021167,Edmonton Oilers,Anaheim Ducks,7,5,1,6,1,0,0,6,0
+363984,2024-03-30,2023021168,Arizona Coyotes,New York Rangers,13,3,6,3,2,0,1,3,0
+364330,2024-03-30,2023021169,Colorado Avalanche,Nashville Predators,11,3,5,5,5,1,1,3,2
+364642,2024-03-30,2023021170,Buffalo Sabres,Toronto Maple Leafs,3,3,0,3,3,0,0,3,0
+364973,2024-03-30,2023021171,Columbus Blue Jackets,Pittsburgh Penguins,6,0,4,3,1,2,1,1,2
+365299,2024-03-30,2023021172,Montreal Canadiens,Carolina Hurricanes,3,3,0,3,3,0,0,3,0
+365590,2024-03-30,2023021173,Philadelphia Flyers,Chicago Blackhawks,6,4,2,3,3,0,0,4,0
+365936,2024-03-30,2023021174,Tampa Bay Lightning,New York Islanders,5,3,1,4,4,1,0,3,1
+366257,2024-03-30,2023021175,Winnipeg Jets,Ottawa Senators,5,1,3,2,1,1,1,1,1
+366623,2024-03-30,2023021176,Washington Capitals,Boston Bruins,4,0,8,1,1,0,4,1,0
+366940,2024-03-30,2023021177,St. Louis Blues,San Jose Sharks,4,4,0,4,4,0,0,4,0
+367271,2024-03-30,2023021178,Calgary Flames,Los Angeles Kings,6,2,4,2,1,0,1,2,0
+367578,2024-03-30,2023021179,Seattle Kraken,Dallas Stars,3,3,0,3,3,0,0,3,0
+367883,2024-03-31,2023021180,Vancouver Canucks,Anaheim Ducks,5,1,2,2,1,0,1,2,0
+368187,2024-04-01,2023021181,Columbus Blue Jackets,Colorado Avalanche,5,3,2,3,1,0,0,3,0
+368483,2024-04-01,2023021182,New York Rangers,Pittsburgh Penguins,7,3,2,3,2,0,0,3,0
+368826,2024-04-01,2023021183,Philadelphia Flyers,New York Islanders,7,1,5,2,1,1,2,1,1
+369153,2024-04-01,2023021184,Tampa Bay Lightning,Detroit Red Wings,6,2,4,2,2,0,2,2,0
+369510,2024-04-01,2023021185,Toronto Maple Leafs,Florida Panthers,10,2,4,3,1,0,0,4,0
+369832,2024-04-01,2023021186,St. Louis Blues,Edmonton Oilers,5,1,3,2,1,1,1,1,1
+370152,2024-04-01,2023021187,Winnipeg Jets,Los Angeles Kings,7,1,4,2,2,2,1,1,1
+370455,2024-04-01,2023021188,San Jose Sharks,Seattle Kraken,6,2,4,2,1,0,0,2,0
+370757,2024-04-02,2023021189,Buffalo Sabres,Washington Capitals,8,4,3,3,3,1,0,4,1
+371102,2024-04-02,2023021190,Montreal Canadiens,Florida Panthers,8,2,4,4,1,1,1,3,1
+371374,2024-04-02,2023021191,New Jersey Devils,Pittsburgh Penguins,9,3,2,5,5,2,0,3,2
+371619,2024-04-02,2023021192,New York Islanders,Chicago Blackhawks,3,1,1,2,2,1,0,1,1
+371877,2024-04-02,2023021193,Minnesota Wild,Ottawa Senators,5,1,2,2,1,0,1,2,0
+372188,2024-04-02,2023021194,Nashville Predators,Boston Bruins,3,3,0,3,3,0,0,3,0
+372528,2024-04-02,2023021195,Calgary Flames,Anaheim Ducks,8,2,4,3,1,2,0,2,1
+372841,2024-04-02,2023021196,Vegas Golden Knights,Vancouver Canucks,9,3,4,3,1,0,0,4,0
+373254,2024-04-03,2023021197,Toronto Maple Leafs,Tampa Bay Lightning,5,3,2,3,3,0,1,3,0
+373574,2024-04-03,2023021198,New York Rangers,New Jersey Devils,7,1,2,3,2,2,0,2,1
+373901,2024-04-03,2023021199,Dallas Stars,Edmonton Oilers,5,5,0,5,5,0,0,5,0
+374160,2024-04-03,2023021201,Los Angeles Kings,Seattle Kraken,7,3,4,3,1,0,0,3,0
+374518,2024-04-03,2023021200,Arizona Coyotes,Vancouver Canucks,3,1,2,1,1,0,1,1,0
+374821,2024-04-04,2023021202,Carolina Hurricanes,Boston Bruins,5,3,2,3,1,0,0,3,0
+375122,2024-04-04,2023021203,Columbus Blue Jackets,New York Islanders,6,2,4,2,2,0,2,2,0
+375460,2024-04-04,2023021204,Montreal Canadiens,Tampa Bay Lightning,11,3,5,4,1,1,1,4,1
+375781,2024-04-04,2023021205,Ottawa Senators,Florida Panthers,6,6,0,6,6,0,0,6,0
+376150,2024-04-04,2023021206,Washington Capitals,Pittsburgh Penguins,5,3,2,3,1,0,0,3,0
+376492,2024-04-04,2023021207,Minnesota Wild,Colorado Avalanche,7,3,4,2,2,0,1,3,0
+376841,2024-04-04,2023021208,Nashville Predators,St. Louis Blues,9,3,4,3,2,0,1,3,0
+377192,2024-04-04,2023021209,Winnipeg Jets,Calgary Flames,7,3,3,3,3,1,1,3,1
+377452,2024-04-04,2023021210,San Jose Sharks,Los Angeles Kings,3,1,1,2,1,0,0,2,0
+377783,2024-04-05,2023021211,Buffalo Sabres,Philadelphia Flyers,6,2,4,2,1,0,1,2,0
+378089,2024-04-05,2023021212,Carolina Hurricanes,Washington Capitals,6,2,1,4,4,1,0,2,2
+378429,2024-04-05,2023021213,Detroit Red Wings,New York Rangers,7,1,4,2,2,2,1,1,1
+378762,2024-04-05,2023021214,Edmonton Oilers,Colorado Avalanche,8,4,2,5,5,2,0,4,1
+379072,2024-04-05,2023021215,Anaheim Ducks,Seattle Kraken,4,2,1,3,1,0,0,3,0
+379422,2024-04-05,2023021216,Arizona Coyotes,Vegas Golden Knights,11,3,2,6,6,2,0,3,3
+379754,2024-04-06,2023021217,Pittsburgh Penguins,Tampa Bay Lightning,9,1,4,3,1,0,1,3,0
+380118,2024-04-06,2023021218,Boston Bruins,Florida Panthers,5,1,3,2,1,1,1,1,1
+380409,2024-04-06,2023021220,Chicago Blackhawks,Dallas Stars,5,1,1,3,2,0,0,3,0
+380659,2024-04-06,2023021219,Minnesota Wild,Winnipeg Jets,6,2,4,2,2,0,2,2,0
+380944,2024-04-06,2023021221,San Jose Sharks,St. Louis Blues,5,1,2,2,1,0,1,2,0
+381259,2024-04-06,2023021222,Columbus Blue Jackets,Philadelphia Flyers,8,4,3,3,1,0,0,5,0
+381592,2024-04-06,2023021223,Montreal Canadiens,Toronto Maple Leafs,6,2,1,4,2,0,0,4,0
+381961,2024-04-06,2023021224,Ottawa Senators,New Jersey Devils,7,1,3,3,2,0,0,3,0
+382274,2024-04-06,2023021225,New York Islanders,Nashville Predators,2,2,0,2,2,0,0,2,0
+382614,2024-04-06,2023021226,Calgary Flames,Edmonton Oilers,6,2,2,2,2,0,1,2,0
+382912,2024-04-06,2023021227,Los Angeles Kings,Vancouver Canucks,9,3,6,2,1,0,0,3,0
+383264,2024-04-07,2023021228,Detroit Red Wings,Buffalo Sabres,4,2,1,3,1,0,0,3,0
+383526,2024-04-07,2023021229,Chicago Blackhawks,Minnesota Wild,4,4,0,4,4,0,0,4,0
+383812,2024-04-07,2023021230,Carolina Hurricanes,Columbus Blue Jackets,3,3,0,3,3,0,0,3,0
+384074,2024-04-07,2023021231,San Jose Sharks,Arizona Coyotes,7,3,4,3,3,0,2,3,0
+384417,2024-04-07,2023021232,Washington Capitals,Ottawa Senators,5,1,3,2,2,1,1,1,1
+384764,2024-04-07,2023021233,New Jersey Devils,Nashville Predators,4,0,3,2,2,1,1,1,1
+385075,2024-04-07,2023021234,New York Rangers,Montreal Canadiens,7,3,3,3,2,1,0,3,1
+385368,2024-04-07,2023021235,Anaheim Ducks,St. Louis Blues,10,0,8,2,1,0,3,2,0
+385738,2024-04-07,2023021236,Colorado Avalanche,Dallas Stars,11,3,5,3,2,1,1,3,1
+386087,2024-04-08,2023021237,Toronto Maple Leafs,Pittsburgh Penguins,5,1,3,2,1,1,1,1,1
+386380,2024-04-08,2023021238,Vancouver Canucks,Vegas Golden Knights,7,1,3,2,2,1,1,1,2
+386692,2024-04-09,2023021239,Boston Bruins,Carolina Hurricanes,5,3,2,2,2,0,0,3,0
+387005,2024-04-09,2023021240,Detroit Red Wings,Washington Capitals,3,1,1,2,1,0,0,2,0
+387344,2024-04-09,2023021241,Florida Panthers,Ottawa Senators,2,2,0,2,2,0,0,2,0
+387689,2024-04-09,2023021242,Montreal Canadiens,Philadelphia Flyers,12,6,4,6,1,0,0,7,0
+387958,2024-04-09,2023021243,New Jersey Devils,Toronto Maple Leafs,7,3,2,4,4,2,0,3,1
+388300,2024-04-09,2023021244,New York Islanders,New York Rangers,6,2,2,3,1,0,0,3,0
+388635,2024-04-09,2023021245,Tampa Bay Lightning,Columbus Blue Jackets,7,3,2,4,4,2,0,3,1
+388963,2024-04-09,2023021246,Dallas Stars,Buffalo Sabres,5,1,3,2,2,1,1,1,1
+389289,2024-04-09,2023021247,Nashville Predators,Winnipeg Jets,7,1,3,3,1,1,1,2,1
+389556,2024-04-09,2023021248,Colorado Avalanche,Minnesota Wild,7,3,2,3,3,0,1,3,0
+389851,2024-04-09,2023021249,Anaheim Ducks,Los Angeles Kings,4,2,1,3,3,1,0,2,1
+390202,2024-04-09,2023021250,Seattle Kraken,Arizona Coyotes,5,5,0,5,5,0,0,5,0
+390531,2024-04-09,2023021251,San Jose Sharks,Calgary Flames,5,1,1,3,3,1,0,1,2
+390808,2024-04-10,2023021252,St. Louis Blues,Chicago Blackhawks,7,3,3,4,1,0,0,4,0
+391129,2024-04-10,2023021253,Edmonton Oilers,Vegas Golden Knights,6,4,2,4,1,0,0,4,0
+391438,2024-04-10,2023021254,Vancouver Canucks,Arizona Coyotes,7,1,4,2,1,0,2,2,0
+391717,2024-04-11,2023021255,Buffalo Sabres,Washington Capitals,6,2,3,2,1,0,0,3,0
+392042,2024-04-11,2023021256,Florida Panthers,Columbus Blue Jackets,4,4,0,4,4,0,0,4,0
+392311,2024-04-11,2023021257,New York Rangers,Philadelphia Flyers,5,3,2,3,3,0,1,3,0
+392643,2024-04-11,2023021258,Pittsburgh Penguins,Detroit Red Wings,11,1,8,2,1,0,3,2,0
+393002,2024-04-11,2023021259,Tampa Bay Lightning,Ottawa Senators,4,0,2,2,2,2,0,1,1
+393352,2024-04-11,2023021260,Toronto Maple Leafs,New Jersey Devils,11,1,7,2,1,3,2,1,1
+393641,2024-04-11,2023021261,New York Islanders,Montreal Canadiens,5,1,3,2,2,1,1,1,1
+393941,2024-04-11,2023021262,Dallas Stars,Winnipeg Jets,3,3,0,3,3,0,0,3,0
+394291,2024-04-11,2023021263,Seattle Kraken,San Jose Sharks,4,2,2,2,2,0,1,2,0
+394558,2024-04-11,2023021264,Los Angeles Kings,Calgary Flames,5,3,2,3,1,0,0,3,0
+394854,2024-04-12,2023021265,St. Louis Blues,Carolina Hurricanes,7,3,3,4,4,1,1,3,1
+395145,2024-04-12,2023021266,Chicago Blackhawks,Nashville Predators,6,4,2,4,1,0,0,4,0
+395470,2024-04-12,2023021267,Edmonton Oilers,Arizona Coyotes,5,1,4,1,1,0,2,1,0
+395786,2024-04-12,2023021268,Anaheim Ducks,Calgary Flames,9,3,2,4,2,0,0,4,0
+396043,2024-04-12,2023021269,Vegas Golden Knights,Minnesota Wild,9,5,4,3,2,0,0,5,0
+396409,2024-04-13,2023021270,New York Rangers,New York Islanders,4,0,2,3,3,2,0,2,1
+396685,2024-04-13,2023021271,Dallas Stars,Seattle Kraken,4,2,1,3,1,0,0,3,0
+396986,2024-04-13,2023021272,Colorado Avalanche,Winnipeg Jets,7,7,0,7,7,0,0,7,0
+397324,2024-04-13,2023021273,Florida Panthers,Buffalo Sabres,5,1,3,2,1,1,1,1,1
+397594,2024-04-13,2023021274,Philadelphia Flyers,New Jersey Devils,1,1,0,1,1,0,0,1,0
+397949,2024-04-13,2023021275,Washington Capitals,Tampa Bay Lightning,6,2,4,2,2,0,2,2,0
+398320,2024-04-13,2023021276,Ottawa Senators,Montreal Canadiens,8,0,7,2,2,1,3,1,1
+398688,2024-04-13,2023021277,Toronto Maple Leafs,Detroit Red Wings,9,1,3,4,1,1,1,3,1
+399049,2024-04-13,2023021278,Nashville Predators,Columbus Blue Jackets,10,2,4,4,2,1,0,4,1
+399402,2024-04-13,2023021279,Pittsburgh Penguins,Boston Bruins,10,2,5,2,1,0,0,3,0
+399733,2024-04-13,2023021280,Edmonton Oilers,Vancouver Canucks,4,2,2,2,1,0,0,2,0
+399969,2024-04-13,2023021281,Los Angeles Kings,Anaheim Ducks,4,2,2,2,1,0,0,2,0
+400279,2024-04-13,2023021282,San Jose Sharks,Minnesota Wild,8,4,4,3,3,0,1,4,0
+400571,2024-04-14,2023021283,St. Louis Blues,Seattle Kraken,5,3,1,4,4,1,0,3,1
+400896,2024-04-14,2023021284,Vegas Golden Knights,Colorado Avalanche,7,1,1,4,4,1,0,1,3
+401171,2024-04-14,2023021285,Chicago Blackhawks,Carolina Hurricanes,6,2,3,3,3,1,1,2,1
+401500,2024-04-14,2023021286,Calgary Flames,Arizona Coyotes,11,1,5,3,3,1,2,1,2
+401810,2024-04-15,2023021287,Detroit Red Wings,Montreal Canadiens,9,1,3,4,4,1,0,1,3
+402061,2024-04-15,2023021288,New Jersey Devils,New York Islanders,5,3,2,2,2,0,0,3,0
+402371,2024-04-15,2023021289,Pittsburgh Penguins,Nashville Predators,6,2,4,2,1,0,0,2,0
+402673,2024-04-15,2023021290,Tampa Bay Lightning,Buffalo Sabres,6,2,4,2,1,0,1,2,0
+403026,2024-04-15,2023021291,Washington Capitals,Boston Bruins,2,2,0,2,2,0,0,2,0
+403321,2024-04-15,2023021292,New York Rangers,Ottawa Senators,4,4,0,4,4,0,0,4,0
+403651,2024-04-15,2023021293,Edmonton Oilers,San Jose Sharks,11,7,3,5,1,0,0,8,0
+403913,2024-04-15,2023021294,Los Angeles Kings,Minnesota Wild,4,2,1,3,1,0,0,3,0
+404220,2024-04-16,2023021295,Boston Bruins,Ottawa Senators,4,2,2,2,1,0,0,2,0
+404476,2024-04-16,2023021296,Columbus Blue Jackets,Carolina Hurricanes,9,3,4,3,3,0,2,3,0
+404812,2024-04-16,2023021298,Montreal Canadiens,Detroit Red Wings,8,0,5,2,2,1,2,1,2
+405162,2024-04-16,2023021299,Philadelphia Flyers,Washington Capitals,3,1,2,1,1,0,1,1,0
+405550,2024-04-16,2023021297,Florida Panthers,Toronto Maple Leafs,7,3,1,5,5,1,0,3,2
+405797,2024-04-16,2023021300,Winnipeg Jets,Seattle Kraken,7,1,4,2,1,0,2,2,0
+406124,2024-04-16,2023021301,Vegas Golden Knights,Chicago Blackhawks,4,2,2,2,1,0,0,2,0
+406433,2024-04-16,2023021302,Vancouver Canucks,Calgary Flames,5,3,2,3,1,0,0,3,0
+406789,2024-04-17,2023021303,New York Islanders,Pittsburgh Penguins,9,1,6,2,1,2,2,1,1
+407120,2024-04-17,2023021304,Tampa Bay Lightning,Toronto Maple Leafs,10,2,3,4,3,0,0,5,0
+407430,2024-04-17,2023021305,Dallas Stars,St. Louis Blues,2,0,1,2,2,1,0,1,1
+407721,2024-04-17,2023021306,Arizona Coyotes,Edmonton Oilers,7,3,4,2,2,0,1,3,0
+407985,2024-04-18,2023021307,Minnesota Wild,Seattle Kraken,7,1,4,2,1,1,1,2,1
+408267,2024-04-18,2023021308,Winnipeg Jets,Vancouver Canucks,6,2,3,2,2,1,1,2,1
+408552,2024-04-18,2023021309,Calgary Flames,San Jose Sharks,6,4,1,5,1,0,0,5,0
+408835,2024-04-18,2023021310,Colorado Avalanche,Edmonton Oilers,6,4,2,4,1,0,0,4,0
+409117,2024-04-18,2023021311,Vegas Golden Knights,Anaheim Ducks,5,3,2,3,3,0,1,3,0
+409376,2024-04-18,2023021312,Los Angeles Kings,Chicago Blackhawks,9,1,3,3,2,3,0,2,1
+409702,2024-04-20,2023030141,Carolina Hurricanes,New York Islanders,4,2,2,2,2,0,1,2,0
+410075,2024-04-20,2023030121,Boston Bruins,Toronto Maple Leafs,6,4,2,4,1,0,0,4,0
+410463,2024-04-21,2023030111,Florida Panthers,Tampa Bay Lightning,5,1,3,2,1,0,1,2,0
+410784,2024-04-21,2023030131,New York Rangers,Washington Capitals,5,3,2,3,1,0,0,3,0
+411156,2024-04-21,2023030161,Winnipeg Jets,Colorado Avalanche,13,1,6,4,2,3,0,3,1
+411483,2024-04-21,2023030171,Vancouver Canucks,Nashville Predators,6,2,3,3,3,1,1,2,1
+411862,2024-04-22,2023030122,Boston Bruins,Toronto Maple Leafs,5,1,3,2,2,1,1,1,1
+412241,2024-04-22,2023030142,Carolina Hurricanes,New York Islanders,8,2,1,5,5,1,0,2,3
+412604,2024-04-22,2023030151,Dallas Stars,Vegas Golden Knights,7,1,5,2,1,0,0,2,0
+413046,2024-04-22,2023030181,Edmonton Oilers,Los Angeles Kings,11,3,4,4,1,0,0,4,0
+413363,2024-04-23,2023030132,New York Rangers,Washington Capitals,7,1,4,2,1,1,1,2,1
+413777,2024-04-23,2023030112,Florida Panthers,Tampa Bay Lightning,5,1,2,2,1,0,1,2,0
+414121,2024-04-23,2023030162,Winnipeg Jets,Colorado Avalanche,7,3,3,4,4,1,1,3,1
+414446,2024-04-23,2023030172,Vancouver Canucks,Nashville Predators,5,3,2,3,1,0,0,3,0
+414882,2024-04-24,2023030123,Toronto Maple Leafs,Boston Bruins,6,2,3,2,2,1,1,2,1
+415282,2024-04-24,2023030152,Dallas Stars,Vegas Golden Knights,4,2,1,3,3,1,0,2,1
+415695,2024-04-24,2023030182,Edmonton Oilers,Los Angeles Kings,9,1,6,2,1,0,2,2,0
+416090,2024-04-25,2023030113,Tampa Bay Lightning,Florida Panthers,8,2,4,3,1,2,0,2,1
+416424,2024-04-25,2023030143,New York Islanders,Carolina Hurricanes,5,1,3,2,1,0,0,2,0
+416779,2024-04-26,2023030133,Washington Capitals,New York Rangers,4,2,1,3,3,1,0,2,1
+417092,2024-04-26,2023030173,Nashville Predators,Vancouver Canucks,3,1,1,2,1,0,0,2,0
+417464,2024-04-26,2023030163,Colorado Avalanche,Winnipeg Jets,8,4,2,5,5,2,0,4,1
+417806,2024-04-26,2023030183,Los Angeles Kings,Edmonton Oilers,7,5,2,3,3,0,0,5,0
+418243,2024-04-27,2023030144,New York Islanders,Carolina Hurricanes,5,1,3,2,1,1,1,1,1
+418630,2024-04-27,2023030114,Tampa Bay Lightning,Florida Panthers,9,3,4,3,2,0,0,3,0
+418962,2024-04-27,2023030124,Toronto Maple Leafs,Boston Bruins,4,2,1,3,1,0,0,3,0
+419418,2024-04-27,2023030153,Vegas Golden Knights,Dallas Stars,5,1,2,2,1,0,1,2,0
+419778,2024-04-28,2023030164,Colorado Avalanche,Winnipeg Jets,6,4,2,4,4,0,1,4,0
+420102,2024-04-28,2023030174,Nashville Predators,Vancouver Canucks,7,1,2,3,3,2,0,1,2
+420450,2024-04-28,2023030134,Washington Capitals,New York Rangers,6,2,4,2,2,0,2,2,0
+420758,2024-04-28,2023030184,Los Angeles Kings,Edmonton Oilers,1,1,0,1,1,0,0,1,0
+421173,2024-04-29,2023030115,Florida Panthers,Tampa Bay Lightning,7,5,2,4,4,0,0,5,0
+421561,2024-04-29,2023030154,Vegas Golden Knights,Dallas Stars,6,2,3,3,3,1,1,2,1
+421942,2024-04-30,2023030125,Boston Bruins,Toronto Maple Leafs,3,1,2,1,1,0,1,1,0
+422291,2024-04-30,2023030145,Carolina Hurricanes,New York Islanders,9,3,4,3,3,0,1,3,0
+422654,2024-04-30,2023030165,Winnipeg Jets,Colorado Avalanche,9,3,5,3,3,1,2,3,1
+422981,2024-04-30,2023030175,Vancouver Canucks,Nashville Predators,3,1,1,2,2,1,0,1,1
+423292,2024-05-01,2023030155,Dallas Stars,Vegas Golden Knights,5,1,3,2,1,1,1,1,1
+423642,2024-05-01,2023030185,Edmonton Oilers,Los Angeles Kings,7,1,3,3,1,2,0,2,1
+424044,2024-05-02,2023030126,Toronto Maple Leafs,Boston Bruins,3,1,1,2,1,0,0,2,0
+424379,2024-05-03,2023030176,Nashville Predators,Vancouver Canucks,1,1,0,1,1,0,0,1,0
+424694,2024-05-03,2023030156,Vegas Golden Knights,Dallas Stars,2,2,0,2,2,0,0,2,0
+425098,2024-05-04,2023030127,Boston Bruins,Toronto Maple Leafs,3,1,1,2,2,1,0,1,1
+425412,2024-05-05,2023030221,New York Rangers,Carolina Hurricanes,7,1,5,2,1,0,1,2,0
+425750,2024-05-05,2023030157,Dallas Stars,Vegas Golden Knights,3,1,2,1,1,0,1,1,0
+426217,2024-05-06,2023030211,Florida Panthers,Boston Bruins,6,4,1,5,5,1,0,4,1
+426709,2024-05-07,2023030222,New York Rangers,Carolina Hurricanes,7,1,4,2,2,2,1,1,1
+427070,2024-05-07,2023030231,Dallas Stars,Colorado Avalanche,7,1,1,4,4,1,0,1,3
+427474,2024-05-08,2023030212,Florida Panthers,Boston Bruins,7,5,1,6,6,1,0,5,1
+427770,2024-05-08,2023030241,Vancouver Canucks,Edmonton Oilers,9,1,3,4,4,1,0,1,3
+428135,2024-05-09,2023030223,Carolina Hurricanes,New York Rangers,5,1,3,2,1,1,1,1,1
+428476,2024-05-09,2023030232,Dallas Stars,Colorado Avalanche,8,2,2,4,1,0,0,4,0
+428828,2024-05-10,2023030213,Boston Bruins,Florida Panthers,8,4,2,4,2,0,0,4,0
+429176,2024-05-10,2023030242,Vancouver Canucks,Edmonton Oilers,7,1,5,2,2,1,2,1,1
+429492,2024-05-11,2023030224,Carolina Hurricanes,New York Rangers,7,1,4,2,1,0,1,2,0
+429827,2024-05-11,2023030233,Colorado Avalanche,Dallas Stars,5,3,2,3,3,0,1,3,0
+430213,2024-05-12,2023030214,Boston Bruins,Florida Panthers,5,1,1,3,3,1,0,1,2
+430591,2024-05-12,2023030243,Edmonton Oilers,Vancouver Canucks,7,1,4,3,1,1,0,2,1
+430886,2024-05-13,2023030225,New York Rangers,Carolina Hurricanes,5,3,1,4,4,1,0,3,1
+431256,2024-05-13,2023030234,Colorado Avalanche,Dallas Stars,6,4,2,3,2,0,0,4,0
+431636,2024-05-14,2023030215,Florida Panthers,Boston Bruins,3,1,2,1,1,0,1,1,0
+431962,2024-05-14,2023030244,Edmonton Oilers,Vancouver Canucks,5,1,2,2,1,0,1,2,0
+432317,2024-05-15,2023030235,Dallas Stars,Colorado Avalanche,8,2,5,3,1,1,1,2,1
+432648,2024-05-16,2023030226,Carolina Hurricanes,New York Rangers,8,2,3,4,4,1,0,2,2
+433002,2024-05-16,2023030245,Vancouver Canucks,Edmonton Oilers,5,1,3,2,2,1,1,1,1
+433367,2024-05-17,2023030216,Boston Bruins,Florida Panthers,3,1,1,2,2,1,0,1,1
+433864,2024-05-17,2023030236,Colorado Avalanche,Dallas Stars,3,1,1,2,2,1,0,1,1
+434219,2024-05-18,2023030246,Edmonton Oilers,Vancouver Canucks,6,4,2,4,4,0,1,4,0
+434519,2024-05-20,2023030247,Vancouver Canucks,Edmonton Oilers,5,1,1,3,2,0,0,3,0
+434859,2024-05-22,2023030311,New York Rangers,Florida Panthers,3,3,0,3,3,0,0,3,0
+435296,2024-05-23,2023030321,Dallas Stars,Edmonton Oilers,5,1,2,2,1,0,1,2,0
+435710,2024-05-24,2023030312,New York Rangers,Florida Panthers,3,1,2,1,1,0,1,1,0
+436013,2024-05-25,2023030322,Dallas Stars,Edmonton Oilers,4,2,2,2,2,0,1,2,0
+436444,2024-05-26,2023030313,Florida Panthers,New York Rangers,9,1,5,2,1,1,2,2,1
+436789,2024-05-27,2023030323,Edmonton Oilers,Dallas Stars,8,2,3,3,2,1,1,2,2
+437200,2024-05-28,2023030314,Florida Panthers,New York Rangers,5,1,3,2,1,1,1,1,1
+437524,2024-05-29,2023030324,Edmonton Oilers,Dallas Stars,7,3,1,5,5,1,0,3,2
+437860,2024-05-30,2023030315,New York Rangers,Florida Panthers,5,1,2,3,1,1,0,2,1
+438160,2024-05-31,2023030325,Dallas Stars,Edmonton Oilers,4,2,1,3,1,0,0,3,0
+438545,2024-06-01,2023030316,Florida Panthers,New York Rangers,3,1,1,2,1,0,0,2,0
+438852,2024-06-02,2023030326,Edmonton Oilers,Dallas Stars,3,1,1,2,1,0,0,2,0
+439221,2024-06-08,2023030411,Florida Panthers,Edmonton Oilers,3,3,0,3,3,0,0,3,0
+439602,2024-06-10,2023030412,Florida Panthers,Edmonton Oilers,5,3,1,4,4,1,0,3,1
+439946,2024-06-13,2023030413,Edmonton Oilers,Florida Panthers,7,1,3,3,2,0,1,3,0
+440346,2024-06-15,2023030414,Edmonton Oilers,Florida Panthers,9,7,2,6,6,0,0,7,0
+440700,2024-06-18,2023030415,Florida Panthers,Edmonton Oilers,8,2,4,3,1,0,0,3,0
+441039,2024-06-21,2023030416,Edmonton Oilers,Florida Panthers,6,4,2,3,2,0,0,4,0
+441370,2024-06-24,2023030417,Florida Panthers,Edmonton Oilers,3,1,2,1,1,0,1,1,0
