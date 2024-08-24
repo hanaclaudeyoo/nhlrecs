@@ -36,6 +36,7 @@ def filter_games(scoring, closeness, unpredictability, back_and_forth):
     return display_df, f"{len(display_df)} total results."
 
 demo = gr.Interface(
+    title="nhlrecs",
     fn=filter_games,
     inputs=[
         gr.Slider(0, 1, value=0, step=0.01, label="Scoring"),
@@ -52,4 +53,4 @@ demo = gr.Interface(
 )
 
 if __name__ == "__main__":
-    demo.launch(server_name="0.0.0.0", server_port=7860)
+    demo.launch(server_name="0.0.0.0", server_port=7860, favicon_path="nhl_logo.png")
