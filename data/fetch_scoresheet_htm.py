@@ -11,11 +11,12 @@ def fetch_season(
     season_str: str, # i.e. "20252026"
     season_type: str = "02",
     output_dir: Path = Path("data/raw_htm"),
-    redownload: bool = False
+    redownload: bool = False,
+    start_game_num: int = 1
 ):
     out_season_dir = output_dir / season_str
 
-    game_num = 1
+    game_num = start_game_num
 
     session = requests.Session()
 
