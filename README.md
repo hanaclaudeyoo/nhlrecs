@@ -17,7 +17,7 @@
 - `<game#>` chronological order, all games (4 digits)
 e.g. https://www.nhl.com/scores/htmlreports/20162017/PL020716.HTM
 
-### Past season data
+### Past season data (no longer updated after 2024)
 
 https://github.com/danmorse314/hockeyR-data
 
