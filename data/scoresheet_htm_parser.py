@@ -1,6 +1,5 @@
 from bs4 import BeautifulSoup
 from bs4.element import Tag
-from typing import List
 from dataclasses import dataclass
 import re
 from datetime import datetime
@@ -38,8 +37,8 @@ def get_team_from_desc(description: str) -> Team:
     return Team(team_name)
 
 
-def extract_htm_play_rows(soup: BeautifulSoup) -> List[PlayRow]:
-    play_rows: List[PlayRow] = []
+def extract_htm_play_rows(soup: BeautifulSoup) -> list[PlayRow]:
+    play_rows: list[PlayRow] = []
 
     for tr in soup.find_all("tr", id=re.compile(r"^PL-\d+")):
         tds = tr.find_all("td")
@@ -68,8 +67,8 @@ def extract_game_info(soup: BeautifulSoup) -> Tag:
     return game_info
 
 
-def parse_goals(play_rows: List[PlayRow]) -> List[Goal]:
-    goals: List[Goal] = []
+def parse_goals(play_rows: list[PlayRow]) -> list[Goal]:
+    goals: list[Goal] = []
 
     for row in play_rows:
         if row.event != "GOAL":
