@@ -9,22 +9,34 @@ class Scorer:
         weights: dict[str, float] = None,
     ):
         self.metrics = metrics
-        self.weights = weights
-
-        assert sum(weights.values()) == 1.0
 
         if weights is None:
             num_metrics = len(self.metrics)
             self.weights = {m.name: 1.0/num_metrics for m in metrics}
+        else:
+            self.weights = weights
+            s = sum(self.weights.values())
+            assert abs(1.0 - s) < 1e-6, f"Metric weights must sum to 1.0, got {s}"
     
 
-    def percentile_normalize(self, values: list[float]):
+    def percentile_normalize(self, values: list[float]) -> list[float]:
         n = len(values)
         if n <= 1:
-            return [0] * n
-        
+            return [0.0] * n
+
         sorted_vals = sorted(values)
-        return [sorted_vals.index(v) / (n - 1) for v in values]
+        percentiles: dict[float, float] = {}
+        i = 0
+        while i < n:
+            j = i
+            while j < n and sorted_vals[j] == sorted_vals[i]:
+                j += 1 # skip duplicates
+
+            avg_rank = (i + j - 1) / 2 # average rank for ties
+            percentiles[sorted_vals[i]] = avg_rank / (n - 1)
+
+            i = j
+        return [percentiles[v] for v in values]
 
 
     def score_games(self, games: list[Game]) -> dict[str, float]: # returns {game ID: score}
@@ -35,13 +47,13 @@ class Scorer:
         
         # normalize scores per metric
         scores_normal: dict[str, list[float]] = {}
-        for metric, scores in scores_metric:
+        for metric, scores in scores_metric.items():
             scores_normal[metric] = self.percentile_normalize(scores)
         
         # combine into one weighted aggregate score
-        scores_weighted = dict[str, float] = {}
+        scores_weighted: dict[str, float] = {}
         for i, g in enumerate(games):
-            score = sum([self.weights[m] * scores_normal[m][i] for m in self.metrics])
+            score = sum([self.weights[m.name] * scores_normal[m.name][i] for m in self.metrics])
             scores_weighted[g.game_id] = score
         return scores_weighted
         
@@ -50,6 +62,5 @@ class Scorer:
         scores = self.score_games(games)
         return sorted(
             games,
-            key=lambda g: scores[g.game_id],
-            reverse=True
+            key=lambda g: (-scores[g.game_id], g.date),
         )
