@@ -1,13 +1,16 @@
 from dataclasses import dataclass, field
-from teams import Team
+from dataclasses_json import dataclass_json
+from core.teams import Team
 
 
+@dataclass_json
 @dataclass
 class Goal:
     time_elapsed_seconds: int
     team: Team
 
 
+@dataclass_json
 @dataclass
 class Game:
     game_id: str
@@ -17,4 +20,4 @@ class Game:
     goals: list[Goal]
     
     summary: dict[str, float] = field(default_factory=dict)
-    watched: bool
+    watched: bool = False

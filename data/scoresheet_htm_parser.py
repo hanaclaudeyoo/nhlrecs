@@ -4,6 +4,8 @@ from typing import List
 from dataclasses import dataclass
 import re
 from datetime import datetime
+from pathlib import Path
+import json
 
 from core.models import Goal, Game
 from core.teams import Team, FULL_NAME_TO_TEAM
@@ -21,10 +23,13 @@ class PlayRow:
 
 
 def get_time_elapsed(cell_text: str, period: int) -> int:
-    # cell text e.g: "1:00\n19:00"
-    elapsed = cell_text.strip().split("\n")[0]
-    minutes, seconds = elapsed.split(":")
-    return (period - 1)*PERIOD_LENGTH_SECONDS + int(minutes)*60 + int(seconds)
+    # cell text i.e. "1:0019:00"
+    times = re.findall(r"\d{1,2}:\d{2}", cell_text)
+    if not times:
+        raise ValueError(f"Could not parse elapsed time from '{cell_text}'")
+
+    minutes_str, seconds_str = times[0].split(":")
+    return (period - 1) * PERIOD_LENGTH_SECONDS + int(minutes_str) * 60 + int(seconds_str)
 
 
 def get_team_from_desc(description: str) -> Team:
@@ -140,3 +145,32 @@ def parse_game_htm(htm: str) -> Game:
         away_team=away_team,
         goals=goals
     )
+
+def parse_season(
+    season_str: str, # i.e. "20252026",
+    season_type: str = "02",
+    input_dir: Path = Path("data/raw_htm"),
+    output_dir: Path = Path("data/parsed_games"),
+    overwrite: bool = False
+):
+    in_season_dir = input_dir / season_str
+    out_season_dir = output_dir / season_str
+    out_season_dir.mkdir(parents=True, exist_ok=True)
+
+    for htm_file in sorted(in_season_dir.glob(f"{season_str}_{season_type}*.HTM")):
+        out_file = out_season_dir / (htm_file.stem + ".json")
+        if not overwrite and out_file.exists():
+            continue
+
+        with open(htm_file, "r", encoding="utf-8") as f:
+            htm_str = f.read()
+
+        game = parse_game_htm(htm_str)
+
+        with open(out_file, "w", encoding="utf-8") as f:
+            json.dump(game.to_json(indent=2), f, indent=2)
+        
+        print(f"Parsed {out_file.stem}")
+
+
+parse_season("20252026")

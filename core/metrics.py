@@ -1,4 +1,4 @@
-from models import Game
+from core.models import Game
 
 
 class Metric:

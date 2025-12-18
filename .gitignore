@@ -1,4 +1,6 @@
 .DS_Store
 play_by_play_2023_24_lite*
 raw_htm/
+parsed_games/
 test/
+__pycache__

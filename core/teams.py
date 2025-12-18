@@ -29,6 +29,7 @@ class Team(Enum):
     STL = "STL"
     TBL = "TBL"
     TOR = "TOR"
+    UTA = "UTA"
     VAN = "VAN"
     VGK = "VGK"
     WPG = "WPG"
@@ -51,6 +52,7 @@ FULL_NAME_TO_TEAM = {
     "LOS ANGELES KINGS": Team.LAK,
     "MINNESOTA WILD": Team.MIN,
     "MONTREAL CANADIENS": Team.MTL,
+    "MONTRÉAL CANADIENS": Team.MTL,
     "NEW JERSEY DEVILS": Team.NJD,
     "NASHVILLE PREDATORS": Team.NSH,
     "NEW YORK ISLANDERS": Team.NYI,
@@ -63,6 +65,7 @@ FULL_NAME_TO_TEAM = {
     "ST. LOUIS BLUES": Team.STL,
     "TAMPA BAY LIGHTNING": Team.TBL,
     "TORONTO MAPLE LEAFS": Team.TOR,
+    "UTAH MAMMOTH": Team.UTA,
     "VANCOUVER CANUCKS": Team.VAN,
     "VEGAS GOLDEN KNIGHTS": Team.VGK,
     "WINNIPEG JETS": Team.WPG,
