@@ -20,4 +20,3 @@ class Game:
     goals: list[Goal]
     
     summary: dict[str, float] = field(default_factory=dict)
-    watched: bool = False

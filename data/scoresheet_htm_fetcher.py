@@ -5,12 +5,13 @@ import time
 
 BASE_URL = "https://www.nhl.com/scores/htmlreports"
 REQUEST_DELAY = 0.5 # seconds
+DEFAULT_OUTPUT_DIR = "data/scoresheet_htm_raw"
 
 
 def fetch_season(
     season_str: str, # i.e. "20252026"
     season_type: str = "02",
-    output_dir: Path = Path("data/scoresheet_htm_raw"),
+    output_dir: Path = Path(DEFAULT_OUTPUT_DIR),
     redownload: bool = False,
     start_game_num: int = 1
 ):

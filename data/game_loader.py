@@ -2,9 +2,13 @@ import json
 from pathlib import Path
 from core.models import Game
 
+
+DEFAULT_GAME_DIR = "data/game_objects"
+
+
 def load_season_games(
     season_str: str, # e.g. "20252026",
-    input_dir: Path = Path("data/game_objects")
+    input_dir: Path = Path(DEFAULT_GAME_DIR)
 ) -> list[Game]:
     season_dir = input_dir / season_str
 
@@ -18,3 +22,12 @@ def load_season_games(
             games.append(Game.from_dict(data))
     
     return games
+
+
+def load_watched(season_str: str) -> set[str]:
+    watched_file = Path(f"data/watched/{season_str}/watched.json")
+    if not watched_file.exists():
+        return set()
+    
+    with open(watched_file, "r") as f:
+        return set(json.load(f))
