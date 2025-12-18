@@ -148,8 +148,8 @@ def parse_game_htm(htm: str) -> Game:
 def parse_season(
     season_str: str, # i.e. "20252026",
     season_type: str = "02",
-    input_dir: Path = Path("data/raw_htm"),
-    output_dir: Path = Path("data/parsed_games"),
+    input_dir: Path = Path("data/scoresheet_htm_raw"),
+    output_dir: Path = Path("data/game_objects"),
     overwrite: bool = False
 ):
     in_season_dir = input_dir / season_str

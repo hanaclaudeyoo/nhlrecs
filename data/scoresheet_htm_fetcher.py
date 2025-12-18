@@ -10,7 +10,7 @@ REQUEST_DELAY = 0.5 # seconds
 def fetch_season(
     season_str: str, # i.e. "20252026"
     season_type: str = "02",
-    output_dir: Path = Path("data/raw_htm"),
+    output_dir: Path = Path("data/scoresheet_htm_raw"),
     redownload: bool = False,
     start_game_num: int = 1
 ):

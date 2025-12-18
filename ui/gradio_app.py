@@ -18,6 +18,7 @@ def load_ranked_games() -> list[list[str]]:
     rows = []
     for game in ranked_games:
         rows.append([
+            game.game_id,
             game.date,
             game.away_team,
             game.home_team
@@ -29,8 +30,8 @@ with gr.Blocks(title="NHL Game Recommender") as demo:
     gr.Markdown("## NHL Game Recommender")
 
     games_table = gr.DataFrame(
-        headers=["Date", "Away", "Home"],
-        datatype=["str", "str", "str"],
+        headers=["Game ID", "Date", "Away", "Home"],
+        datatype=["str", "str", "str", "str"],
         interactive=False
     )
 
