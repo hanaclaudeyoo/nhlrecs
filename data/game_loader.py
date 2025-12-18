@@ -13,6 +13,8 @@ def load_season_games(
     for json_file in sorted(season_dir.glob("*.json")):
         with open(json_file, "r", encoding="utf-8") as f:
             data = json.load(f)
+            if isinstance(data, str):
+                data = json.loads(data)
             games.append(Game.from_dict(data))
     
     return games
