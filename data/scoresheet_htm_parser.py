@@ -115,7 +115,7 @@ def parse_game_id(game_info: Tag) -> str:
             # e.g. "Game 0001"
             return text.split("Game ")[1]
         
-    raise ValueError("Could not find game id in GameInfo")
+    raise ValueError("Could not find game id in GameInfo.")
 
 
 def parse_game_date(game_info: Tag) -> str:
@@ -127,7 +127,7 @@ def parse_game_date(game_info: Tag) -> str:
             date = datetime.strptime(text, "%A, %B %d, %Y")
             return date.date().isoformat()
         
-    raise ValueError("Could not find game date in GameInfo")
+    raise ValueError("Could not find game date in GameInfo.")
 
 
 def parse_game_htm(htm: str) -> Game:
@@ -177,13 +177,11 @@ def parse_season(
 
         game = parse_game_htm(htm_str)
         if game is None:
-            print(f"Game {out_file.stem} is invalid or unfinished, skipping")
+            print(f"Game {out_file.stem} is invalid or unfinished, skipping.")
             continue
 
         with open(out_file, "w", encoding="utf-8") as f:
             json.dump(game.to_json(indent=2), f, indent=2)
         
         print(f"Parsed {out_file.stem}")
-
-
-parse_season("20252026")
+    print(f"Completed parsing season {season_str}")

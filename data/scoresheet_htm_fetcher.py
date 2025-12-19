@@ -9,8 +9,8 @@ DEFAULT_OUTPUT_DIR = "data/scoresheet_htm_raw"
 PARSED_DIR = "data/game_objects"
 
 
-def is_parsed(filename: str) -> bool:
-    parsed_filepath = Path(PARSED_DIR) / f"{filename}.json"
+def is_parsed(season_str, filename: str) -> bool:
+    parsed_filepath = Path(PARSED_DIR) / season_str / f"{filename}.json"
     if parsed_filepath.exists():
         return True
     return False
@@ -20,7 +20,6 @@ def fetch_season(
     season_str: str, # i.e. "20252026"
     season_type: str = "02",
     output_dir: Path = Path(DEFAULT_OUTPUT_DIR),
-    skip_parsed: bool = True,
     redownload: bool = False,
     start_game_num: int = 1
 ):
@@ -35,20 +34,8 @@ def fetch_season(
         out_filename = f"{season_str}_{season_type}_{game_num:04d}.HTM"
         out_path = out_season_dir / out_filename
 
-        if not redownload:
-            if skip_parsed:
-                if is_parsed(out_filename[:-4]):
-                    print(f"Already parsed {out_filename}, skipping.")
-                    game_num += 1
-                    continue
-            elif out_path.exists():
-                print(f"Already downloaded {out_filename}, skipping.")
-                game_num += 1
-                continue
-
-        if not redownload and out_path.exists():
-            # already downloaded - skip
-            print(f"Already downloaded {out_filename}, skipping.")
+        if not redownload and is_parsed(season_str, out_filename[:-4]):
+            print(f"Already parsed {out_filename}, skipping.")
             game_num += 1
             continue
             
@@ -66,6 +53,3 @@ def fetch_season(
 
         game_num += 1
         time.sleep(REQUEST_DELAY)
-
-
-fetch_season("20252026")

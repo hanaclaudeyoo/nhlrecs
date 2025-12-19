@@ -3,6 +3,7 @@ import gradio as gr
 from core.metrics import TotalGoalsMetric
 from core.scorer import Scorer
 from data.game_loader import load_season_games, load_watched, toggle_watched
+from data.update_pipeline import update_season
 
 
 SEASON_STR = "20252026"
@@ -43,7 +44,7 @@ def on_row_select(event: gr.SelectData) -> int:
 
 def on_toggle_watched(
     table: gr.DataFrame,
-    selected_row: int | None,
+    selected_row: int,
     show_watched: bool,
     show_unwatched: bool
 ) -> gr.DataFrame | list[list[str]]:
@@ -54,6 +55,11 @@ def on_toggle_watched(
     toggle_watched(SEASON_STR, game_id)
     
     return load_ranked_games(show_watched, show_unwatched)
+
+def on_update_click(show_watched: bool, show_unwatched: bool):
+    num_new_rows = update_season(SEASON_STR)
+    status = f"Added {num_new_rows} new games"
+    return load_ranked_games(show_watched, show_unwatched), status
 
 
 with gr.Blocks(title="NHL Game Recommender") as demo:
@@ -71,7 +77,10 @@ with gr.Blocks(title="NHL Game Recommender") as demo:
         interactive=False
     )
 
-    toggle_watched_button = gr.Button("Toggle Watched")
+    toggle_watched_button = gr.Button("Toggle watched")
+
+    update_season_button = gr.Button("Load new games")
+    update_season_status = gr.Markdown("")
 
     show_watched_check.change(
         fn=load_ranked_games,
@@ -94,6 +103,12 @@ with gr.Blocks(title="NHL Game Recommender") as demo:
         fn=on_toggle_watched,
         inputs=[games_table, selected_row, show_watched_check, show_unwatched_check],
         outputs=[games_table]
+    )
+
+    update_season_button.click(
+        fn=on_update_click,
+        inputs=[show_watched_check, show_unwatched_check],
+        outputs=[games_table, update_season_status]
     )
 
     demo.load(
