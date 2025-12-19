@@ -1,15 +1,33 @@
 # nhlrecs
 
-## requirements
+## Requirements
 
-## updating new games
-
-## running recommendation app
+See `requirements.txt`.
 
 
-## implementation notes
+## Updating new games
 
-### data source
+To download scoresheets of new games, from root, run:
+
+`python -m data.scoresheet_htm_fetcher`
+
+To parse scoresheets into game objects, from root, run:
+
+`python -m data.scoresheet_htm_parser`
+
+After running those two commands in that order, the new games will be available.
+
+
+## Running the app
+
+From root, run:
+
+`python -m ui.gradio_app`
+
+
+## Implementation notes
+
+### Data source
 
 `https://www.nhl.com/scores/htmlreports/<yr1><yr2>/PL<szn><game#>.HTM`
 - `<yr1>`-`<yr2>` season
