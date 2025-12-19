@@ -5,19 +5,6 @@
 See `requirements.txt`.
 
 
-## Updating new games
-
-To download scoresheets of new games, from root, run:
-
-`python -m data.scoresheet_htm_fetcher`
-
-To parse scoresheets into game objects, from root, run:
-
-`python -m data.scoresheet_htm_parser`
-
-After running those two commands in that order, the new games will be available.
-
-
 ## Running the app
 
 From root, run:
