@@ -62,11 +62,15 @@ def extract_htm_play_rows(soup: BeautifulSoup) -> list[PlayRow]:
 
 
 def extract_game_info(soup: BeautifulSoup) -> Tag:
-    game_info = soup.find("table", id="GameInfo")
-    if game_info is None:
-        raise ValueError("Could not find GameInfo table")
-    
-    return game_info
+    return soup.find("table", id="GameInfo")
+
+
+def is_final_game(game_info: Tag) -> bool:
+    for td in game_info.find_all("td"):
+        text = td.get_text(strip=True)
+        if text == "Final":
+            return True
+    return False
 
 
 def parse_goals(play_rows: list[PlayRow]) -> list[Goal]:
@@ -129,12 +133,17 @@ def parse_game_date(game_info: Tag) -> str:
 def parse_game_htm(htm: str) -> Game:
     soup = BeautifulSoup(htm, "html.parser")
 
-    home_team = parse_team_names(soup, "Home")
-    away_team = parse_team_names(soup, "Visitor")
-
     game_info = extract_game_info(soup)
+    if game_info is None:
+        return None
+    if not is_final_game(game_info):
+        return None
+    
     game_id = parse_game_id(game_info)
     game_date = parse_game_date(game_info)
+
+    home_team = parse_team_names(soup, "Home")
+    away_team = parse_team_names(soup, "Visitor")
 
     play_rows = extract_htm_play_rows(soup)
     goals = parse_goals(play_rows)
@@ -167,6 +176,9 @@ def parse_season(
             htm_str = f.read()
 
         game = parse_game_htm(htm_str)
+        if game is None:
+            print(f"Game {out_file.stem} is invalid or unfinished, skipping")
+            continue
 
         with open(out_file, "w", encoding="utf-8") as f:
             json.dump(game.to_json(indent=2), f, indent=2)

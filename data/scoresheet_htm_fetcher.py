@@ -6,12 +6,21 @@ import time
 BASE_URL = "https://www.nhl.com/scores/htmlreports"
 REQUEST_DELAY = 0.5 # seconds
 DEFAULT_OUTPUT_DIR = "data/scoresheet_htm_raw"
+PARSED_DIR = "data/game_objects"
+
+
+def is_parsed(filename: str) -> bool:
+    parsed_filepath = Path(PARSED_DIR) / f"{filename}.json"
+    if parsed_filepath.exists():
+        return True
+    return False
 
 
 def fetch_season(
     season_str: str, # i.e. "20252026"
     season_type: str = "02",
     output_dir: Path = Path(DEFAULT_OUTPUT_DIR),
+    skip_parsed: bool = True,
     redownload: bool = False,
     start_game_num: int = 1
 ):
@@ -24,8 +33,19 @@ def fetch_season(
     while True:
         req_url = f"{BASE_URL}/{season_str}/PL{season_type}{game_num:04d}.HTM"
         out_filename = f"{season_str}_{season_type}_{game_num:04d}.HTM"
-
         out_path = out_season_dir / out_filename
+
+        if not redownload:
+            if skip_parsed:
+                if is_parsed(out_filename[:-4]):
+                    print(f"Already parsed {out_filename}, skipping.")
+                    game_num += 1
+                    continue
+            elif out_path.exists():
+                print(f"Already downloaded {out_filename}, skipping.")
+                game_num += 1
+                continue
+
         if not redownload and out_path.exists():
             # already downloaded - skip
             print(f"Already downloaded {out_filename}, skipping.")

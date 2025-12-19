@@ -41,7 +41,12 @@ def on_row_select(event: gr.SelectData) -> int:
     return event.index[0]
 
 
-def on_toggle_watched(table, selected_row, show_watched, show_unwatched):
+def on_toggle_watched(
+    table: gr.DataFrame,
+    selected_row: int | None,
+    show_watched: bool,
+    show_unwatched: bool
+) -> gr.DataFrame | list[list[str]]:
     if selected_row is None:
         return table # nothing selected
     
@@ -52,7 +57,7 @@ def on_toggle_watched(table, selected_row, show_watched, show_unwatched):
 
 
 with gr.Blocks(title="NHL Game Recommender") as demo:
-    gr.Markdown("## NHL Game Recommender")
+    gr.Markdown("## NHL Game Recommender - 20252026")
 
     with gr.Row():
         show_watched_check = gr.Checkbox(value=True, label="Show Watched")
