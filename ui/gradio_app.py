@@ -8,7 +8,10 @@ from data.game_loader import load_season_games, load_watched, toggle_watched
 SEASON_STR = "20252026"
 
 
-def load_ranked_games() -> list[list[str]]:
+def load_ranked_games(
+    show_watched: bool,
+    show_unwatched: bool
+) -> list[list[str]]:
     games = load_season_games(SEASON_STR)
     watched = load_watched(SEASON_STR)
 
@@ -18,7 +21,12 @@ def load_ranked_games() -> list[list[str]]:
 
     rows = []
     for game in ranked_games:
-        watched_flag = "✓" if game.game_id in watched else ""
+        is_watched = game.game_id in watched
+        if is_watched and not show_watched:
+            continue
+        if not is_watched and not show_unwatched:
+            continue
+        watched_flag = "✓" if is_watched else ""
         rows.append([
             game.game_id,
             game.date,
@@ -33,18 +41,22 @@ def on_row_select(event: gr.SelectData) -> int:
     return event.index[0]
 
 
-def on_toggle_watched(table, selected_row):
+def on_toggle_watched(table, selected_row, show_watched, show_unwatched):
     if selected_row is None:
         return table # nothing selected
     
     game_id = table.iloc[selected_row, 0]
     toggle_watched(SEASON_STR, game_id)
     
-    return load_ranked_games()
+    return load_ranked_games(show_watched, show_unwatched)
 
 
 with gr.Blocks(title="NHL Game Recommender") as demo:
     gr.Markdown("## NHL Game Recommender")
+
+    with gr.Row():
+        show_watched_check = gr.Checkbox(value=True, label="Show Watched")
+        show_unwatched_check = gr.Checkbox(value=True, label="Show Unwatched")
 
     selected_row: int = gr.State(None)
 
@@ -56,6 +68,17 @@ with gr.Blocks(title="NHL Game Recommender") as demo:
 
     toggle_watched_button = gr.Button("Toggle Watched")
 
+    show_watched_check.change(
+        fn=load_ranked_games,
+        inputs=[show_watched_check, show_unwatched_check],
+        outputs=[games_table]
+    )
+    show_unwatched_check.change(
+        fn=load_ranked_games,
+        inputs=[show_watched_check, show_unwatched_check],
+        outputs=[games_table]
+    )
+
     games_table.select(
         fn=on_row_select,
         inputs=[],
@@ -64,13 +87,13 @@ with gr.Blocks(title="NHL Game Recommender") as demo:
 
     toggle_watched_button.click(
         fn=on_toggle_watched,
-        inputs=[games_table, selected_row],
+        inputs=[games_table, selected_row, show_watched_check, show_unwatched_check],
         outputs=[games_table]
     )
 
     demo.load(
         fn=load_ranked_games,
-        inputs=[],
+        inputs=[show_watched_check, show_unwatched_check],
         outputs=[games_table]
     )
 
