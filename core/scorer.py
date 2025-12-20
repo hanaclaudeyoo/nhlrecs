@@ -43,7 +43,7 @@ class Scorer:
         # calculate score per metric
         scores_metric: dict[str, list[float]] = {}
         for metric in self.metrics:
-            scores_metric[metric.name] = [metric.compute(g) for g in games]
+            scores_metric[metric.name] = [metric.score(g) for g in games]
         
         # normalize scores per metric
         scores_normal: dict[str, list[float]] = {}

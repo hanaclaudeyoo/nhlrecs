@@ -15,11 +15,17 @@ def count_parsed_games(season_str: str) -> int:
 
 def update_season(
     season_str: str, # e.g. "20252026"
+    refetch: bool = False,
+    reparse: bool = False
 ) -> int:
-    fetch_season(season_str)
+    fetch_season(season_str, redownload=refetch)
 
     before = count_parsed_games(season_str)
-    parse_season(season_str)
+    parse_season(season_str, overwrite=reparse)
     after = count_parsed_games(season_str)
 
     return after - before # returns number of new games added
+
+
+if __name__ == "__main__":
+    update_season("20252026", reparse=True)

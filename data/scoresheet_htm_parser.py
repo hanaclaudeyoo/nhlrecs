@@ -80,6 +80,9 @@ def parse_goals(play_rows: list[PlayRow]) -> list[Goal]:
         if row.event != "GOAL":
             continue
 
+        if row.time_elapsed_seconds >= PERIOD_LENGTH_SECONDS * 4:
+            continue # skip shootout goals
+
         team = get_team_from_desc(row.description)
 
         goals.append(Goal(

@@ -1,6 +1,6 @@
 import gradio as gr
 
-from core.metrics import TotalGoalsMetric
+from core.metrics import TotalGoalsMetric, LeadChanges, MaxLead
 from core.scorer import Scorer
 from data.game_loader import load_season_games, load_watched, toggle_watched
 from data.update_pipeline import update_season
@@ -16,7 +16,7 @@ def load_ranked_games(
     games = load_season_games(SEASON_STR)
     watched = load_watched(SEASON_STR)
 
-    scorer = Scorer([TotalGoalsMetric()])
+    scorer = Scorer([TotalGoalsMetric(), LeadChanges(), MaxLead()])
 
     ranked_games = scorer.rank_games(games)
 
