@@ -1,6 +1,9 @@
 from core.models import Game
 
 
+PERIOD_LENGTH_SECONDS = 20 * 60
+
+
 class Metric:
     name: str
     maximize: bool
@@ -36,7 +39,7 @@ class FinalGoalDifferentialMetric(Metric):
         return abs(away_score - home_score)
 
 
-class LeadChanges(Metric):
+class LeadChangesMetric(Metric):
     name = "lead_changes"
     maximize = True
 
@@ -64,7 +67,7 @@ class LeadChanges(Metric):
         return num_lead_changes
 
 
-class MaxLead(Metric):
+class MaxLeadMetric(Metric):
     name = "max_lead"
     maximize = False
 
@@ -80,3 +83,27 @@ class MaxLead(Metric):
             if abs(away_score - home_score) > max_lead:
                 max_lead = abs(away_score - home_score)
         return max_lead
+    
+class MaxTimeBetweenGoalsMetric(Metric):
+    name = "max_time_between_goals"
+    maximize = False
+
+    def compute(self, game: Game) -> float:
+        max_time_btwn = 0
+
+        prev_time = 0
+        for goal in game.goals:
+            gap = goal.time_elapsed_seconds - prev_time
+            if gap > max_time_btwn:
+                max_time_btwn = gap
+            prev_time = goal.time_elapsed_seconds
+
+        # consider time between last goal and end of game
+        if len(game.goals) < 1:
+            print(game)
+        if game.goals[-1].time_elapsed_seconds < PERIOD_LENGTH_SECONDS: # exclude overtime
+            gap = PERIOD_LENGTH_SECONDS - game.goals[-1].time_elapsed_seconds
+            if gap > max_time_btwn:
+                max_time_btwn = gap
+        
+        return max_time_btwn

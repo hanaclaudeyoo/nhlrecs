@@ -133,6 +133,18 @@ def parse_game_date(game_info: Tag) -> str:
     raise ValueError("Could not find game date in GameInfo.")
 
 
+def parse_final_score(soup: BeautifulSoup) -> tuple[int, int]:
+    visitor = soup.find("table", id="Visitor")
+    home = soup.find("table", id="Home")
+
+    visitor_score = int(visitor.find("td", style=re.compile("font-size: 40px")).get_text(strip=True))
+    home_score = int(home.find("td", style=re.compile("font-size: 40px")).get_text(strip=True))
+    if visitor_score == home_score:
+        raise ValueError(f"Final game score is tied {visitor_score} vs {home_score}")
+
+    return visitor_score, home_score
+
+
 def parse_game_htm(htm: str) -> Game:
     soup = BeautifulSoup(htm, "html.parser")
 
@@ -145,12 +157,27 @@ def parse_game_htm(htm: str) -> Game:
     game_id = parse_game_id(game_info)
     game_date = parse_game_date(game_info)
 
-    home_team = parse_team_names(soup, "Home")
     away_team = parse_team_names(soup, "Visitor")
+    home_team = parse_team_names(soup, "Home")
+
+    away_score, home_score = parse_final_score(soup)
 
     play_rows = extract_htm_play_rows(soup)
     goals = parse_goals(play_rows)
 
+    # check for shootout
+    if away_score + home_score == len(goals) + 1:
+        winning_team = home_team if home_score > away_score else away_team
+        goals.append(Goal(
+            time_elapsed_seconds=PERIOD_LENGTH_SECONDS*4,
+            team=winning_team
+        ))
+    
+    if len(goals) < 1:
+        raise ValueError(f"Game {game_id} has no goals")
+    
+    goals.sort(key=lambda g: g.time_elapsed_seconds)
+        
     return Game(
         game_id=game_id,
         date=game_date,
@@ -158,6 +185,7 @@ def parse_game_htm(htm: str) -> Game:
         away_team=away_team,
         goals=goals
     )
+
 
 def parse_season(
     season_str: str, # i.e. "20252026",

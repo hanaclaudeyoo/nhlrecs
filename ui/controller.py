@@ -1,6 +1,6 @@
 from data.game_store import load_season_games, load_watched, save_watched
 from data.update_pipeline import update_season
-from core.metrics import TotalGoalsMetric, LeadChanges, MaxLead
+from core.metrics import TotalGoalsMetric, LeadChangesMetric, MaxLeadMetric, MaxTimeBetweenGoalsMetric
 from core.scorer import Scorer
 
 
@@ -14,7 +14,7 @@ def load_ranked_games(
     games = load_season_games(SEASON_STR)
     watched = load_watched(SEASON_STR)
 
-    scorer = Scorer([TotalGoalsMetric(), LeadChanges(), MaxLead()])
+    scorer = Scorer([TotalGoalsMetric(), LeadChangesMetric(), MaxLeadMetric(), MaxTimeBetweenGoalsMetric()])
 
     ranked_games = scorer.rank_games(games)
 
@@ -32,8 +32,8 @@ def load_ranked_games(
         table.append([
             game.game_id,
             game.date,
-            game.away_team,
-            game.home_team,
+            game.away_team.full_name,
+            game.home_team.full_name,
             watched_flag
         ])
         game_ids.append(game.game_id)

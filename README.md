@@ -21,3 +21,10 @@ From root, run:
 - `<szn>`: 01=preseason, 02=regular season
 - `<game#>` chronological order, all games (4 digits)
 e.g. https://www.nhl.com/scores/htmlreports/20162017/PL020716.HTM
+
+
+### Data processing
+
+To re-run data fetch and/or parse, run:
+
+`python -m data.update_pipline`
