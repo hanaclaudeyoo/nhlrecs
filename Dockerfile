@@ -29,13 +29,6 @@ ENV VIRTUAL_ENV=/home/app/venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-# TODO
-#### # upgrade pip
-#### RUN pip install --upgrade pip
-#### # install
-#### RUN pip install --upgrade pandas==2.2.2
-#### RUN pip install --upgrade gradio==4.42.0
-
 COPY requirements.txt ./
 RUN python -m pip install --upgrade pip && \
     python -m pip install --no-cache-dir -r requirements.txt
