@@ -39,12 +39,3 @@ def save_watched(season_str: str, watched: set[str]) -> None:
 
     with open(watched_file, "w") as f:
         json.dump(sorted(watched), f, indent=2)
-
-
-def toggle_watched(season_str: str, game_id: str) -> None:
-    watched = load_watched(season_str)
-    if game_id in watched:
-        watched.remove(game_id)
-    else:
-        watched.add(game_id)
-    save_watched(season_str, watched)

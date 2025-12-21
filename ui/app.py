@@ -1,0 +1,74 @@
+import gradio as gr
+from ui.controller import load_ranked_games
+from ui.hooks import on_row_select, on_toggle_watched, on_update_click
+
+
+with gr.Blocks(title="NHL Game Recommender") as demo:
+
+    ### COMPONENTS ###
+
+    gr.Markdown("## NHL Game Recommender - 20252026")
+
+    with gr.Row():
+        show_watched_check = gr.Checkbox(value=True, label="Show Watched")
+        show_unwatched_check = gr.Checkbox(value=True, label="Show Unwatched")
+
+    selected_game_id: str = gr.State(None)
+
+    games_table = gr.DataFrame(
+        headers=["Game ID", "Date", "Away", "Home", "Watched"],
+        datatype=["str", "str", "str", "str", "str"],
+        interactive=False
+    )
+
+    toggle_watched_button = gr.Button("Toggle watched")
+
+    update_season_button = gr.Button("Load new games")
+    update_season_status = gr.Markdown("")
+
+
+    ### HOOKS ###
+
+    # Filters
+    show_watched_check.change(
+        fn=load_ranked_games,
+        inputs=[show_watched_check, show_unwatched_check],
+        outputs=[games_table]
+    )
+    show_unwatched_check.change(
+        fn=load_ranked_games,
+        inputs=[show_watched_check, show_unwatched_check],
+        outputs=[games_table]
+    )
+
+    games_table.select(
+        fn=on_row_select,
+        inputs=[],
+        outputs=[selected_game_id]
+    )
+
+    # Buttons
+    toggle_watched_button.click(
+        fn=on_toggle_watched,
+        inputs=[games_table, selected_game_id, show_watched_check, show_unwatched_check],
+        outputs=[games_table]
+    )
+
+    update_season_button.click(
+        fn=on_update_click,
+        inputs=[show_watched_check, show_unwatched_check],
+        outputs=[games_table, update_season_status]
+    )
+
+
+    ### APP ###
+
+    demo.load(
+        fn=load_ranked_games,
+        inputs=[show_watched_check, show_unwatched_check],
+        outputs=[games_table]
+    )
+
+
+if __name__ == "__main__":
+    demo.launch()

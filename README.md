@@ -9,7 +9,7 @@ See `requirements.txt`.
 
 From root, run:
 
-`python -m ui.gradio_app`
+`python -m ui.app`
 
 
 ## Implementation notes
