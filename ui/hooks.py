@@ -2,8 +2,15 @@ import gradio as gr
 from ui.controller import load_ranked_games, toggle_watched, load_new_games
 
 
-def on_row_select(event: gr.SelectData) -> int:
-    return event.value if event.index[1] == 0 else None
+def refresh(show_watched: bool, show_unwatched: bool):
+    return load_ranked_games(show_watched, show_unwatched)
+
+
+def on_row_select(event: gr.SelectData, table_game_ids: list[str]) -> int:
+    row = event.index[0]
+    if row >= len(table_game_ids):
+        return None
+    return table_game_ids[row]
 
 
 def on_toggle_watched(
