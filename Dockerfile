@@ -1,4 +1,17 @@
-FROM python:3.12.4-alpine3.20
+# FROM python:3.12.4-alpine3.20
+FROM python:3.11.5-alpine3.18
+
+# Install build dependencies for matplotlib and other packages
+RUN apk add --no-cache \
+    gcc \
+    g++ \
+    musl-dev \
+    linux-headers \
+    freetype-dev \
+    libpng-dev \
+    openblas-dev \
+    lapack-dev \
+    gfortran
 
 # permissions and nonroot user for tightened security
 RUN adduser -D nonroot
@@ -16,12 +29,18 @@ ENV VIRTUAL_ENV=/home/app/venv
 RUN python -m venv $VIRTUAL_ENV
 ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
-# upgrade pip
-RUN pip install --upgrade pip
-# install
-RUN pip install --upgrade pandas==2.2.2
-RUN pip install --upgrade gradio==4.42.0
+# TODO
+#### # upgrade pip
+#### RUN pip install --upgrade pip
+#### # install
+#### RUN pip install --upgrade pandas==2.2.2
+#### RUN pip install --upgrade gradio==4.42.0
+
+COPY requirements.txt ./
+RUN python -m pip install --upgrade pip && \
+    python -m pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 7860
-CMD ["python", "gradio_demo.py"]
+CMD ["python", "-m", "ui.app"]
+# CMD ["python", "gradio_demo.py"]
 # CMD ["gradio", "gradio_demo.py"]

@@ -2,4 +2,4 @@ requests==2.32.3
 beautifulsoup4==4.12.3
 dataclasses-json==0.6.4
 pandas==2.2.2
-gradio==4.42.0
+gradio==5.12.0
