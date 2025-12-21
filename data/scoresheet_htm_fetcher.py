@@ -2,15 +2,15 @@ import requests
 from pathlib import Path
 import time
 
+from core.paths import RAW_SCORESHEET_DIR, PARSED_GAMES_DIR
+
 
 BASE_URL = "https://www.nhl.com/scores/htmlreports"
 REQUEST_DELAY = 0.5 # seconds
-DEFAULT_OUTPUT_DIR = "data/scoresheet_htm_raw"
-PARSED_DIR = "data/game_objects"
 
 
 def is_parsed(season_str, filename: str) -> bool:
-    parsed_filepath = Path(PARSED_DIR) / season_str / f"{filename}.json"
+    parsed_filepath = Path(PARSED_GAMES_DIR) / season_str / f"{filename}.json"
     if parsed_filepath.exists():
         return True
     return False
@@ -19,7 +19,7 @@ def is_parsed(season_str, filename: str) -> bool:
 def fetch_season(
     season_str: str, # i.e. "20252026"
     season_type: str = "02",
-    output_dir: Path = Path(DEFAULT_OUTPUT_DIR),
+    output_dir: Path = Path(RAW_SCORESHEET_DIR),
     redownload: bool = False,
     start_game_num: int = 1
 ):

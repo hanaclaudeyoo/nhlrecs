@@ -30,4 +30,5 @@ def on_toggle_watched(
 def on_update_click(show_watched: bool, show_unwatched: bool):
     num_new_rows = load_new_games()
     status = f"Added {num_new_rows} new games"
-    return load_ranked_games(show_watched, show_unwatched), status
+    table, game_ids = load_ranked_games(show_watched, show_unwatched)
+    return table, game_ids, status

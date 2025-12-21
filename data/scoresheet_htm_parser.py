@@ -6,14 +6,13 @@ from datetime import datetime
 from pathlib import Path
 import json
 
+from core.paths import RAW_SCORESHEET_DIR, PARSED_GAMES_DIR
 from core.models import Goal, Game
 from core.teams import Team, FULL_NAME_TO_TEAM
 
 
 PERIOD_LENGTH_SECONDS = 20 * 60
 TEAM_TABLE_TYPES = ("Home", "Visitor")
-DEFAULT_INPUT_DIR = "data/scoresheet_htm_raw"
-DEFAULT_OUTPUT_DIR = "data/game_objects"
 
 
 @dataclass
@@ -190,8 +189,8 @@ def parse_game_htm(htm: str) -> Game:
 def parse_season(
     season_str: str, # i.e. "20252026",
     season_type: str = "02",
-    input_dir: Path = Path(DEFAULT_INPUT_DIR),
-    output_dir: Path = Path(DEFAULT_OUTPUT_DIR),
+    input_dir: Path = Path(RAW_SCORESHEET_DIR),
+    output_dir: Path = Path(PARSED_GAMES_DIR),
     overwrite: bool = False
 ):
     in_season_dir = input_dir / season_str
