@@ -24,6 +24,7 @@ def fetch_season(
     start_game_num: int = 1
 ):
     out_season_dir = output_dir / season_str
+    out_season_dir.mkdir(parents=True, exist_ok=True)
 
     game_num = start_game_num
 
