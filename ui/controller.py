@@ -19,7 +19,6 @@ def load_ranked_games(
     ranked_games = scorer.rank_games(games)
 
     table = []
-    game_ids = []
 
     for game in ranked_games:
         is_watched = game.game_id in watched
@@ -36,17 +35,21 @@ def load_ranked_games(
             game.home_team.full_name,
             watched_flag
         ])
-        game_ids.append(game.game_id)
 
-    return table, game_ids
+    return table
 
 
 def toggle_watched(game_id: str) -> None:
+    if game_id is None:
+        return
+    
     watched = load_watched(SEASON_STR)
+
     if game_id in watched:
         watched.remove(game_id)
     else:
         watched.add(game_id)
+
     save_watched(SEASON_STR, watched)
 
 

@@ -12,7 +12,6 @@ with gr.Blocks(title="NHL Game Recommender") as demo:
         show_watched_check = gr.Checkbox(value=True, label="Show Watched")
         show_unwatched_check = gr.Checkbox(value=True, label="Show Unwatched")
 
-    table_game_ids: list[str] = gr.State([])
     selected_game_id: str = gr.State(None)
 
     games_table = gr.DataFrame(
@@ -33,31 +32,31 @@ with gr.Blocks(title="NHL Game Recommender") as demo:
     show_watched_check.change(
         fn=refresh,
         inputs=[show_watched_check, show_unwatched_check],
-        outputs=[games_table, table_game_ids]
+        outputs=[games_table]
     )
     show_unwatched_check.change(
         fn=refresh,
         inputs=[show_watched_check, show_unwatched_check],
-        outputs=[games_table, table_game_ids]
+        outputs=[games_table]
     )
 
     games_table.select(
         fn=on_row_select,
-        inputs=[table_game_ids],
+        inputs=[games_table],
         outputs=[selected_game_id]
     )
 
     # Buttons
     toggle_watched_button.click(
         fn=on_toggle_watched,
-        inputs=[games_table, selected_game_id, show_watched_check, show_unwatched_check],
-        outputs=[games_table, table_game_ids]
+        inputs=[selected_game_id, show_watched_check, show_unwatched_check],
+        outputs=[games_table]
     )
 
     update_season_button.click(
         fn=on_update_click,
         inputs=[show_watched_check, show_unwatched_check],
-        outputs=[games_table, table_game_ids, update_season_status]
+        outputs=[games_table, update_season_status]
     )
 
 
@@ -66,7 +65,7 @@ with gr.Blocks(title="NHL Game Recommender") as demo:
     demo.load(
         fn=refresh,
         inputs=[show_watched_check, show_unwatched_check],
-        outputs=[games_table, table_game_ids]
+        outputs=[games_table]
     )
 
 
