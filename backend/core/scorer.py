@@ -1,5 +1,5 @@
-from core.metrics import Metric
-from core.models import Game
+from backend.core.metrics import Metric
+from backend.core.models import Game
 
 
 class Scorer:

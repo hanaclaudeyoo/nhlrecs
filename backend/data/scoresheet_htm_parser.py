@@ -6,9 +6,9 @@ from datetime import datetime
 from pathlib import Path
 import json
 
-from core.paths import RAW_SCORESHEET_DIR, PARSED_GAMES_DIR
-from core.models import Goal, Game
-from core.teams import Team, FULL_NAME_TO_TEAM
+from backend.core.paths import RAW_SCORESHEET_DIR, PARSED_GAMES_DIR
+from backend.core.models import Goal, Game
+from backend.core.teams import Team, FULL_NAME_TO_TEAM
 
 
 PERIOD_LENGTH_SECONDS = 20 * 60

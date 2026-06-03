@@ -2,7 +2,7 @@ import requests
 from pathlib import Path
 import time
 
-from core.paths import RAW_SCORESHEET_DIR, PARSED_GAMES_DIR
+from backend.core.paths import RAW_SCORESHEET_DIR, PARSED_GAMES_DIR
 
 
 BASE_URL = "https://www.nhl.com/scores/htmlreports"

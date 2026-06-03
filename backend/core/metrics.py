@@ -1,4 +1,4 @@
-from core.models import Game
+from backend.core.models import Game
 
 
 PERIOD_LENGTH_SECONDS = 20 * 60

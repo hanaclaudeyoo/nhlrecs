@@ -1,6 +1,6 @@
 from pathlib import Path
 
-REPO_ROOT = Path(__file__).resolve().parents[1]
+REPO_ROOT = Path(__file__).resolve().parents[2]
 
 DATASETS_DIR = REPO_ROOT / "datasets"
 RAW_SCORESHEET_DIR = DATASETS_DIR / "scoresheet_htm_raw"

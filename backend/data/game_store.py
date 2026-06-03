@@ -1,8 +1,8 @@
 import json
 from pathlib import Path
 
-from core.models import Game
-from core.paths import PARSED_GAMES_DIR, WATCHED_DIR
+from backend.core.models import Game
+from backend.core.paths import PARSED_GAMES_DIR, WATCHED_DIR
 
 
 def load_season_games(

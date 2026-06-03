@@ -1,6 +1,6 @@
 from dataclasses import dataclass, field
 from dataclasses_json import dataclass_json
-from core.teams import Team
+from backend.core.teams import Team
 
 
 @dataclass_json

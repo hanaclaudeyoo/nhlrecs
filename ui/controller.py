@@ -1,7 +1,7 @@
-from data.game_store import load_season_games, load_watched, save_watched
-from data.update_pipeline import update_season
-from core.metrics import TotalGoalsMetric, LeadChangesMetric, MaxLeadMetric, MaxTimeBetweenGoalsMetric
-from core.scorer import Scorer
+from backend.data.game_store import load_season_games, load_watched, save_watched
+from backend.data.update_pipeline import update_season
+from backend.core.metrics import TotalGoalsMetric, LeadChangesMetric, MaxLeadMetric, MaxTimeBetweenGoalsMetric
+from backend.core.scorer import Scorer
 
 
 SEASON_STR = "20252026"
