@@ -2,14 +2,23 @@
 
 ## Requirements
 
-See `requirements.txt`.
+Python FastAPI backend + Vite React TypeScript frontend. See `requirements.txt`.
 
 
-## Running the app
+## Running the app (dev)
 
-From root, run:
+To launch backend, run:
 
-`python -m ui.app`
+```
+uvicorn backend.api.app:app --reload --port 8000
+```
+
+To launch frontend, run:
+
+```
+cd frontend
+npm run dev
+```
 
 
 ## Implementation notes
