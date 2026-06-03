@@ -37,7 +37,6 @@ class Team(Enum):
 
     @property
     def full_name(self) -> str:
-        """Return the team's properly capitalized full name."""
         return TEAM_TO_FULL_NAME[self]
 
 FULL_NAME_TO_TEAM = {
