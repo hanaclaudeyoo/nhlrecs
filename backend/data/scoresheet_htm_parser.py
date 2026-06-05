@@ -179,6 +179,7 @@ def parse_game_htm(htm: str) -> Game:
         
     return Game(
         game_id=game_id,
+        season="20252026", # HOTFIX (to be updated in ticket [030])
         date=game_date,
         home_team=home_team,
         away_team=away_team,

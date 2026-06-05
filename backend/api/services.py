@@ -1,4 +1,5 @@
-from backend.data.game_store import load_season_games, load_watched, save_watched
+from backend.db.game_store import read_season_games
+from backend.db.watched_store import read_watched_game_ids, insert_watched_game, remove_watched_game
 from backend.data.update_pipeline import update_season
 from backend.core.metrics import TotalGoalsMetric, LeadChangesMetric, MaxLeadMetric, MaxTimeBetweenGoalsMetric
 from backend.core.scorer import Scorer
@@ -12,8 +13,8 @@ def list_game_recommendations(
     show_watched: bool,
     show_unwatched: bool
 ) -> list[GameRecommendation]:
-    games = load_season_games(SEASON_STR)
-    watched = load_watched(SEASON_STR)
+    games = read_season_games(SEASON_STR)
+    watched = read_watched_game_ids(SEASON_STR)
 
     scorer = Scorer([TotalGoalsMetric(), LeadChangesMetric(), MaxLeadMetric(), MaxTimeBetweenGoalsMetric()])
 
@@ -41,27 +42,26 @@ def list_game_recommendations(
     return game_recommendations
 
 
-def toggle_game_watched(game_id: str) -> bool:
+def toggle_game_watched(game_id: str) -> bool | None:
     # check if valid game_id
     if game_id is None:
         return None
     
-    games = load_season_games(SEASON_STR)
+    games = read_season_games(SEASON_STR)
     game_ids = {game.game_id for game in games}
     if game_id not in game_ids:
         return None
     
     # toggle watched
-    watched = load_watched(SEASON_STR)
+    watched = read_watched_game_ids(SEASON_STR)
 
     if game_id in watched:
-        watched.remove(game_id)
+        remove_watched_game(SEASON_STR, game_id)
         is_watched = False
     else:
-        watched.add(game_id)
+        insert_watched_game(SEASON_STR, game_id)
         is_watched = True
 
-    save_watched(SEASON_STR, watched)
     return is_watched
 
 
