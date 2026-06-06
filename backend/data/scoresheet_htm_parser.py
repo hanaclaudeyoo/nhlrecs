@@ -144,7 +144,11 @@ def parse_final_score(soup: BeautifulSoup) -> tuple[int, int]:
     return visitor_score, home_score
 
 
-def parse_game_htm(htm: str) -> Game:
+def parse_game_htm(
+    htm: str,
+    season: str,
+    season_type: str
+) -> Game | None:
     soup = BeautifulSoup(htm, "html.parser")
 
     game_info = extract_game_info(soup)
@@ -179,7 +183,8 @@ def parse_game_htm(htm: str) -> Game:
         
     return Game(
         game_id=game_id,
-        season="20252026", # HOTFIX (to be updated in ticket [030])
+        season=season,
+        season_type=season_type,
         date=game_date,
         home_team=home_team,
         away_team=away_team,
@@ -206,7 +211,7 @@ def parse_season(
         with open(htm_file, "r", encoding="utf-8") as f:
             htm_str = f.read()
 
-        game = parse_game_htm(htm_str)
+        game = parse_game_htm(htm_str, season_str, season_type)
         if game is None:
             print(f"Game {out_file.stem} is invalid or unfinished, skipping.")
             continue

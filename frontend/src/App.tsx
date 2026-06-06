@@ -8,6 +8,8 @@ import {
 import type { GameRecommendation } from './types/games'
 
 function App() {
+  const season = '20252026'
+  const seasonType = '02'
   const [games, setGames] = useState<GameRecommendation[]>([])
   const [showWatched, setShowWatched] = useState(true)
   const [showUnwatched, setShowUnwatched] = useState(true)
@@ -21,6 +23,8 @@ function App() {
 
     try {
       const nextGames = await fetchGameRecommendations(
+        season,
+        seasonType,
         showWatched,
         showUnwatched,
       )
@@ -31,7 +35,7 @@ function App() {
     } finally {
       setIsLoading(false)
     }
-  }, [showWatched, showUnwatched])
+  }, [season, seasonType, showWatched, showUnwatched])
 
   useEffect(() => {
     void loadGames()
@@ -42,7 +46,7 @@ function App() {
     setError(null)
 
     try {
-      const result = await toggleGameWatched(gameId)
+      const result = await toggleGameWatched(season, seasonType, gameId)
       setStatus(
         `${result.game_id} marked ${result.watched ? 'watched' : 'unwatched'}`,
       )
@@ -116,6 +120,7 @@ function App() {
             <tr>
               <th>Rank</th>
               <th>Game ID</th>
+              <th>Season</th>
               <th>Date</th>
               <th>Away</th>
               <th>Home</th>
@@ -125,9 +130,10 @@ function App() {
           </thead>
           <tbody>
             {games.map((game) => (
-              <tr key={game.game_id}>
+              <tr key={`${game.season}-${game.season_type}-${game.game_id}`}>
                 <td>{game.rank}</td>
                 <td>{game.game_id}</td>
+                <td>{game.season} / {game.season_type}</td>
                 <td>{game.date}</td>
                 <td>{game.away_team}</td>
                 <td>{game.home_team}</td>
@@ -145,7 +151,7 @@ function App() {
             ))}
             {games.length === 0 && !isLoading && (
               <tr>
-                <td colSpan={7}>No games match the current filters.</td>
+                <td colSpan={8}>No games match the current filters.</td>
               </tr>
             )}
           </tbody>

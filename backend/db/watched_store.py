@@ -3,7 +3,7 @@ from backend.db.connection import get_connection
 
 def read_watched_game_ids(
     season: str,
-    season_type: str = "02"
+    season_type: str
 ) -> set[str]:
     with get_connection() as conn:
         watched_rows = conn.execute(
@@ -23,8 +23,8 @@ def read_watched_game_ids(
 
 def insert_watched_game(
     season: str,
-    game_id: str,
-    season_type: str = "02"
+    season_type: str,
+    game_id: str
 ) -> None:
     with get_connection() as conn:
         conn.execute(
@@ -40,8 +40,8 @@ def insert_watched_game(
 
 def remove_watched_game(
     season: str,
-    game_id: str,
-    season_type: str = "02"
+    season_type: str,
+    game_id: str
 ) -> None:
     with get_connection() as conn:
         conn.execute(

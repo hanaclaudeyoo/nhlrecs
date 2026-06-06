@@ -13,9 +13,14 @@ class Goal:
 @dataclass_json
 @dataclass
 class Game:
-    game_id: str
-    season: str
+    season: str         # e.g. 20252026
+    season_type: str    # pre(01)/reg(02)/post(03) season
+    game_id: str        # 4 digits
     date: str
     home_team: Team
     away_team: Team
     goals: list[Goal]
+
+    @property
+    def uid(self) -> str:
+        return f"{self.season}_{self.season_type}_{self.game_id}"

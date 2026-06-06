@@ -1,5 +1,7 @@
 export type GameRecommendation = {
     rank: number;
+    season: string;
+    season_type: string;
     game_id: string;
     date: string;
     away_team: string;

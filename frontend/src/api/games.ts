@@ -16,10 +16,14 @@ async function requestJson<T>(url: string, init?: RequestInit): Promise<T> {
 }
 
 export function fetchGameRecommendations(
+  season: string,
+  seasonType: string,
   showWatched: boolean,
   showUnwatched: boolean,
 ): Promise<GameRecommendation[]> {
   const params = new URLSearchParams({
+    season,
+    season_type: seasonType,
     show_watched: String(showWatched),
     show_unwatched: String(showUnwatched),
   })
@@ -28,10 +32,12 @@ export function fetchGameRecommendations(
 }
 
 export function toggleGameWatched(
+  season: string,
+  seasonType: string,
   gameId: string,
 ): Promise<ToggleWatchedResponse> {
   return requestJson<ToggleWatchedResponse>(
-    `/api/games/${encodeURIComponent(gameId)}/watched/toggle`,
+    `/api/games/${encodeURIComponent(season)}/${encodeURIComponent(seasonType)}/${encodeURIComponent(gameId)}/watched/toggle`,
     { method: 'POST' },
   )
 }

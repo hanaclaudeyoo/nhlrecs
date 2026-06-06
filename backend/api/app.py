@@ -12,16 +12,20 @@ def health():
 
 @app.get("/api/games")
 def get_games(
+    season: str = Query("20252026"), # HOTFIX to prevent breaking frontend until season selector UI component added (ticket 034)
+    season_type: str = Query("02"),
     show_watched: bool = Query(True),
     show_unwatched: bool = Query(True)
 ):
-    return list_game_recommendations(show_watched, show_unwatched)
+    return list_game_recommendations(season, season_type, show_watched, show_unwatched)
 
-@app.post("/api/games/{game_id}/watched/toggle")
+@app.post("/api/games/{season}/{season_type}/{game_id}/watched/toggle")
 def post_toggle_game_watched(
+    season: str,
+    season_type: str,
     game_id: str
 ):
-    watched = toggle_game_watched(game_id)
+    watched = toggle_game_watched(season, season_type, game_id)
 
     if watched is None:
         raise HTTPException(status_code=404, detail="Game ID not found")
@@ -34,5 +38,5 @@ def post_toggle_game_watched(
 @app.post("/api/seasons/current/update")
 def post_update_current_season():
     return {
-        "num_games_added": load_new_games()
+        "num_games_added": load_new_games("20252026") # HOTFIX (also currently doesn't use season_type)
     }

@@ -6,15 +6,14 @@ from backend.core.scorer import Scorer
 from backend.api.schemas import GameRecommendation
 
 
-SEASON_STR = "20252026"
-
-
 def list_game_recommendations(
+    season: str,
+    season_type: str,
     show_watched: bool,
     show_unwatched: bool
 ) -> list[GameRecommendation]:
-    games = read_season_games(SEASON_STR)
-    watched = read_watched_game_ids(SEASON_STR)
+    games = read_season_games(season, season_type)
+    watched = read_watched_game_ids(season, season_type)
 
     scorer = Scorer([TotalGoalsMetric(), LeadChangesMetric(), MaxLeadMetric(), MaxTimeBetweenGoalsMetric()])
 
@@ -32,6 +31,8 @@ def list_game_recommendations(
 
         game_recommendations.append(GameRecommendation(
             rank=i+1,
+            season=season,
+            season_type=season_type,
             game_id=game.game_id,
             date=game.date,
             away_team=game.away_team,
@@ -42,28 +43,34 @@ def list_game_recommendations(
     return game_recommendations
 
 
-def toggle_game_watched(game_id: str) -> bool | None:
+def toggle_game_watched(
+    season: str,
+    season_type: str,
+    game_id: str
+) -> bool | None:
     # check if valid game_id
     if game_id is None:
         return None
     
-    games = read_season_games(SEASON_STR)
+    games = read_season_games(season, season_type)
     game_ids = {game.game_id for game in games}
     if game_id not in game_ids:
         return None
     
     # toggle watched
-    watched = read_watched_game_ids(SEASON_STR)
+    watched = read_watched_game_ids(season, season_type)
 
     if game_id in watched:
-        remove_watched_game(SEASON_STR, game_id)
+        remove_watched_game(season, season_type, game_id)
         is_watched = False
     else:
-        insert_watched_game(SEASON_STR, game_id)
+        insert_watched_game(season, season_type, game_id)
         is_watched = True
 
     return is_watched
 
 
-def load_new_games() -> int:
-    return update_season(SEASON_STR)
+def load_new_games(
+    season: str
+) -> int:
+    return update_season(season)
