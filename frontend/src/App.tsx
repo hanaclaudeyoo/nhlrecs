@@ -130,10 +130,10 @@ function App() {
           </thead>
           <tbody>
             {games.map((game) => (
-              <tr key={`${game.season}-${game.season_type}-${game.game_id}`}>
+              <tr key={`${game.season}-${game.season_phase}-${game.game_id}`}>
                 <td>{game.rank}</td>
                 <td>{game.game_id}</td>
-                <td>{game.season} / {game.season_type}</td>
+                <td>{game.season} / {game.season_phase}</td>
                 <td>{game.date}</td>
                 <td>{game.away_team}</td>
                 <td>{game.home_team}</td>

@@ -23,7 +23,7 @@ export function fetchGameRecommendations(
 ): Promise<GameRecommendation[]> {
   const params = new URLSearchParams({
     season,
-    season_type: seasonType,
+    season_phase: seasonType,
     show_watched: String(showWatched),
     show_unwatched: String(showUnwatched),
   })

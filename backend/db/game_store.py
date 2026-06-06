@@ -5,18 +5,18 @@ from backend.db.connection import get_connection
 
 def read_season_games(
     season: str,
-    season_type: str
+    season_phase: str
 ) -> list[Game]:
     with get_connection() as conn:
         # get all games for the season
         game_rows = conn.execute(
             """
-            SELECT id, game_id, season, season_type, date, home_team, away_team
+            SELECT id, game_id, season, season_phase, date, home_team, away_team
             FROM games
-            WHERE season = ? AND season_type = ?
+            WHERE season = ? AND season_phase = ?
             ORDER BY date, game_id;
             """, 
-            (season, season_type)
+            (season, season_phase)
         ).fetchall()
 
         games: list[Game] = []
@@ -45,7 +45,7 @@ def read_season_games(
                 Game(
                     game_id=game_row["game_id"],
                     season=game_row["season"],
-                    season_type=game_row["season_type"],
+                    season_phase=game_row["season_phase"],
                     date=game_row["date"],
                     home_team=Team(game_row["home_team"]),
                     away_team=Team(game_row["away_team"]),

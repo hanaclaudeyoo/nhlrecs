@@ -7,10 +7,16 @@ Python FastAPI backend + Vite React TypeScript frontend. See `requirements.txt`.
 
 ## Running the app (dev)
 
-To launch backend, run:
+To initialize the database, run:
 
 ```
 python -m backend.db.init_db
+python test/seed_dummy_db.py  // for testing only
+```
+
+To launch backend, run:
+
+```
 uvicorn backend.api.app:app --reload --port 8000
 ```
 

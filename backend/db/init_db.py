@@ -7,12 +7,12 @@ def init_db() -> None:
         CREATE TABLE IF NOT EXISTS games (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             season TEXT NOT NULL,
-            season_type TEXT NOT NULL,
+            season_phase TEXT NOT NULL,
             game_id TEXT NOT NULL,
             date TEXT NOT NULL,
             home_team TEXT NOT NULL,
             away_team TEXT NOT NULL,
-            UNIQUE (season, season_type, game_id)
+            UNIQUE (season, season_phase, game_id)
         );
                     
         CREATE TABLE IF NOT EXISTS goals (
