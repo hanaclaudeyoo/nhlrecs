@@ -12,7 +12,7 @@ def health():
 
 @app.get("/api/games")
 def get_games(
-    season: str = Query("20252026"), # HOTFIX to prevent breaking frontend until season selector UI component added
+    season: str,
     season_phase: str = Query("02"),
     show_watched: bool = Query(True),
     show_unwatched: bool = Query(True)
@@ -35,8 +35,10 @@ def post_toggle_game_watched(
         "watched": watched
     }
 
-@app.post("/api/seasons/current/update")
-def post_update_current_season():
+@app.post("/api/seasons/{season}/update")
+def post_update_season(
+    season: str
+):
     return {
-        "num_games_added": load_new_games("20252026", "02") # HOTFIX
+        "num_games_added": load_new_games(season, "02") # HOTFIX
     }

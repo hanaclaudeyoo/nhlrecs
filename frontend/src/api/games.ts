@@ -42,8 +42,11 @@ export function toggleGameWatched(
   )
 }
 
-export function updateCurrentSeason(): Promise<UpdateSeasonResponse> {
-  return requestJson<UpdateSeasonResponse>('/api/seasons/current/update', {
-    method: 'POST',
-  })
+export function updateSeason(season: string): Promise<UpdateSeasonResponse> {
+  return requestJson<UpdateSeasonResponse>(
+    `/api/seasons/${encodeURIComponent(season)}/update`,
+    {
+      method: 'POST',
+    },
+  )
 }

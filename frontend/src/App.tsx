@@ -3,7 +3,7 @@ import './styles/app.css'
 import {
   fetchGameRecommendations,
   toggleGameWatched,
-  updateCurrentSeason,
+  updateSeason,
 } from './api/games'
 import { GameFilters } from './components/GameFilters'
 import { GameTable } from './components/GameTable'
@@ -12,8 +12,8 @@ import { StatusBar } from './components/StatusBar'
 import type { GameRecommendation } from './types/games'
 
 function App() {
-  const season = '20252026'
   const seasonType = '02'
+  const [season, setSeason] = useState('20252026')
   const [games, setGames] = useState<GameRecommendation[]>([])
   const [showWatched, setShowWatched] = useState(true)
   const [showUnwatched, setShowUnwatched] = useState(true)
@@ -69,7 +69,7 @@ function App() {
     setError(null)
 
     try {
-      const result = await updateCurrentSeason()
+      const result = await updateSeason(season)
       setStatus(`Added ${result.num_games_added} new games`)
       await loadGames()
     } catch (err) {
@@ -85,7 +85,9 @@ function App() {
       <GameFilters
         showWatched={showWatched}
         showUnwatched={showUnwatched}
+        selectedSeason={season}
         isLoading={isLoading}
+        onSeasonChange={setSeason}
         onShowWatchedChange={setShowWatched}
         onShowUnwatchedChange={setShowUnwatched}
         onUpdateSeason={handleUpdateSeason}

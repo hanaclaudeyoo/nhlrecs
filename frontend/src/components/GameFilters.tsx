@@ -1,9 +1,12 @@
+import { SeasonFilter } from './SeasonFilter'
 import { WatchedFilter } from './WatchedFilter'
 
 type GameFiltersProps = {
   showWatched: boolean
   showUnwatched: boolean
+  selectedSeason: string
   isLoading: boolean
+  onSeasonChange: (value: string) => void
   onShowWatchedChange: (value: boolean) => void
   onShowUnwatchedChange: (value: boolean) => void
   onUpdateSeason: () => void
@@ -12,7 +15,9 @@ type GameFiltersProps = {
 export function GameFilters({
   showWatched,
   showUnwatched,
+  selectedSeason,
   isLoading,
+  onSeasonChange,
   onShowWatchedChange,
   onShowUnwatchedChange,
   onUpdateSeason,
@@ -22,6 +27,11 @@ export function GameFilters({
       <section className="toolbar" aria-label="Game filters and actions">
         <h2 className="game-filters-heading">Filters</h2>
         <div className="toolbar-controls">
+          <SeasonFilter
+            selectedSeason={selectedSeason}
+            disabled={isLoading}
+            onSeasonChange={onSeasonChange}
+          />
           <WatchedFilter
             showWatched={showWatched}
             showUnwatched={showUnwatched}

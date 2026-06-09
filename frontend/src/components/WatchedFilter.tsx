@@ -18,10 +18,10 @@ export function WatchedFilter({
 {
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <div className="watched-filter" onMouseLeave={() => setIsOpen(false)}>
+        <div className="filter-dropdown watched-filter" onMouseLeave={() => setIsOpen(false)}>
             <button 
                 type="button"
-                className={isOpen ? 'watched-filter-button is-open' : 'watched-filter-button'}
+                className={isOpen ? 'filter-dropdown-button is-open' : 'filter-dropdown-button'}
                 disabled={disabled}
                 onClick={() => setIsOpen((isOpen) => !isOpen)}
             >
