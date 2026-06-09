@@ -5,6 +5,10 @@ import {
   toggleGameWatched,
   updateCurrentSeason,
 } from './api/games'
+import { GameFilters } from './components/GameFilters'
+import { GameTable } from './components/GameTable'
+import { PageHeader } from './components/PageHeader'
+import { StatusBar } from './components/StatusBar'
 import type { GameRecommendation } from './types/games'
 
 function App() {
@@ -77,82 +81,21 @@ function App() {
 
   return (
     <main className="app-shell">
-      <header className="page-header">
-        <div>
-          <h1>🏒 NHL Game Recommender</h1>
-          <p>Find fun games without getting spoiled!</p>
-        </div>
-        <button type="button" onClick={loadGames} disabled={isLoading}>
-          Refresh
-        </button>
-      </header>
-
-      <section className="toolbar" aria-label="Game filters and actions">
-        <label>
-          <input
-            type="checkbox"
-            checked={showWatched}
-            onChange={(event) => setShowWatched(event.target.checked)}
-          />
-          Show watched
-        </label>
-        <label>
-          <input
-            type="checkbox"
-            checked={showUnwatched}
-            onChange={(event) => setShowUnwatched(event.target.checked)}
-          />
-          Show unwatched
-        </label>
-        <button type="button" onClick={handleUpdateSeason} disabled={isLoading}>
-          Load new games
-        </button>
-      </section>
-
-      <section className="status-bar" aria-live="polite">
-        <span>{isLoading ? 'Loading...' : status}</span>
-        {error && <strong>{error}</strong>}
-      </section>
-
-      <div className="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Rank</th>
-              <th>Date</th>
-              <th>Away</th>
-              <th>Home</th>
-              <th>Watched</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {games.map((game) => (
-              <tr key={`${game.season}-${game.season_phase}-${game.game_id}`}>
-                <td>{game.rank}</td>
-                <td>{game.date}</td>
-                <td>{game.away_team}</td>
-                <td>{game.home_team}</td>
-                <td>{game.watched ? 'Yes' : 'No'}</td>
-                <td>
-                  <button
-                    type="button"
-                    onClick={() => void handleToggleWatched(game.game_id)}
-                    disabled={isLoading}
-                  >
-                    Toggle
-                  </button>
-                </td>
-              </tr>
-            ))}
-            {games.length === 0 && !isLoading && (
-              <tr>
-                <td colSpan={6}>No games match the current filters.</td>
-              </tr>
-            )}
-          </tbody>
-        </table>
-      </div>
+      <PageHeader isLoading={isLoading} onRefresh={loadGames} />
+      <GameFilters
+        showWatched={showWatched}
+        showUnwatched={showUnwatched}
+        isLoading={isLoading}
+        onShowWatchedChange={setShowWatched}
+        onShowUnwatchedChange={setShowUnwatched}
+        onUpdateSeason={handleUpdateSeason}
+      />
+      <StatusBar isLoading={isLoading} status={status} error={error} />
+      <GameTable
+        games={games}
+        isLoading={isLoading}
+        onToggleWatched={(gameId) => void handleToggleWatched(gameId)}
+      />
     </main>
   )
 }
