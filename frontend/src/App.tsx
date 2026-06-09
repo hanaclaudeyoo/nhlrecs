@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import './App.css'
+import './styles/app.css'
 import {
   fetchGameRecommendations,
   toggleGameWatched,
