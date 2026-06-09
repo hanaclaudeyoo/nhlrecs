@@ -186,6 +186,11 @@ input[type='checkbox'] {
   background: var(--color-surface);
 }
 
+.team-filter-menu {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
 .filter-menu label {
   display: inline-flex;
   align-items: center;

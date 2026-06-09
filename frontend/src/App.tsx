@@ -14,6 +14,7 @@ import type { GameRecommendation } from './types/games'
 function App() {
   const seasonType = '02'
   const [season, setSeason] = useState('20252026')
+  const [team, setTeam] = useState<string | null>(null)
   const [games, setGames] = useState<GameRecommendation[]>([])
   const [showWatched, setShowWatched] = useState(true)
   const [showUnwatched, setShowUnwatched] = useState(true)
@@ -31,6 +32,7 @@ function App() {
         seasonType,
         showWatched,
         showUnwatched,
+        team,
       )
       setGames(nextGames)
       setStatus(`Loaded ${nextGames.length} game recommendations`)
@@ -39,7 +41,7 @@ function App() {
     } finally {
       setIsLoading(false)
     }
-  }, [season, seasonType, showWatched, showUnwatched])
+  }, [season, seasonType, showWatched, showUnwatched, team])
 
   useEffect(() => {
     void loadGames()
@@ -86,8 +88,10 @@ function App() {
         showWatched={showWatched}
         showUnwatched={showUnwatched}
         selectedSeason={season}
+        selectedTeam={team}
         isLoading={isLoading}
         onSeasonChange={setSeason}
+        onTeamChange={setTeam}
         onShowWatchedChange={setShowWatched}
         onShowUnwatchedChange={setShowUnwatched}
         onUpdateSeason={handleUpdateSeason}

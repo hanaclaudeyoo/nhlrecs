@@ -10,9 +10,10 @@ def list_game_recommendations(
     season: str,
     season_phase: str,
     show_watched: bool,
-    show_unwatched: bool
+    show_unwatched: bool,
+    team: str | None
 ) -> list[GameRecommendation]:
-    games = read_season_games(season, season_phase)
+    games = read_season_games(season, season_phase, team)
     watched = read_watched_game_ids(season, season_phase)
 
     scorer = Scorer([TotalGoalsMetric(), LeadChangesMetric(), MaxLeadMetric(), MaxTimeBetweenGoalsMetric()])

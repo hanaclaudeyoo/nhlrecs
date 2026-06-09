@@ -20,6 +20,7 @@ export function fetchGameRecommendations(
   seasonType: string,
   showWatched: boolean,
   showUnwatched: boolean,
+  team: string | null,
 ): Promise<GameRecommendation[]> {
   const params = new URLSearchParams({
     season,
@@ -27,6 +28,10 @@ export function fetchGameRecommendations(
     show_watched: String(showWatched),
     show_unwatched: String(showUnwatched),
   })
+
+  if (team !== null) {
+    params.set('team', team)
+  }
 
   return requestJson<GameRecommendation[]>(`/api/games?${params.toString()}`)
 }

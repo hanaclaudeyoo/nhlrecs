@@ -15,9 +15,10 @@ def get_games(
     season: str,
     season_phase: str = Query("02"),
     show_watched: bool = Query(True),
-    show_unwatched: bool = Query(True)
+    show_unwatched: bool = Query(True),
+    team: str = Query(None),
 ):
-    return list_game_recommendations(season, season_phase, show_watched, show_unwatched)
+    return list_game_recommendations(season, season_phase, show_watched, show_unwatched, team)
 
 @app.post("/api/games/{season}/{season_phase}/{game_id}/watched/toggle")
 def post_toggle_game_watched(

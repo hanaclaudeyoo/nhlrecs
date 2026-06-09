@@ -5,19 +5,32 @@ from backend.db.connection import get_connection
 
 def read_season_games(
     season: str,
-    season_phase: str
+    season_phase: str,
+    team: str = None
 ) -> list[Game]:
     with get_connection() as conn:
-        # get all games for the season
-        game_rows = conn.execute(
-            """
-            SELECT id, game_id, season, season_phase, date, home_team, away_team
-            FROM games
-            WHERE season = ? AND season_phase = ?
-            ORDER BY date, game_id;
-            """, 
-            (season, season_phase)
-        ).fetchall()
+        if team:
+            # get all games for the season
+            game_rows = conn.execute(
+                """
+                SELECT id, game_id, season, season_phase, date, home_team, away_team
+                FROM games
+                WHERE season = ? AND season_phase = ? AND (home_team = ? OR away_team = ?)
+                ORDER BY date, game_id;
+                """, 
+                (season, season_phase, team, team)
+            ).fetchall()
+        else:
+            # get all games for the season
+            game_rows = conn.execute(
+                """
+                SELECT id, game_id, season, season_phase, date, home_team, away_team
+                FROM games
+                WHERE season = ? AND season_phase = ?
+                ORDER BY date, game_id;
+                """, 
+                (season, season_phase)
+            ).fetchall()
 
         games: list[Game] = []
 
