@@ -79,8 +79,8 @@ function App() {
     <main className="app-shell">
       <header className="page-header">
         <div>
-          <h1>NHL Game Recommender</h1>
-          <p>Basic React to FastAPI validation UI</p>
+          <h1>🏒 NHL Game Recommender</h1>
+          <p>Find fun games without getting spoiled!</p>
         </div>
         <button type="button" onClick={loadGames} disabled={isLoading}>
           Refresh
@@ -119,8 +119,6 @@ function App() {
           <thead>
             <tr>
               <th>Rank</th>
-              <th>Game ID</th>
-              <th>Season</th>
               <th>Date</th>
               <th>Away</th>
               <th>Home</th>
@@ -132,8 +130,6 @@ function App() {
             {games.map((game) => (
               <tr key={`${game.season}-${game.season_phase}-${game.game_id}`}>
                 <td>{game.rank}</td>
-                <td>{game.game_id}</td>
-                <td>{game.season} / {game.season_phase}</td>
                 <td>{game.date}</td>
                 <td>{game.away_team}</td>
                 <td>{game.home_team}</td>
@@ -151,7 +147,7 @@ function App() {
             ))}
             {games.length === 0 && !isLoading && (
               <tr>
-                <td colSpan={8}>No games match the current filters.</td>
+                <td colSpan={6}>No games match the current filters.</td>
               </tr>
             )}
           </tbody>
