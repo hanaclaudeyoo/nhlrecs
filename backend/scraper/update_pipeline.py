@@ -30,9 +30,8 @@ def update_season_games(
                 game_id += 1
                 continue
 
-            save_game(game)
-            
-            num_games_updated += 1
+            if save_game(game):
+                num_games_updated += 1
 
         game_id += 1
     

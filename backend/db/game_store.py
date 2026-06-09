@@ -77,12 +77,12 @@ def game_exists(
 
 def save_game(
     game: Game
-):
+) -> bool:
     with get_connection() as conn:
         # insert game
         cursor = conn.execute(
             """
-            INSERT INTO games (
+            INSERT OR IGNORE INTO games (
                 season,
                 season_phase,
                 game_id,
@@ -100,6 +100,10 @@ def save_game(
                 game.away_team.value
             )
         )
+
+        if cursor.rowcount == 0:
+            return False
+
         game_db_id = cursor.lastrowid
 
         # insert goals for the game
@@ -121,3 +125,5 @@ def save_game(
                 )
             )
         conn.commit()
+
+        return True
