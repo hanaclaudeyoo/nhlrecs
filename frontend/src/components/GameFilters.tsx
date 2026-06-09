@@ -1,3 +1,5 @@
+import { WatchedFilter } from './WatchedFilter'
+
 type GameFiltersProps = {
   showWatched: boolean
   showUnwatched: boolean
@@ -16,26 +18,22 @@ export function GameFilters({
   onUpdateSeason,
 }: GameFiltersProps) {
   return (
-    <section className="toolbar" aria-label="Game filters and actions">
-      <label>
-        <input
-          type="checkbox"
-          checked={showWatched}
-          onChange={(event) => onShowWatchedChange(event.target.checked)}
-        />
-        Show watched
-      </label>
-      <label>
-        <input
-          type="checkbox"
-          checked={showUnwatched}
-          onChange={(event) => onShowUnwatchedChange(event.target.checked)}
-        />
-        Show unwatched
-      </label>
-      <button type="button" onClick={onUpdateSeason} disabled={isLoading}>
-        Load new games
-      </button>
-    </section>
+    <div className="game-filters">
+      <section className="toolbar" aria-label="Game filters and actions">
+        <h2 className="game-filters-heading">Filters</h2>
+        <div className="toolbar-controls">
+          <WatchedFilter
+            showWatched={showWatched}
+            showUnwatched={showUnwatched}
+            disabled={isLoading}
+            onShowWatchedChange={onShowWatchedChange}
+            onShowUnwatchedChange={onShowUnwatchedChange}
+          />
+          <button type="button" onClick={onUpdateSeason} disabled={isLoading}>
+            Load new games
+          </button>
+        </div>
+      </section>
+    </div>
   )
 }
