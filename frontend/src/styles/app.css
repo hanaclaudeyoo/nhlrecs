@@ -120,6 +120,7 @@ button:disabled {
 input[type='checkbox'] {
   width: 16px;
   height: 16px;
+  accent-color: var(--color-border-soft);
 }
 
 @media (max-width: 700px) {
@@ -201,11 +202,16 @@ input[type='checkbox'] {
 .filter-menu-option {
   border: 0;
   border-radius: 0;
-  padding: 0;
+  padding: 4px 6px;
   text-align: left;
 }
 
+.filter-menu-option.is-selected {
+  background: var(--color-surface-subtle);
+  font-weight: 700;
+}
+
 .filter-menu-option:hover:not(:disabled) {
-  background: transparent;
+  background: var(--color-surface-subtle);
   border-color: transparent;
 }

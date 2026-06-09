@@ -1,9 +1,7 @@
-import { useState } from 'react'
-
-type TeamOption = {
-  value: string | null
-  label: string
-}
+import {
+  SingleSelectFilterDropdown,
+  type SingleSelectFilterOption,
+} from './SingleSelectFilterDropdown'
 
 type TeamFilterProps = {
   selectedTeam: string | null
@@ -11,7 +9,7 @@ type TeamFilterProps = {
   onTeamChange: (value: string | null) => void
 }
 
-const teamOptions: TeamOption[] = [
+const teamOptions: SingleSelectFilterOption<string | null>[] = [
   { value: null, label: 'All Teams' },
   { value: 'ANA', label: 'ANA' },
   { value: 'ARI', label: 'ARI' },
@@ -53,45 +51,14 @@ export function TeamFilter({
   disabled,
   onTeamChange,
 }: TeamFilterProps) {
-  const [isOpen, setIsOpen] = useState(false)
-  const selectedLabel =
-    teamOptions.find((team) => team.value === selectedTeam)?.label ??
-    'All Teams'
-
   return (
-    <div className="filter-dropdown team-filter" onMouseLeave={() => setIsOpen(false)}>
-      <button
-        type="button"
-        className={
-          isOpen
-            ? 'filter-dropdown-button is-open'
-            : 'filter-dropdown-button'
-        }
-        disabled={disabled}
-        onClick={() => setIsOpen((isOpen) => !isOpen)}
-      >
-        <span>{selectedLabel}</span>
-        <span className="dropdown-caret" aria-hidden="true" />
-      </button>
-
-      {isOpen && (
-        <div className="filter-menu team-filter-menu">
-          {teamOptions.map((team) => (
-            <button
-              type="button"
-              className="filter-menu-option"
-              key={team.value ?? 'all'}
-              disabled={disabled}
-              onClick={() => {
-                onTeamChange(team.value)
-                setIsOpen(false)
-              }}
-            >
-              {team.label}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
+    <SingleSelectFilterDropdown
+      value={selectedTeam}
+      options={teamOptions}
+      disabled={disabled}
+      fallbackLabel="All Teams"
+      menuClassName="team-filter-menu"
+      onChange={onTeamChange}
+    />
   )
 }
