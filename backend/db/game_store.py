@@ -54,3 +54,70 @@ def read_season_games(
             )
 
         return games
+    
+
+def game_exists(
+    season: str,
+    season_phase: str,
+    game_id: str
+):
+    with get_connection() as conn:
+        row = conn.execute(
+            """
+            SELECT 1
+            FROM games
+            WHERE season = ? AND season_phase = ? AND game_id = ?
+            LIMIT 1;
+            """,
+            (season, season_phase, game_id)
+        ).fetchone()
+
+        return row is not None
+
+
+def save_game(
+    game: Game
+):
+    with get_connection() as conn:
+        # insert game
+        cursor = conn.execute(
+            """
+            INSERT INTO games (
+                season,
+                season_phase,
+                game_id,
+                date,
+                home_team,
+                away_team
+            ) VALUES (?, ?, ?, ?, ?, ?);
+            """,
+            (
+                game.season,
+                game.season_phase,
+                game.game_id,
+                game.date,
+                game.home_team.value,
+                game.away_team.value
+            )
+        )
+        game_db_id = cursor.lastrowid
+
+        # insert goals for the game
+        for i, goal in enumerate(game.goals):
+            conn.execute(
+                """
+                INSERT INTO goals (
+                    game_db_id,
+                    goal_index,
+                    time_elapsed_seconds,
+                    team
+                ) VALUES (?, ?, ?, ?);
+                """,
+                (
+                    game_db_id,
+                    i,
+                    goal.time_elapsed_seconds,
+                    goal.team.value
+                )
+            )
+        conn.commit()

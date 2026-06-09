@@ -38,5 +38,5 @@ def post_toggle_game_watched(
 @app.post("/api/seasons/current/update")
 def post_update_current_season():
     return {
-        "num_games_added": load_new_games("20252026") # HOTFIX (also currently doesn't use season_phase)
+        "num_games_added": load_new_games("20252026", "02") # HOTFIX
     }

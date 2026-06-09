@@ -47,17 +47,13 @@ e.g. https://www.nhl.com/scores/htmlreports/20162017/PL020716.HTM
 
 ### Data processing
 
-To re-run data fetch and/or parse, run:
-
-`python -m data.update_pipline`
-
 
 ### Repository Structure
 
 - `backend/`
-    - `core/`
-    - `api/`
+    - `core/`: data models and metrics scoring logic
+    - `api/`: FastAPI endpoints and services
     - `scraper/`: fetch and parse scoresheets to ingest data
     - `db/`: functions to interact with the SQLite database
 - `frontend/`
-- `data/` = persistent SQLite database
+- `data/`: persistent SQLite database
