@@ -1,22 +1,15 @@
 # nhlrecs
 
-## Requirements
 
-Python FastAPI backend + Vite React TypeScript frontend. See `requirements.txt`.
+Python FastAPI backend + Vite React TypeScript frontend + SQLite database.
 
 
 ## Running the app (dev)
 
-To initialize the database, run:
-
-```
-python -m backend.db.init_db
-python test/seed_dummy_db.py  // for testing only
-```
-
 To launch backend, run:
 
 ```
+python -m backend.db.init_db
 uvicorn backend.api.app:app --reload --port 8000
 ```
 
@@ -45,10 +38,7 @@ npm run dev
 e.g. https://www.nhl.com/scores/htmlreports/20162017/PL020716.HTM
 
 
-### Data processing
-
-
-### Repository Structure
+### Repository structure
 
 - `backend/`
     - `core/`: data models and metrics scoring logic
