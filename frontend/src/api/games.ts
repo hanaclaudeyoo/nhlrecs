@@ -1,5 +1,5 @@
 import type {
-  GameRecommendation,
+  GameRecommendationsPage,
   ToggleWatchedResponse,
   UpdateSeasonResponse,
 } from '../types/games'
@@ -21,19 +21,23 @@ export function fetchGameRecommendations(
   showWatched: boolean,
   showUnwatched: boolean,
   team: string | null,
-): Promise<GameRecommendation[]> {
+  page: number,
+  pageSize: number,
+): Promise<GameRecommendationsPage> {
   const params = new URLSearchParams({
     season,
     season_phase: seasonType,
     show_watched: String(showWatched),
     show_unwatched: String(showUnwatched),
+    page: String(page),
+    page_size: String(pageSize)
   })
 
   if (team !== null) {
     params.set('team', team)
   }
 
-  return requestJson<GameRecommendation[]>(`/api/games?${params.toString()}`)
+  return requestJson<GameRecommendationsPage>(`/api/games?${params.toString()}`)
 }
 
 export function toggleGameWatched(

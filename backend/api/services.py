@@ -6,7 +6,7 @@ from backend.core.scorer import Scorer
 from backend.api.schemas import GameRecommendation
 
 
-def list_game_recommendations(
+def get_all_game_recommendations(
     season: str,
     season_phase: str,
     show_watched: bool,

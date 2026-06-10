@@ -11,3 +11,10 @@ class GameRecommendation(BaseModel):
     away_team: Team
     home_team: Team
     watched: bool
+
+class GameRecommendationsPage(BaseModel):
+    games: list[GameRecommendation]
+    page: int
+    page_size: int
+    total: int
+    total_pages: int

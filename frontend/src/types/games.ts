@@ -9,6 +9,14 @@ export type GameRecommendation = {
     watched: boolean;
 }
 
+export type GameRecommendationsPage = {
+    games: GameRecommendation[]
+    page: number
+    page_size: number
+    total: number
+    total_pages: number
+}
+
 export type ToggleWatchedResponse = {
     game_id: string;
     watched: boolean;

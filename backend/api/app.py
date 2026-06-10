@@ -1,5 +1,7 @@
 from fastapi import FastAPI, Query, HTTPException
-from backend.api.services import list_game_recommendations, toggle_game_watched, load_new_games
+import math
+from backend.api.schemas import GameRecommendationsPage
+from backend.api.services import get_all_game_recommendations, toggle_game_watched, load_new_games
 
 
 app = FastAPI(title="NHL Game Recommender API")
@@ -10,6 +12,7 @@ def health():
         "status": "ok"
     }
 
+
 @app.get("/api/games")
 def get_games(
     season: str,
@@ -17,8 +20,27 @@ def get_games(
     show_watched: bool = Query(True),
     show_unwatched: bool = Query(True),
     team: str = Query(None),
+    page: int = Query(1, ge=1),
+    page_size: int = Query(25, ge=1)
 ):
-    return list_game_recommendations(season, season_phase, show_watched, show_unwatched, team)
+    games = get_all_game_recommendations(season, season_phase, show_watched, show_unwatched, team)
+
+    total_games = len(games)
+    total_pages = max(1, math.ceil(total_games/page_size))
+    if page > total_pages:
+        raise HTTPException(status_code=404, detail=f"Page {page} is out of range ({total_pages} pages total)")
+
+    start_idx = (page - 1) * page_size
+    end_idx = start_idx + page_size
+
+    return GameRecommendationsPage(
+        games=games[start_idx:end_idx],
+        page=page,
+        page_size=page_size,
+        total=total_games,
+        total_pages=total_pages
+    )
+
 
 @app.post("/api/games/{season}/{season_phase}/{game_id}/watched/toggle")
 def post_toggle_game_watched(
@@ -35,6 +57,7 @@ def post_toggle_game_watched(
         "game_id": game_id,
         "watched": watched
     }
+
 
 @app.post("/api/seasons/{season}/update")
 def post_update_season(
