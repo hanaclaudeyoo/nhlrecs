@@ -1,13 +1,12 @@
 type StatusBarProps = {
   isLoading: boolean
-  status: string
   error: string | null
 }
 
-export function StatusBar({ isLoading, status, error }: StatusBarProps) {
+export function StatusBar({ isLoading, error }: StatusBarProps) {
   return (
     <section className="status-bar" aria-live="polite">
-      <span>{isLoading ? 'Loading...' : status}</span>
+      {isLoading && <span>Loading...</span>}
       {error && <strong>{error}</strong>}
     </section>
   )

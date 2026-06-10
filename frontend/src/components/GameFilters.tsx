@@ -32,24 +32,31 @@ export function GameFilters({
       <section className="toolbar" aria-label="Game filters and actions">
         <h2 className="game-filters-heading">Filters</h2>
         <div className="toolbar-controls">
-          <SeasonFilter
-            selectedSeason={selectedSeason}
+          <div className="toolbar-filter-controls">
+            <SeasonFilter
+              selectedSeason={selectedSeason}
+              disabled={isLoading}
+              onSeasonChange={onSeasonChange}
+            />
+            <TeamFilter
+              selectedTeam={selectedTeam}
+              disabled={isLoading}
+              onTeamChange={onTeamChange}
+            />
+            <WatchedFilter
+              showWatched={showWatched}
+              showUnwatched={showUnwatched}
+              disabled={isLoading}
+              onShowWatchedChange={onShowWatchedChange}
+              onShowUnwatchedChange={onShowUnwatchedChange}
+            />
+          </div>
+          <button
+            type="button"
+            className="toolbar-load-button"
+            onClick={onUpdateSeason}
             disabled={isLoading}
-            onSeasonChange={onSeasonChange}
-          />
-          <TeamFilter
-            selectedTeam={selectedTeam}
-            disabled={isLoading}
-            onTeamChange={onTeamChange}
-          />
-          <WatchedFilter
-            showWatched={showWatched}
-            showUnwatched={showUnwatched}
-            disabled={isLoading}
-            onShowWatchedChange={onShowWatchedChange}
-            onShowUnwatchedChange={onShowUnwatchedChange}
-          />
-          <button type="button" onClick={onUpdateSeason} disabled={isLoading}>
+          >
             Load new games
           </button>
         </div>

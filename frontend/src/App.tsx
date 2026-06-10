@@ -25,7 +25,6 @@ function App() {
   const [totalGames, setTotalGames] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [status, setStatus] = useState('Ready')
 
   const loadGames = useCallback(async () => {
     setIsLoading(true)
@@ -46,7 +45,6 @@ function App() {
       setPageSize(nextGames.page_size)
       setTotalPages(nextGames.total_pages)
       setTotalGames(nextGames.total)
-      setStatus(`Loaded ${nextGames.games.length} / ${nextGames.total} game recommendations`)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load games')
     } finally {
@@ -88,10 +86,7 @@ function App() {
     setError(null)
 
     try {
-      const result = await toggleGameWatched(season, seasonType, gameId)
-      setStatus(
-        `${result.game_id} marked ${result.watched ? 'watched' : 'unwatched'}`,
-      )
+      await toggleGameWatched(season, seasonType, gameId)
       await loadGames()
     } catch (err) {
       setError(
@@ -107,8 +102,7 @@ function App() {
     setError(null)
 
     try {
-      const result = await updateSeason(season)
-      setStatus(`Added ${result.num_games_added} new games`)
+      await updateSeason(season)
       await loadGames()
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to update season')
@@ -119,7 +113,7 @@ function App() {
 
   return (
     <main className="app-shell">
-      <PageHeader isLoading={isLoading} onRefresh={loadGames} />
+      <PageHeader />
       <GameFilters
         showWatched={showWatched}
         showUnwatched={showUnwatched}
@@ -132,7 +126,7 @@ function App() {
         onShowUnwatchedChange={handleShowUnwatchedChange}
         onUpdateSeason={handleUpdateSeason}
       />
-      <StatusBar isLoading={isLoading} status={status} error={error} />
+      <StatusBar isLoading={isLoading} error={error} />
       <GameTable
         games={games}
         isLoading={isLoading}

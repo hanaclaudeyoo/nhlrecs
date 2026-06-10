@@ -9,15 +9,24 @@ Python FastAPI backend + Vite React TypeScript frontend + SQLite database.
 To launch backend, run:
 
 ```
-python -m backend.db.init_db
-uvicorn backend.api.app:app --reload --port 8000
+$ python -m backend.db.init_db
+$ uvicorn backend.api.app:app --reload --port 8000
 ```
 
 To launch frontend, run:
 
 ```
-cd frontend
-npm run dev
+$ cd frontend
+$ npm run dev
+```
+
+
+## Scheduled updates (prod)
+
+After running docker container, run host cron job:
+
+```
+$ 0 6 * 9-12,1-4 * docker exec nhlrecs python -m backend.scraper.update_pipeline 20252026 02
 ```
 
 
