@@ -1,4 +1,5 @@
 import type {
+  DateWindow,
   GameRecommendationsPage,
   ToggleWatchedResponse,
   UpdateSeasonResponse,
@@ -21,6 +22,7 @@ export function fetchGameRecommendations(
   showWatched: boolean,
   showUnwatched: boolean,
   team: string | null,
+  dateWindow: DateWindow,
   page: number,
   pageSize: number,
 ): Promise<GameRecommendationsPage> {
@@ -29,6 +31,7 @@ export function fetchGameRecommendations(
     season_phase: seasonType,
     show_watched: String(showWatched),
     show_unwatched: String(showUnwatched),
+    date_window: dateWindow,
     page: String(page),
     page_size: String(pageSize)
   })

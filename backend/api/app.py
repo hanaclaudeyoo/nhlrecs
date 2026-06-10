@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Query, HTTPException
 import math
 from backend.api.schemas import GameRecommendationsPage
-from backend.api.services import get_all_game_recommendations, toggle_game_watched, load_new_games
+from backend.api.services import DateWindow, get_all_game_recommendations, toggle_game_watched, load_new_games
 
 
 app = FastAPI(title="NHL Game Recommender API")
@@ -20,10 +20,18 @@ def get_games(
     show_watched: bool = Query(True),
     show_unwatched: bool = Query(True),
     team: str = Query(None),
+    date_window: DateWindow = Query("all"),
     page: int = Query(1, ge=1),
     page_size: int = Query(25, ge=1)
 ):
-    games = get_all_game_recommendations(season, season_phase, show_watched, show_unwatched, team)
+    games = get_all_game_recommendations(
+        season,
+        season_phase,
+        show_watched,
+        show_unwatched,
+        team,
+        date_window,
+    )
 
     total_games = len(games)
     total_pages = max(1, math.ceil(total_games/page_size))

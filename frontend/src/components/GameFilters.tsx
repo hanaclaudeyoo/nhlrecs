@@ -1,15 +1,19 @@
+import { DateFilter } from './DateFilter'
 import { SeasonFilter } from './SeasonFilter'
 import { TeamFilter } from './TeamFilter'
 import { WatchedFilter } from './WatchedFilter'
+import type { DateWindow } from '../types/games'
 
 type GameFiltersProps = {
   showWatched: boolean
   showUnwatched: boolean
   selectedSeason: string
   selectedTeam: string | null
+  selectedDateWindow: DateWindow
   isLoading: boolean
   onSeasonChange: (value: string) => void
   onTeamChange: (value: string | null) => void
+  onDateWindowChange: (value: DateWindow) => void
   onShowWatchedChange: (value: boolean) => void
   onShowUnwatchedChange: (value: boolean) => void
   onUpdateSeason: () => void
@@ -20,9 +24,11 @@ export function GameFilters({
   showUnwatched,
   selectedSeason,
   selectedTeam,
+  selectedDateWindow,
   isLoading,
   onSeasonChange,
   onTeamChange,
+  onDateWindowChange,
   onShowWatchedChange,
   onShowUnwatchedChange,
   onUpdateSeason,
@@ -37,6 +43,11 @@ export function GameFilters({
               selectedSeason={selectedSeason}
               disabled={isLoading}
               onSeasonChange={onSeasonChange}
+            />
+            <DateFilter
+              selectedDateWindow={selectedDateWindow}
+              disabled={isLoading}
+              onDateWindowChange={onDateWindowChange}
             />
             <TeamFilter
               selectedTeam={selectedTeam}

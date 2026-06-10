@@ -1,3 +1,6 @@
+from datetime import date, timedelta
+from typing import Literal
+
 from backend.db.game_store import read_season_games
 from backend.db.watched_store import read_watched_game_ids, insert_watched_game, remove_watched_game
 from backend.scraper.update_pipeline import update_season_games
@@ -5,15 +8,40 @@ from backend.core.metrics import TotalGoalsMetric, LeadChangesMetric, MaxLeadMet
 from backend.core.scorer import Scorer
 from backend.api.schemas import GameRecommendation
 
+DateWindow = Literal["all", "last_week", "last_month", "last_two_months"]
+
+DATE_WINDOW_DAYS: dict[DateWindow, int | None] = {
+    "all": None,
+    "last_week": 7,
+    "last_month": 31,
+    "last_two_months": 62,
+}
+
+
+def filter_games_by_date_window(games, date_window: DateWindow):
+    window_days = DATE_WINDOW_DAYS[date_window]
+    if window_days is None or not games:
+        return games
+
+    cutoff_date = date.today() - timedelta(days=window_days)
+
+    return [
+        game
+        for game in games
+        if date.fromisoformat(game.date) >= cutoff_date
+    ]
+
 
 def get_all_game_recommendations(
     season: str,
     season_phase: str,
     show_watched: bool,
     show_unwatched: bool,
-    team: str | None
+    team: str | None,
+    date_window: DateWindow
 ) -> list[GameRecommendation]:
     games = read_season_games(season, season_phase, team)
+    games = filter_games_by_date_window(games, date_window)
     watched = read_watched_game_ids(season, season_phase)
 
     scorer = Scorer([TotalGoalsMetric(), LeadChangesMetric(), MaxLeadMetric(), MaxTimeBetweenGoalsMetric()])

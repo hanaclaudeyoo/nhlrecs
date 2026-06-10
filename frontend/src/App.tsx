@@ -10,12 +10,13 @@ import { GameTable } from './components/GameTable'
 import { PageHeader } from './components/PageHeader'
 import { PaginationControls } from './components/PaginationControls'
 import { StatusBar } from './components/StatusBar'
-import type { GameRecommendation } from './types/games'
+import type { DateWindow, GameRecommendation } from './types/games'
 
 function App() {
   const seasonType = '02'
   const [season, setSeason] = useState('20252026')
   const [team, setTeam] = useState<string | null>(null)
+  const [dateWindow, setDateWindow] = useState<DateWindow>('all')
   const [games, setGames] = useState<GameRecommendation[]>([])
   const [showWatched, setShowWatched] = useState(true)
   const [showUnwatched, setShowUnwatched] = useState(true)
@@ -37,6 +38,7 @@ function App() {
         showWatched,
         showUnwatched,
         team,
+        dateWindow,
         page,
         pageSize,
       )
@@ -50,7 +52,7 @@ function App() {
     } finally {
       setIsLoading(false)
     }
-  }, [season, seasonType, showWatched, showUnwatched, team, page, pageSize])
+  }, [season, seasonType, showWatched, showUnwatched, team, dateWindow, page, pageSize])
 
   function handleSeasonChange(value: string) {
     setSeason(value)
@@ -59,6 +61,11 @@ function App() {
 
   function handleTeamChange(value: string | null) {
     setTeam(value)
+    setPage(1)
+  }
+
+  function handleDateWindowChange(value: DateWindow) {
+    setDateWindow(value)
     setPage(1)
   }
 
@@ -119,9 +126,11 @@ function App() {
         showUnwatched={showUnwatched}
         selectedSeason={season}
         selectedTeam={team}
+        selectedDateWindow={dateWindow}
         isLoading={isLoading}
         onSeasonChange={handleSeasonChange}
         onTeamChange={handleTeamChange}
+        onDateWindowChange={handleDateWindowChange}
         onShowWatchedChange={handleShowWatchedChange}
         onShowUnwatchedChange={handleShowUnwatchedChange}
         onUpdateSeason={handleUpdateSeason}
