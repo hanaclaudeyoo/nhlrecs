@@ -80,7 +80,7 @@ th,
 td {
   padding: 10px 12px;
   border-bottom: 1px solid var(--color-border-soft);
-  text-align: left;
+  text-align: center;
   white-space: nowrap;
 }
 
@@ -94,6 +94,49 @@ th {
 
 tbody tr:last-child td {
   border-bottom: 0;
+}
+
+.watched-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  padding: 0;
+}
+
+.watched-icon-button:hover:not(:disabled) {
+  background: --color-surface-subtle;
+  border-color: transparent;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip-label {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 8px);
+  z-index: 20;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltip-label,
+.tooltip:focus-within .tooltip-label {
+  opacity: 1;
 }
 
 button {
@@ -255,4 +298,55 @@ input[type='checkbox'] {
     align-items: flex-start;
     flex-direction: column;
   }
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(22, 32, 51, 0.35);
+}
+
+.modal {
+  width: min(420px, 100%);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  padding: 20px;
+}
+
+.modal h2 {
+  margin: 0 0 8px;
+  color: var(--color-text-heading);
+  font-size: 20px;
+}
+
+.modal p {
+  color: var(--color-text-muted);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.modal-cancel-button {
+  border-color: var(--color-border-strong);
+  color: var(--color-text-muted);
+}
+
+.modal-confirm-button {
+  border-color: var(--color-border-strong);
+  background: var(--color-highlight);
+  color: var(--color-text);
+}
+
+.modal-confirm-button:hover:not(:disabled) {
+  background: var(--color-highlight);
+  border-color: var(--color-text-muted);
 }

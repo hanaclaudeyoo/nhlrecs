@@ -46,7 +46,7 @@ function App() {
       setPageSize(nextGames.page_size)
       setTotalPages(nextGames.total_pages)
       setTotalGames(nextGames.total)
-      setStatus(`Loaded ${nextGames.games.length} game recommendations`)
+      setStatus(`Loaded ${nextGames.games.length} / ${nextGames.total} game recommendations`)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load games')
     } finally {
