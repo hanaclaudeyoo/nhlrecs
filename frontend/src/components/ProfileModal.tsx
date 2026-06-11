@@ -3,6 +3,7 @@ import type { FormEvent } from 'react'
 
 type ProfileModalProps = {
   username: string | null
+  error: string | null
   onClose: () => void
   onLogin: (username: string, password: string) => void
   onLogout: () => void
@@ -10,6 +11,7 @@ type ProfileModalProps = {
 
 export function ProfileModal({
   username,
+  error,
   onClose,
   onLogin,
   onLogout,
@@ -29,16 +31,22 @@ export function ProfileModal({
   }
 
   return (
-    <div className="modal-backdrop" role="presentation">
+    <div className="modal-backdrop" role="presentation" onClick={onClose}>
       <div
         className="modal profile-modal"
         role="dialog"
         aria-modal="true"
         aria-labelledby="profile-modal-title"
+        onClick={(event) => event.stopPropagation()}
       >
         {username === null ? (
           <form onSubmit={handleLogin}>
             <h2 id="profile-modal-title">Log in</h2>
+            {error && (
+              <div className="profile-modal-error" role="alert">
+                {error}
+              </div>
+            )}
             <label className="profile-login-field">
               <span>Username</span>
               <input
@@ -76,6 +84,11 @@ export function ProfileModal({
         ) : (
           <>
             <h2 id="profile-modal-title">Profile</h2>
+            {error && (
+              <div className="profile-modal-error" role="alert">
+                {error}
+              </div>
+            )}
             <p>Logged in as {username}</p>
             <div className="modal-actions">
               <button

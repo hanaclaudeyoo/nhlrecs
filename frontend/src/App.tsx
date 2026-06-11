@@ -33,7 +33,9 @@ function App() {
   const [profileId, setProfileId] = useState(defaultProfileId)
   const [username, setUsername] = useState<string | null>(null)
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false)
-  const [profileError, setProfileError] = useState<string | null>(null)
+  const [profileModalError, setProfileModalError] = useState<string | null>(
+    null,
+  )
   const displayUsername = username ?? defaultUsername
 
   const loadGames = useCallback(async () => {
@@ -98,21 +100,10 @@ function App() {
     void loadGames()
   }, [loadGames])
 
-  useEffect(() => {
-    if (profileError === null) {
-      return
-    }
-
-    const timeoutId = window.setTimeout(() => {
-      setProfileError(null)
-    }, 3200)
-
-    return () => window.clearTimeout(timeoutId)
-  }, [profileError])
-
   async function handleToggleWatched(gameId: string) {
     if (profileId === defaultProfileId) {
-      setProfileError('Log in to track watched games')
+      setProfileModalError('Log in to track watched games')
+      setIsProfileModalOpen(true)
       return
     }
 
@@ -153,11 +144,11 @@ function App() {
       const profile = await loginProfile(nextUsername, password)
       setProfileId(profile.id)
       setUsername(profile.username)
-      setProfileError(null)
+      setProfileModalError(null)
       setPage(1)
       setIsProfileModalOpen(false)
     } catch (err) {
-      setProfileError(
+      setProfileModalError(
         err instanceof Error &&
           err.message.includes('Invalid username or password')
           ? 'Invalid username or password'
@@ -171,6 +162,7 @@ function App() {
   function handleLogout() {
     setProfileId(defaultProfileId)
     setUsername(null)
+    setProfileModalError(null)
     setPage(1)
     setIsProfileModalOpen(false)
   }
@@ -180,8 +172,10 @@ function App() {
       <PageHeader
         displayUsername={displayUsername}
         isLoggedIn={username !== null}
-        profileError={profileError}
-        onProfileClick={() => setIsProfileModalOpen(true)}
+        onProfileClick={() => {
+          setProfileModalError(null)
+          setIsProfileModalOpen(true)
+        }}
       />
       <GameFilters
         showWatched={showWatched}
@@ -215,7 +209,11 @@ function App() {
       {isProfileModalOpen && (
         <ProfileModal
           username={username}
-          onClose={() => setIsProfileModalOpen(false)}
+          error={profileModalError}
+          onClose={() => {
+            setProfileModalError(null)
+            setIsProfileModalOpen(false)
+          }}
           onLogin={handleLogin}
           onLogout={handleLogout}
         />

@@ -41,32 +41,6 @@
   white-space: nowrap;
 }
 
-.profile-header-control {
-  display: grid;
-  justify-items: end;
-  gap: 6px;
-}
-
-.profile-header-error {
-  max-width: 260px;
-  color: var(--color-error);
-  font-size: 13px;
-  font-weight: 700;
-  text-align: right;
-  animation: profile-error-fade 3.2s ease forwards;
-}
-
-@keyframes profile-error-fade {
-  0%,
-  70% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
 .game-filters-heading {
   margin: 0;
   color: var(--color-text-heading);
@@ -483,6 +457,13 @@ input[type='checkbox'] {
 .profile-login-field input {
   width: 100%;
   color: var(--color-text);
+}
+
+.profile-modal-error {
+  margin-top: 12px;
+  color: var(--color-error);
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .modal-actions {
