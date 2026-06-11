@@ -1,6 +1,7 @@
 import type {
   DateWindow,
   GameRecommendationsPage,
+  Profile,
   ToggleWatchedResponse,
   UpdateSeasonResponse,
 } from '../types/games'
@@ -25,6 +26,7 @@ export function fetchGameRecommendations(
   dateWindow: DateWindow,
   page: number,
   pageSize: number,
+  profileId: number,
 ): Promise<GameRecommendationsPage> {
   const params = new URLSearchParams({
     season,
@@ -33,7 +35,8 @@ export function fetchGameRecommendations(
     show_unwatched: String(showUnwatched),
     date_window: dateWindow,
     page: String(page),
-    page_size: String(pageSize)
+    page_size: String(pageSize),
+    profile_id: String(profileId),
   })
 
   if (team !== null) {
@@ -47,9 +50,14 @@ export function toggleGameWatched(
   season: string,
   seasonType: string,
   gameId: string,
+  profileId: number,
 ): Promise<ToggleWatchedResponse> {
+  const params = new URLSearchParams({
+    profile_id: String(profileId),
+  })
+
   return requestJson<ToggleWatchedResponse>(
-    `/api/games/${encodeURIComponent(season)}/${encodeURIComponent(seasonType)}/${encodeURIComponent(gameId)}/watched/toggle`,
+    `/api/games/${encodeURIComponent(season)}/${encodeURIComponent(seasonType)}/${encodeURIComponent(gameId)}/watched/toggle?${params.toString()}`,
     { method: 'POST' },
   )
 }
@@ -61,4 +69,14 @@ export function updateSeason(season: string): Promise<UpdateSeasonResponse> {
       method: 'POST',
     },
   )
+}
+
+export function loginProfile(username: string): Promise<Profile> {
+  const params = new URLSearchParams({
+    username,
+  })
+
+  return requestJson<Profile>(`/api/profiles/login?${params.toString()}`, {
+    method: 'POST',
+  })
 }

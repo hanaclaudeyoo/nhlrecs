@@ -3,6 +3,7 @@ from typing import Literal
 
 from backend.db.game_store import read_season_games
 from backend.db.watched_store import read_watched_game_ids, insert_watched_game, remove_watched_game
+from backend.db.profile_store import read_profile
 from backend.scraper.update_pipeline import update_season_games
 from backend.core.metrics import TotalGoalsMetric, LeadChangesMetric, MaxLeadMetric, MaxTimeBetweenGoalsMetric
 from backend.core.scorer import Scorer
@@ -106,3 +107,9 @@ def load_new_games(
     season_phase: str
 ) -> int:
     return update_season_games(season, season_phase)
+
+
+def get_profile_id_for_username(
+    username: str
+) -> int | None:
+    return read_profile(username)

@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Query, HTTPException
 import math
 from backend.api.schemas import GameRecommendationsPage
-from backend.api.services import DateWindow, get_all_game_recommendations, toggle_game_watched, load_new_games
+from backend.api.services import DateWindow, get_all_game_recommendations, toggle_game_watched, load_new_games, get_profile_id_for_username
 
 
 app = FastAPI(title="NHL Game Recommender API")
@@ -76,4 +76,18 @@ def post_update_season(
 ):
     return {
         "num_games_added": load_new_games(season, "02") # HOTFIX
+    }
+
+
+@app.post("/api/profiles/login")
+def post_profile_login(
+    username: str
+):
+    profile_id = get_profile_id_for_username(username)
+    if profile_id is None:
+        raise HTTPException(status_code=404, detail="Profile not found")
+
+    return {
+        "id": profile_id,
+        "username": username
     }

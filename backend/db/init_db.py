@@ -39,6 +39,11 @@ def init_db() -> None:
                            
         INSERT OR IGNORE INTO profiles (id, username)
         VALUES (0, "Guest");
+                           
+        INSERT OR IGNORE INTO profiles (username)
+        VALUES ("Test1");
+        INSERT OR IGNORE INTO profiles (username)
+        VALUES ("Test2");
         """)
 
         conn.commit()

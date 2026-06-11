@@ -1,5 +1,10 @@
 export type DateWindow = 'all' | 'last_week' | 'last_month' | 'last_two_months'
 
+export type Profile = {
+    id: number;
+    username: string;
+}
+
 export type GameRecommendation = {
     rank: number;
     season: string;

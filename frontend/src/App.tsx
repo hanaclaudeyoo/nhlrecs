@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react'
 import './styles/app.css'
 import {
   fetchGameRecommendations,
+  loginProfile,
   toggleGameWatched,
   updateSeason,
 } from './api/games'
@@ -10,10 +11,13 @@ import { GameTable } from './components/GameTable'
 import { PageHeader } from './components/PageHeader'
 import { PaginationControls } from './components/PaginationControls'
 import { StatusBar } from './components/StatusBar'
+import { ProfileModal } from './components/ProfileModal'
 import type { DateWindow, GameRecommendation } from './types/games'
 
 function App() {
   const seasonType = '02'
+  const defaultProfileId = 0
+  const defaultUsername = 'Guest'
   const [season, setSeason] = useState('20252026')
   const [team, setTeam] = useState<string | null>(null)
   const [dateWindow, setDateWindow] = useState<DateWindow>('all')
@@ -26,6 +30,11 @@ function App() {
   const [totalGames, setTotalGames] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [profileId, setProfileId] = useState(defaultProfileId)
+  const [username, setUsername] = useState<string | null>(null)
+  const [isProfileModalOpen, setIsProfileModalOpen] = useState(false)
+  const [profileError, setProfileError] = useState<string | null>(null)
+  const displayUsername = username ?? defaultUsername
 
   const loadGames = useCallback(async () => {
     setIsLoading(true)
@@ -41,6 +50,7 @@ function App() {
         dateWindow,
         page,
         pageSize,
+        profileId,
       )
       setGames(nextGames.games)
       setPage(nextGames.page)
@@ -52,7 +62,7 @@ function App() {
     } finally {
       setIsLoading(false)
     }
-  }, [season, seasonType, showWatched, showUnwatched, team, dateWindow, page, pageSize])
+  }, [season, seasonType, showWatched, showUnwatched, team, dateWindow, page, pageSize, profileId])
 
   function handleSeasonChange(value: string) {
     setSeason(value)
@@ -88,12 +98,24 @@ function App() {
     void loadGames()
   }, [loadGames])
 
+  useEffect(() => {
+    if (profileError === null) {
+      return
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      setProfileError(null)
+    }, 3200)
+
+    return () => window.clearTimeout(timeoutId)
+  }, [profileError])
+
   async function handleToggleWatched(gameId: string) {
     setIsLoading(true)
     setError(null)
 
     try {
-      await toggleGameWatched(season, seasonType, gameId)
+      await toggleGameWatched(season, seasonType, gameId, profileId)
       await loadGames()
     } catch (err) {
       setError(
@@ -118,9 +140,43 @@ function App() {
     }
   }
 
+  async function handleLogin(nextUsername: string) {
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      const profile = await loginProfile(nextUsername)
+      setProfileId(profile.id)
+      setUsername(profile.username)
+      setProfileError(null)
+      setPage(1)
+      setIsProfileModalOpen(false)
+    } catch (err) {
+      setProfileError(
+        err instanceof Error && err.message.includes('Profile not found')
+          ? `Profile "${nextUsername}" does not exist`
+          : 'Failed to log in',
+      )
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  function handleLogout() {
+    setProfileId(defaultProfileId)
+    setUsername(null)
+    setPage(1)
+    setIsProfileModalOpen(false)
+  }
+
   return (
     <main className="app-shell">
-      <PageHeader />
+      <PageHeader
+        displayUsername={displayUsername}
+        isLoggedIn={username !== null}
+        profileError={profileError}
+        onProfileClick={() => setIsProfileModalOpen(true)}
+      />
       <GameFilters
         showWatched={showWatched}
         showUnwatched={showUnwatched}
@@ -150,6 +206,14 @@ function App() {
         onPageChange={setPage}
         onPageSizeChange={handlePageSizeChange}
       />
+      {isProfileModalOpen && (
+        <ProfileModal
+          username={username}
+          onClose={() => setIsProfileModalOpen(false)}
+          onLogin={handleLogin}
+          onLogout={handleLogout}
+        />
+      )}
     </main>
   )
 }
