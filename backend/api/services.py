@@ -5,7 +5,6 @@ from backend.db.game_store import read_season_games
 from backend.db.watched_store import read_watched_game_ids, insert_watched_game, remove_watched_game
 from backend.db.profile_store import read_profile
 from backend.scraper.update_pipeline import update_season_games
-from backend.core.metrics import TotalGoalsMetric, LeadChangesMetric, MaxLeadMetric, MaxTimeBetweenGoalsMetric
 from backend.core.scorer import Scorer
 from backend.api.schemas import GameRecommendation
 
@@ -46,7 +45,7 @@ def get_all_game_recommendations(
     games = filter_games_by_date_window(games, date_window)
     watched = read_watched_game_ids(profile_id, season, season_phase)
 
-    scorer = Scorer([TotalGoalsMetric(), LeadChangesMetric(), MaxLeadMetric(), MaxTimeBetweenGoalsMetric()])
+    scorer = Scorer(profile_id)
 
     ranked_games = scorer.rank_games(games)
 

@@ -5,7 +5,7 @@ PERIOD_LENGTH_SECONDS = 20 * 60
 
 
 class Metric:
-    name: str
+    key: str
     maximize: bool
 
     def compute(self, game: Game) -> float:
@@ -17,7 +17,7 @@ class Metric:
 
 
 class TotalGoalsMetric(Metric):
-    name = "total_goals"
+    key = "total_goals"
     maximize = True
 
     def compute(self, game: Game) -> float:
@@ -25,7 +25,7 @@ class TotalGoalsMetric(Metric):
 
 
 class FinalGoalDifferentialMetric(Metric):
-    name = "final_goal_diff"
+    key = "final_goal_diff"
     maximize = False
 
     def compute(self, game: Game) -> float:
@@ -40,7 +40,7 @@ class FinalGoalDifferentialMetric(Metric):
 
 
 class LeadChangesMetric(Metric):
-    name = "lead_changes"
+    key = "lead_changes"
     maximize = True
 
     def compute(self, game: Game) -> float:
@@ -68,7 +68,7 @@ class LeadChangesMetric(Metric):
 
 
 class MaxLeadMetric(Metric):
-    name = "max_lead"
+    key = "max_lead"
     maximize = False
 
     def compute(self, game: Game) -> float:
@@ -85,7 +85,7 @@ class MaxLeadMetric(Metric):
         return max_lead
     
 class MaxTimeBetweenGoalsMetric(Metric):
-    name = "max_time_between_goals"
+    key = "max_time_between_goals"
     maximize = False
 
     def compute(self, game: Game) -> float:
@@ -107,3 +107,20 @@ class MaxTimeBetweenGoalsMetric(Metric):
                 max_time_btwn = gap
         
         return max_time_btwn
+    
+
+ALL_METRIC_KEYS = [
+    "total_goals",
+    "final_goal_diff",
+    "lead_changes",
+    "max_lead",
+    "max_time_between_goals"
+]
+
+KEY_TO_METRIC = {
+    "total_goals": TotalGoalsMetric(),
+    "final_goal_diff": FinalGoalDifferentialMetric(),
+    "lead_changes": LeadChangesMetric(),
+    "max_lead": MaxLeadMetric(),
+    "max_time_between_goals": MaxTimeBetweenGoalsMetric()
+}

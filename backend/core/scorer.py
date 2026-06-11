@@ -1,22 +1,14 @@
 from backend.core.metrics import Metric
 from backend.core.models import Game
+from backend.db.metric_weights_store import read_metric_weights
 
 
 class Scorer:
     def __init__(
         self,
-        metrics: list[Metric],
-        weights: dict[str, float] = None,
+        profile_id: int
     ):
-        self.metrics = metrics
-
-        if weights is None:
-            num_metrics = len(self.metrics)
-            self.weights = {m.name: 1.0/num_metrics for m in metrics}
-        else:
-            self.weights = weights
-            s = sum(self.weights.values())
-            assert abs(1.0 - s) < 1e-6, f"Metric weights must sum to 1.0, got {s}"
+        self.metric_weights = read_metric_weights(profile_id)
     
 
     def percentile_normalize(self, values: list[float]) -> list[float]:
@@ -42,8 +34,8 @@ class Scorer:
     def score_games(self, games: list[Game]) -> dict[str, float]: # returns {game ID: score}
         # calculate score per metric
         scores_metric: dict[str, list[float]] = {}
-        for metric in self.metrics:
-            scores_metric[metric.name] = [metric.score(g) for g in games]
+        for metric in self.metric_weights.keys():
+            scores_metric[metric.key] = [metric.score(g) for g in games]
         
         # normalize scores per metric
         scores_normal: dict[str, list[float]] = {}
@@ -53,7 +45,7 @@ class Scorer:
         # combine into one weighted aggregate score
         scores_weighted: dict[str, float] = {}
         for i, g in enumerate(games):
-            score = sum([self.weights[m.name] * scores_normal[m.name][i] for m in self.metrics])
+            score = sum([w * scores_normal[m.key][i] for m, w in self.metric_weights.items()])
             scores_weighted[g.game_id] = score
         return scores_weighted
         
