@@ -33,6 +33,7 @@ def filter_games_by_date_window(games, date_window: DateWindow):
 
 
 def get_all_game_recommendations(
+    profile_id: int,
     season: str,
     season_phase: str,
     show_watched: bool,
@@ -42,7 +43,7 @@ def get_all_game_recommendations(
 ) -> list[GameRecommendation]:
     games = read_season_games(season, season_phase, team)
     games = filter_games_by_date_window(games, date_window)
-    watched = read_watched_game_ids(season, season_phase)
+    watched = read_watched_game_ids(profile_id, season, season_phase)
 
     scorer = Scorer([TotalGoalsMetric(), LeadChangesMetric(), MaxLeadMetric(), MaxTimeBetweenGoalsMetric()])
 
@@ -73,6 +74,7 @@ def get_all_game_recommendations(
 
 
 def toggle_game_watched(
+    profile_id: int, 
     season: str,
     season_phase: str,
     game_id: str
@@ -87,13 +89,13 @@ def toggle_game_watched(
         return None
     
     # toggle watched
-    watched = read_watched_game_ids(season, season_phase)
+    watched = read_watched_game_ids(profile_id, season, season_phase)
 
     if game_id in watched:
-        remove_watched_game(season, season_phase, game_id)
+        remove_watched_game(profile_id, season, season_phase, game_id)
         is_watched = False
     else:
-        insert_watched_game(season, season_phase, game_id)
+        insert_watched_game(profile_id, season, season_phase, game_id)
         is_watched = True
 
     return is_watched

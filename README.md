@@ -26,7 +26,7 @@ $ npm run dev
 After running docker container, run host cron job:
 
 ```
-$ 0 6 * 9-12,1-4 * docker exec nhlrecs python -m backend.scraper.update_pipeline 20252026 02
+$ 0 6 * 9-12,1-4 * docker exec nhlrecs python -m backend.scraper.update_pipeline 20262027 02
 ```
 
 

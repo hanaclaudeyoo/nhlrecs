@@ -22,9 +22,11 @@ def get_games(
     team: str = Query(None),
     date_window: DateWindow = Query("all"),
     page: int = Query(1, ge=1),
-    page_size: int = Query(25, ge=1)
+    page_size: int = Query(25, ge=1),
+    profile_id: int = Query(0)
 ):
     games = get_all_game_recommendations(
+        profile_id,
         season,
         season_phase,
         show_watched,
@@ -54,9 +56,10 @@ def get_games(
 def post_toggle_game_watched(
     season: str,
     season_phase: str,
-    game_id: str
+    game_id: str,
+    profile_id: int = Query(0)
 ):
-    watched = toggle_game_watched(season, season_phase, game_id)
+    watched = toggle_game_watched(profile_id, season, season_phase, game_id)
 
     if watched is None:
         raise HTTPException(status_code=404, detail="Game ID not found")

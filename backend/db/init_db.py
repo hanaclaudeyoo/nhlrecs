@@ -23,11 +23,22 @@ def init_db() -> None:
             PRIMARY KEY (game_db_id, goal_index),
             FOREIGN KEY (game_db_id) REFERENCES games(id) ON DELETE CASCADE
         );
+                           
+        CREATE TABLE IF NOT EXISTS profiles (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            username TEXT NOT NULL UNIQUE
+        );
         
         CREATE TABLE IF NOT EXISTS watched (
-            game_db_id INTEGER PRIMARY KEY,
-            FOREIGN KEY (game_db_id) REFERENCES games(id) ON DELETE CASCADE
+            game_db_id INTEGER NOT NULL,
+            profile_id INTEGER NOT NULL,
+            PRIMARY KEY (game_db_id, profile_id),
+            FOREIGN KEY (game_db_id) REFERENCES games(id) ON DELETE CASCADE,
+            FOREIGN KEY (profile_id) REFERENCES profiles(id) ON DELETE CASCADE
         );
+                           
+        INSERT OR IGNORE INTO profiles (id, username)
+        VALUES (0, "Guest");
         """)
 
         conn.commit()
