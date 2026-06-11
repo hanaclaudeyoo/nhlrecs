@@ -1,5 +1,6 @@
 from backend.db.connection import get_connection
 from backend.core.metrics import ALL_METRIC_KEYS
+from backend.api.auth import hash_password
 
 
 def init_db() -> None:
@@ -38,7 +39,8 @@ def init_db() -> None:
                             
             CREATE TABLE IF NOT EXISTS profiles (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                username TEXT NOT NULL UNIQUE
+                username TEXT NOT NULL UNIQUE,
+                password_hash TEXT
             );
             
             CREATE TABLE IF NOT EXISTS watched (
@@ -68,14 +70,20 @@ def init_db() -> None:
         )
 
         # create test profiles
-        conn.executescript(
+        test_password_hash: str = hash_password("password")
+        conn.execute(
             """
-            INSERT OR IGNORE INTO profiles (id, username)
-            VALUES (1, "Test1");
-                            
-            INSERT OR IGNORE INTO profiles (username)
-            VALUES ("Test2");
+            INSERT OR IGNORE INTO profiles (id, username, password_hash)
+            VALUES (1, "Test1", ?);
+            """,
+            (test_password_hash,)
+        )
+        conn.execute(
             """
+            INSERT OR IGNORE INTO profiles (username, password_hash)
+            VALUES ("Test2", ?);
+            """,
+            (test_password_hash,)
         )
         # insert test values for metric keys
         for mk in ALL_METRIC_KEYS:

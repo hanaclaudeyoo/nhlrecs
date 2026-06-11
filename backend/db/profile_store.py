@@ -1,16 +1,23 @@
 from backend.db.connection import get_connection
+from dataclasses import dataclass
 
 
 DEFAULT_GUEST_ID = 0
 
-
-def read_profile(
+@dataclass(frozen=True)
+class ProfileRecord:
+    id: int
     username: str
-) -> int | None:
+    password_hash: str | None
+
+
+def read_profile_by_username(
+    username: str
+) -> ProfileRecord | None:
     with get_connection() as conn:
         profile_row = conn.execute(
             """
-            SELECT id
+            SELECT id, username, password_hash
             FROM profiles
             WHERE username = ?;
             """,
@@ -20,4 +27,8 @@ def read_profile(
         if profile_row is None:
             return None
 
-        return profile_row["id"]
+        return ProfileRecord(
+            id=profile_row["id"],
+            username=profile_row["username"],
+            password_hash=profile_row["password_hash"]
+        )

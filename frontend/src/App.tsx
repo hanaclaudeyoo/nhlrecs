@@ -111,6 +111,11 @@ function App() {
   }, [profileError])
 
   async function handleToggleWatched(gameId: string) {
+    if (profileId === defaultProfileId) {
+      setProfileError('Log in to track watched games')
+      return
+    }
+
     setIsLoading(true)
     setError(null)
 
@@ -140,12 +145,12 @@ function App() {
     }
   }
 
-  async function handleLogin(nextUsername: string) {
+  async function handleLogin(nextUsername: string, password: string) {
     setIsLoading(true)
     setError(null)
 
     try {
-      const profile = await loginProfile(nextUsername)
+      const profile = await loginProfile(nextUsername, password)
       setProfileId(profile.id)
       setUsername(profile.username)
       setProfileError(null)
@@ -153,8 +158,9 @@ function App() {
       setIsProfileModalOpen(false)
     } catch (err) {
       setProfileError(
-        err instanceof Error && err.message.includes('Profile not found')
-          ? `Profile "${nextUsername}" does not exist`
+        err instanceof Error &&
+          err.message.includes('Invalid username or password')
+          ? 'Invalid username or password'
           : 'Failed to log in',
       )
     } finally {

@@ -18,3 +18,12 @@ class GameRecommendationsPage(BaseModel):
     page_size: int
     total: int
     total_pages: int
+
+class LoginRequest(BaseModel):
+    username: str
+    password: str
+
+class ProfileResponse(BaseModel):
+    id: int
+    username: str
+    

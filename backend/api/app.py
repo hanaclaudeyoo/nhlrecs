@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Query, HTTPException
 import math
-from backend.api.schemas import GameRecommendationsPage
-from backend.api.services import DateWindow, get_all_game_recommendations, toggle_game_watched, load_new_games, get_profile_id_for_username
+from backend.api.schemas import GameRecommendationsPage, LoginRequest
+from backend.api.services import DateWindow, get_all_game_recommendations, toggle_game_watched, load_new_games, login_to_profile
 
 
 app = FastAPI(title="NHL Game Recommender API")
@@ -59,6 +59,12 @@ def post_toggle_game_watched(
     game_id: str,
     profile_id: int = Query(0)
 ):
+    if profile_id == 0:
+        raise HTTPException(
+            status_code=403,
+            detail="Log in to modify watched games"
+        )
+
     watched = toggle_game_watched(profile_id, season, season_phase, game_id)
 
     if watched is None:
@@ -79,15 +85,13 @@ def post_update_season(
     }
 
 
-@app.post("/api/profiles/login")
-def post_profile_login(
-    username: str
+@app.post("/api/auth/login")
+def post_auth_login(
+    request: LoginRequest
 ):
-    profile_id = get_profile_id_for_username(username)
-    if profile_id is None:
-        raise HTTPException(status_code=404, detail="Profile not found")
+    profile_response = login_to_profile(request.username, request.password)
 
-    return {
-        "id": profile_id,
-        "username": username
-    }
+    if profile_response is None:
+        raise HTTPException(status_code=401, detail="Invalid username or password")
+    
+    return profile_response

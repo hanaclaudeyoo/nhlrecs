@@ -4,7 +4,7 @@ import type { FormEvent } from 'react'
 type ProfileModalProps = {
   username: string | null
   onClose: () => void
-  onLogin: (username: string) => void
+  onLogin: (username: string, password: string) => void
   onLogout: () => void
 }
 
@@ -15,15 +15,17 @@ export function ProfileModal({
   onLogout,
 }: ProfileModalProps) {
   const [nextUsername, setNextUsername] = useState(username ?? '')
+  const [password, setPassword] = useState('')
   const trimmedUsername = nextUsername.trim()
+  const canSubmit = trimmedUsername.length > 0 && password.length > 0
 
   function handleLogin(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
-    if (trimmedUsername.length === 0) {
+    if (!canSubmit) {
       return
     }
 
-    onLogin(trimmedUsername)
+    onLogin(trimmedUsername, password)
   }
 
   return (
@@ -46,6 +48,14 @@ export function ProfileModal({
                 onChange={(event) => setNextUsername(event.target.value)}
               />
             </label>
+            <label className="profile-login-field">
+              <span>Password</span>
+              <input
+                type="password"
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+              />
+            </label>
             <div className="modal-actions">
               <button
                 type="button"
@@ -57,7 +67,7 @@ export function ProfileModal({
               <button
                 type="submit"
                 className="modal-confirm-button"
-                disabled={trimmedUsername.length === 0}
+                disabled={!canSubmit}
               >
                 Log in
               </button>

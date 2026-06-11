@@ -1,7 +1,11 @@
 # nhlrecs
 
-
-Python FastAPI backend + Vite React TypeScript frontend + SQLite database.
+1. Webscraping w/ Beautiful Soup
+2. Object-oriented metrics & scoring
+3. RESTful FastAPI backend
+4. Vite React TypeScript frontend
+5. SQLite database
+6. User authentication & sessions
 
 
 ## Running the app (dev)

@@ -71,12 +71,18 @@ export function updateSeason(season: string): Promise<UpdateSeasonResponse> {
   )
 }
 
-export function loginProfile(username: string): Promise<Profile> {
-  const params = new URLSearchParams({
-    username,
-  })
-
-  return requestJson<Profile>(`/api/profiles/login?${params.toString()}`, {
+export function loginProfile(
+  username: string,
+  password: string,
+): Promise<Profile> {
+  return requestJson<Profile>('/api/auth/login', {
     method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      username,
+      password,
+    }),
   })
 }
