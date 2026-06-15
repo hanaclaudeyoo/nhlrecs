@@ -1,13 +1,23 @@
 from datetime import date, timedelta
 from typing import Literal
+from fastapi import Request, Response
 
 from backend.db.game_store import read_season_games
 from backend.db.watched_store import read_watched_game_ids, insert_watched_game, remove_watched_game
 from backend.db.profile_store import read_profile_by_username
+from backend.db.session_store import create_session, delete_session
 from backend.scraper.update_pipeline import update_season_games
 from backend.core.scorer import Scorer
 from backend.api.schemas import GameRecommendation, ProfileResponse
-from backend.api.auth import verify_password
+from backend.api.auth import (
+    SESSION_COOKIE_NAME,
+    clear_session_cookie,
+    create_session_token,
+    get_current_profile_for_cookie,
+    hash_session_token,
+    set_session_cookie,
+    verify_password,
+)
 
 DateWindow = Literal["all", "last_week", "last_month", "last_two_months"]
 
@@ -129,3 +139,54 @@ def login_to_profile(
         id=profile.id,
         username=profile.username
     )
+
+
+def login_to_profile_with_session(
+    username: str,
+    password: str,
+    response: Response
+) -> ProfileResponse | None:
+    profile_response = login_to_profile(username, password)
+
+    if profile_response is None:
+        return None
+
+    token = create_session_token()
+    create_session(hash_session_token(token), profile_response.id)
+    set_session_cookie(response, token)
+
+    return profile_response
+
+
+def logout_current_session(
+    request: Request,
+    response: Response
+) -> None:
+    token = request.cookies.get(SESSION_COOKIE_NAME)
+    if token is not None:
+        delete_session(hash_session_token(token))
+
+    clear_session_cookie(response)
+
+
+def get_current_profile(
+    request: Request
+) -> ProfileResponse | None:
+    profile = get_current_profile_for_cookie(request)
+    if profile is None:
+        return None
+
+    return ProfileResponse(
+        id=profile.id,
+        username=profile.username
+    )
+
+
+def get_current_profile_id(
+    request: Request
+) -> int:
+    profile = get_current_profile(request)
+    if profile is None:
+        return 0
+
+    return profile.id

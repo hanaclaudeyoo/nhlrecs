@@ -7,7 +7,10 @@ import type {
 } from '../types/games'
 
 async function requestJson<T>(url: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(url, init)
+  const response = await fetch(url, {
+    credentials: 'include',
+    ...init,
+  })
 
   if (!response.ok) {
     const errorText = await response.text()
@@ -26,7 +29,6 @@ export function fetchGameRecommendations(
   dateWindow: DateWindow,
   page: number,
   pageSize: number,
-  profileId: number,
 ): Promise<GameRecommendationsPage> {
   const params = new URLSearchParams({
     season,
@@ -36,7 +38,6 @@ export function fetchGameRecommendations(
     date_window: dateWindow,
     page: String(page),
     page_size: String(pageSize),
-    profile_id: String(profileId),
   })
 
   if (team !== null) {
@@ -50,14 +51,9 @@ export function toggleGameWatched(
   season: string,
   seasonType: string,
   gameId: string,
-  profileId: number,
 ): Promise<ToggleWatchedResponse> {
-  const params = new URLSearchParams({
-    profile_id: String(profileId),
-  })
-
   return requestJson<ToggleWatchedResponse>(
-    `/api/games/${encodeURIComponent(season)}/${encodeURIComponent(seasonType)}/${encodeURIComponent(gameId)}/watched/toggle?${params.toString()}`,
+    `/api/games/${encodeURIComponent(season)}/${encodeURIComponent(seasonType)}/${encodeURIComponent(gameId)}/watched/toggle`,
     { method: 'POST' },
   )
 }
@@ -85,4 +81,14 @@ export function loginProfile(
       password,
     }),
   })
+}
+
+export function logoutProfile(): Promise<{ status: string }> {
+  return requestJson<{ status: string }>('/api/auth/logout', {
+    method: 'POST',
+  })
+}
+
+export function fetchCurrentProfile(): Promise<Profile | null> {
+  return requestJson<Profile | null>('/api/auth/me')
 }

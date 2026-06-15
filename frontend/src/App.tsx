@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useState } from 'react'
 import './styles/app.css'
 import {
+  fetchCurrentProfile,
   fetchGameRecommendations,
   loginProfile,
+  logoutProfile,
   toggleGameWatched,
   updateSeason,
 } from './api/games'
@@ -38,9 +40,10 @@ function App() {
   )
   const displayUsername = username ?? defaultUsername
 
-  const loadGames = useCallback(async () => {
+  const loadGames = useCallback(async (pageOverride?: number) => {
     setIsLoading(true)
     setError(null)
+    const nextPage = pageOverride ?? page
 
     try {
       const nextGames = await fetchGameRecommendations(
@@ -50,9 +53,8 @@ function App() {
         showUnwatched,
         team,
         dateWindow,
-        page,
+        nextPage,
         pageSize,
-        profileId,
       )
       setGames(nextGames.games)
       setPage(nextGames.page)
@@ -64,7 +66,7 @@ function App() {
     } finally {
       setIsLoading(false)
     }
-  }, [season, seasonType, showWatched, showUnwatched, team, dateWindow, page, pageSize, profileId])
+  }, [season, seasonType, showWatched, showUnwatched, team, dateWindow, page, pageSize])
 
   function handleSeasonChange(value: string) {
     setSeason(value)
@@ -100,6 +102,23 @@ function App() {
     void loadGames()
   }, [loadGames])
 
+  useEffect(() => {
+    async function restoreCurrentProfile() {
+      try {
+        const profile = await fetchCurrentProfile()
+        if (profile !== null) {
+          setProfileId(profile.id)
+          setUsername(profile.username)
+        }
+      } catch {
+        setProfileId(defaultProfileId)
+        setUsername(null)
+      }
+    }
+
+    void restoreCurrentProfile()
+  }, [])
+
   async function handleToggleWatched(gameId: string) {
     if (profileId === defaultProfileId) {
       setProfileModalError('Log in to track watched games')
@@ -111,8 +130,8 @@ function App() {
     setError(null)
 
     try {
-      await toggleGameWatched(season, seasonType, gameId, profileId)
-      await loadGames()
+      await toggleGameWatched(season, seasonType, gameId)
+      await loadGames(1)
     } catch (err) {
       setError(
         err instanceof Error ? err.message : 'Failed to toggle watched state',
@@ -128,7 +147,7 @@ function App() {
 
     try {
       await updateSeason(season)
-      await loadGames()
+      await loadGames(1)
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to update season')
     } finally {
@@ -147,6 +166,7 @@ function App() {
       setProfileModalError(null)
       setPage(1)
       setIsProfileModalOpen(false)
+      await loadGames()
     } catch (err) {
       setProfileModalError(
         err instanceof Error &&
@@ -159,12 +179,25 @@ function App() {
     }
   }
 
-  function handleLogout() {
-    setProfileId(defaultProfileId)
-    setUsername(null)
-    setProfileModalError(null)
-    setPage(1)
-    setIsProfileModalOpen(false)
+  async function handleLogout() {
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      await logoutProfile()
+      setProfileId(defaultProfileId)
+      setUsername(null)
+      setProfileModalError(null)
+      setPage(1)
+      setIsProfileModalOpen(false)
+      await loadGames()
+    } catch (err) {
+      setProfileModalError(
+        err instanceof Error ? err.message : 'Failed to log out',
+      )
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   return (

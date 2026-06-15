@@ -1,7 +1,16 @@
-from fastapi import FastAPI, Query, HTTPException
+from fastapi import FastAPI, Query, HTTPException, Request, Response
 import math
-from backend.api.schemas import GameRecommendationsPage, LoginRequest
-from backend.api.services import DateWindow, get_all_game_recommendations, toggle_game_watched, load_new_games, login_to_profile
+from backend.api.schemas import GameRecommendationsPage, LoginRequest, ProfileResponse
+from backend.api.services import (
+    DateWindow,
+    get_all_game_recommendations,
+    get_current_profile,
+    get_current_profile_id,
+    load_new_games,
+    login_to_profile_with_session,
+    logout_current_session,
+    toggle_game_watched,
+)
 
 
 app = FastAPI(title="NHL Game Recommender API")
@@ -15,6 +24,7 @@ def health():
 
 @app.get("/api/games")
 def get_games(
+    request: Request,
     season: str,
     season_phase: str = Query("02"),
     show_watched: bool = Query(True),
@@ -22,9 +32,9 @@ def get_games(
     team: str = Query(None),
     date_window: DateWindow = Query("all"),
     page: int = Query(1, ge=1),
-    page_size: int = Query(25, ge=1),
-    profile_id: int = Query(0)
+    page_size: int = Query(25, ge=1)
 ):
+    profile_id = get_current_profile_id(request)
     games = get_all_game_recommendations(
         profile_id,
         season,
@@ -54,11 +64,12 @@ def get_games(
 
 @app.post("/api/games/{season}/{season_phase}/{game_id}/watched/toggle")
 def post_toggle_game_watched(
+    request: Request,
     season: str,
     season_phase: str,
-    game_id: str,
-    profile_id: int = Query(0)
+    game_id: str
 ):
+    profile_id = get_current_profile_id(request)
     if profile_id == 0:
         raise HTTPException(
             status_code=403,
@@ -85,13 +96,36 @@ def post_update_season(
     }
 
 
-@app.post("/api/auth/login")
+@app.post("/api/auth/login", response_model=ProfileResponse)
 def post_auth_login(
-    request: LoginRequest
+    request: LoginRequest,
+    response: Response
 ):
-    profile_response = login_to_profile(request.username, request.password)
+    profile_response = login_to_profile_with_session(
+        request.username,
+        request.password,
+        response
+    )
 
     if profile_response is None:
         raise HTTPException(status_code=401, detail="Invalid username or password")
-    
+
     return profile_response
+
+
+@app.post("/api/auth/logout")
+def post_auth_logout(
+    request: Request,
+    response: Response
+):
+    logout_current_session(request, response)
+    return {
+        "status": "ok"
+    }
+
+
+@app.get("/api/auth/me", response_model=ProfileResponse | None)
+def get_auth_me(
+    request: Request
+):
+    return get_current_profile(request)

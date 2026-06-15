@@ -8,9 +8,10 @@ def init_db() -> None:
         # TESTING ONLY
         conn.executescript(
             """
-            DROP TABLE IF EXISTS profiles;
+            DROP TABLE IF EXISTS sessions;
             DROP TABLE IF EXISTS watched;
             DROP TABLE IF EXISTS metric_weights;
+            DROP TABLE IF EXISTS profiles;
             """
         )
 
@@ -56,6 +57,12 @@ def init_db() -> None:
                 metric_key TEXT NOT NULL,
                 weight REAL NOT NULL,
                 PRIMARY KEY (profile_id, metric_key),
+                FOREIGN KEY (profile_id) REFERENCES profiles(id) ON DELETE CASCADE
+            );
+
+            CREATE TABLE IF NOT EXISTS sessions (
+                token_hash TEXT PRIMARY KEY,
+                profile_id INTEGER NOT NULL,
                 FOREIGN KEY (profile_id) REFERENCES profiles(id) ON DELETE CASCADE
             );
             """
