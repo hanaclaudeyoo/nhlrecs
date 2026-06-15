@@ -1,5 +1,6 @@
 from backend.db.connection import get_connection
 from dataclasses import dataclass
+import sqlite3
 
 
 DEFAULT_GUEST_ID = 0
@@ -54,4 +55,28 @@ def read_profile_by_id(
             id=profile_row["id"],
             username=profile_row["username"],
             password_hash=profile_row["password_hash"]
+        )
+
+
+def create_profile(
+    username: str,
+    password_hash: str
+) -> ProfileRecord | None:
+    with get_connection() as conn:
+        try:
+            cursor = conn.execute(
+                """
+                INSERT INTO profiles (username, password_hash)
+                VALUES (?, ?);
+                """,
+                (username, password_hash)
+            )
+        except sqlite3.IntegrityError:
+            return None
+
+        conn.commit()
+        return ProfileRecord(
+            id=cursor.lastrowid,
+            username=username,
+            password_hash=password_hash
         )

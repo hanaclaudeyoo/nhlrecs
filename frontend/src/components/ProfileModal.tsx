@@ -6,6 +6,7 @@ type ProfileModalProps = {
   error: string | null
   onClose: () => void
   onLogin: (username: string, password: string) => void
+  onSignup: (username: string, password: string) => void
   onLogout: () => void
 }
 
@@ -14,20 +15,37 @@ export function ProfileModal({
   error,
   onClose,
   onLogin,
+  onSignup,
   onLogout,
 }: ProfileModalProps) {
+  const [mode, setMode] = useState<'login' | 'signup'>('login')
   const [nextUsername, setNextUsername] = useState(username ?? '')
   const [password, setPassword] = useState('')
+  const [verifyPassword, setVerifyPassword] = useState('')
   const trimmedUsername = nextUsername.trim()
-  const canSubmit = trimmedUsername.length > 0 && password.length > 0
+  const passwordsMatch = password === verifyPassword
+  const canSubmit =
+    trimmedUsername.length > 0 &&
+    password.length > 0 &&
+    (mode === 'login' || (verifyPassword.length > 0 && passwordsMatch))
 
-  function handleLogin(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     if (!canSubmit) {
       return
     }
 
-    onLogin(trimmedUsername, password)
+    if (mode === 'login') {
+      onLogin(trimmedUsername, password)
+    } else {
+      onSignup(trimmedUsername, password)
+    }
+  }
+
+  function switchMode(nextMode: 'login' | 'signup') {
+    setMode(nextMode)
+    setPassword('')
+    setVerifyPassword('')
   }
 
   return (
@@ -40,8 +58,10 @@ export function ProfileModal({
         onClick={(event) => event.stopPropagation()}
       >
         {username === null ? (
-          <form onSubmit={handleLogin}>
-            <h2 id="profile-modal-title">Log in</h2>
+          <form onSubmit={handleSubmit}>
+            <h2 id="profile-modal-title">
+              {mode === 'login' ? 'Log in' : 'Sign up'}
+            </h2>
             {error && (
               <div className="profile-modal-error" role="alert">
                 {error}
@@ -64,6 +84,21 @@ export function ProfileModal({
                 onChange={(event) => setPassword(event.target.value)}
               />
             </label>
+            {mode === 'signup' && (
+              <label className="profile-login-field">
+                <span>Verify password</span>
+                <input
+                  type="password"
+                  value={verifyPassword}
+                  onChange={(event) => setVerifyPassword(event.target.value)}
+                />
+              </label>
+            )}
+            {mode === 'signup' && verifyPassword.length > 0 && !passwordsMatch && (
+              <div className="profile-modal-error" role="alert">
+                Passwords do not match
+              </div>
+            )}
             <div className="modal-actions">
               <button
                 type="button"
@@ -72,13 +107,24 @@ export function ProfileModal({
               >
                 Cancel
               </button>
-              <button
-                type="submit"
-                className="modal-confirm-button"
-                disabled={!canSubmit}
-              >
-                Log in
-              </button>
+              <div className="profile-submit-actions">
+                <button
+                  type="button"
+                  className="profile-mode-switch-button"
+                  onClick={() =>
+                    switchMode(mode === 'login' ? 'signup' : 'login')
+                  }
+                >
+                  {mode === 'login' ? 'Sign up' : 'Log in'}
+                </button>
+                <button
+                  type="submit"
+                  className="modal-confirm-button"
+                  disabled={!canSubmit}
+                >
+                  {mode === 'login' ? 'Log in' : 'Sign up'}
+                </button>
+              </div>
             </div>
           </form>
         ) : (

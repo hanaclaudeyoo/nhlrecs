@@ -466,9 +466,29 @@ input[type='checkbox'] {
   font-weight: 700;
 }
 
+.profile-mode-switch-button {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+}
+
+.profile-mode-switch-button:hover:not(:disabled) {
+  border-color: var(--color-border-hover);
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+.profile-submit-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
 .modal-actions {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 8px;
   margin-top: 20px;
 }

@@ -23,6 +23,10 @@ class LoginRequest(BaseModel):
     username: str
     password: str
 
+class SignupRequest(BaseModel):
+    username: str
+    password: str
+
 class ProfileResponse(BaseModel):
     id: int
     username: str

@@ -83,6 +83,22 @@ export function loginProfile(
   })
 }
 
+export function signupProfile(
+  username: string,
+  password: string,
+): Promise<Profile> {
+  return requestJson<Profile>('/api/auth/signup', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      username,
+      password,
+    }),
+  })
+}
+
 export function logoutProfile(): Promise<{ status: string }> {
   return requestJson<{ status: string }>('/api/auth/logout', {
     method: 'POST',

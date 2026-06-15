@@ -5,6 +5,7 @@ import {
   fetchGameRecommendations,
   loginProfile,
   logoutProfile,
+  signupProfile,
   toggleGameWatched,
   updateSeason,
 } from './api/games'
@@ -179,6 +180,29 @@ function App() {
     }
   }
 
+  async function handleSignup(nextUsername: string, password: string) {
+    setIsLoading(true)
+    setError(null)
+
+    try {
+      const profile = await signupProfile(nextUsername, password)
+      setProfileId(profile.id)
+      setUsername(profile.username)
+      setProfileModalError(null)
+      setPage(1)
+      setIsProfileModalOpen(false)
+      await loadGames(1)
+    } catch (err) {
+      setProfileModalError(
+        err instanceof Error && err.message.includes('Username already exists')
+          ? 'Username already exists'
+          : 'Failed to sign up',
+      )
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   async function handleLogout() {
     setIsLoading(true)
     setError(null)
@@ -248,6 +272,7 @@ function App() {
             setIsProfileModalOpen(false)
           }}
           onLogin={handleLogin}
+          onSignup={handleSignup}
           onLogout={handleLogout}
         />
       )}

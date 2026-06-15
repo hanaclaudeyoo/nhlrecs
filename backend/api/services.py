@@ -4,7 +4,7 @@ from fastapi import Request, Response
 
 from backend.db.game_store import read_season_games
 from backend.db.watched_store import read_watched_game_ids, insert_watched_game, remove_watched_game
-from backend.db.profile_store import read_profile_by_username
+from backend.db.profile_store import create_profile, read_profile_by_username
 from backend.db.session_store import create_session, delete_session
 from backend.scraper.update_pipeline import update_season_games
 from backend.core.scorer import Scorer
@@ -14,6 +14,7 @@ from backend.api.auth import (
     clear_session_cookie,
     create_session_token,
     get_current_profile_for_cookie,
+    hash_password,
     hash_session_token,
     set_session_cookie,
     verify_password,
@@ -150,6 +151,28 @@ def login_to_profile_with_session(
 
     if profile_response is None:
         return None
+
+    token = create_session_token()
+    create_session(hash_session_token(token), profile_response.id)
+    set_session_cookie(response, token)
+
+    return profile_response
+
+
+def signup_to_profile_with_session(
+    username: str,
+    password: str,
+    response: Response
+) -> ProfileResponse | None:
+    profile = create_profile(username, hash_password(password))
+
+    if profile is None:
+        return None
+
+    profile_response = ProfileResponse(
+        id=profile.id,
+        username=profile.username
+    )
 
     token = create_session_token()
     create_session(hash_session_token(token), profile_response.id)

@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Query, HTTPException, Request, Response
 import math
-from backend.api.schemas import GameRecommendationsPage, LoginRequest, ProfileResponse
+from backend.api.schemas import GameRecommendationsPage, LoginRequest, ProfileResponse, SignupRequest
 from backend.api.services import (
     DateWindow,
     get_all_game_recommendations,
@@ -9,6 +9,7 @@ from backend.api.services import (
     load_new_games,
     login_to_profile_with_session,
     logout_current_session,
+    signup_to_profile_with_session,
     toggle_game_watched,
 )
 
@@ -109,6 +110,23 @@ def post_auth_login(
 
     if profile_response is None:
         raise HTTPException(status_code=401, detail="Invalid username or password")
+
+    return profile_response
+
+
+@app.post("/api/auth/signup", response_model=ProfileResponse)
+def post_auth_signup(
+    request: SignupRequest,
+    response: Response
+):
+    profile_response = signup_to_profile_with_session(
+        request.username,
+        request.password,
+        response
+    )
+
+    if profile_response is None:
+        raise HTTPException(status_code=409, detail="Username already exists")
 
     return profile_response
 
