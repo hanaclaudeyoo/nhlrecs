@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Query, HTTPException, Request, Response
 import math
-from backend.api.schemas import GameRecommendationsPage, LoginRequest, ProfileResponse, SignupRequest
+from backend.api.schemas import AuthRequest, GameRecommendationsPage, ProfileResponse
+from backend.api.rate_limit import check_auth_rate_limit
 from backend.api.services import (
     DateWindow,
     get_all_game_recommendations,
@@ -89,9 +90,12 @@ def post_toggle_game_watched(
 
 @app.post("/api/auth/login", response_model=ProfileResponse)
 def post_auth_login(
-    request: LoginRequest,
+    http_request: Request,
+    request: AuthRequest,
     response: Response
 ):
+    check_auth_rate_limit(http_request, "login", request.username)
+
     profile_response = login_to_profile_with_session(
         request.username,
         request.password,
@@ -106,9 +110,12 @@ def post_auth_login(
 
 @app.post("/api/auth/signup", response_model=ProfileResponse)
 def post_auth_signup(
-    request: SignupRequest,
+    http_request: Request,
+    request: AuthRequest,
     response: Response
 ):
+    check_auth_rate_limit(http_request, "signup", request.username)
+
     profile_response = signup_to_profile_with_session(
         request.username,
         request.password,
