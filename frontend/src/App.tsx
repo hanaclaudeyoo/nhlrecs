@@ -18,7 +18,7 @@ import { ProfileModal } from './components/ProfileModal'
 import type { DateWindow, GameRecommendation } from './types/games'
 
 function App() {
-  const seasonType = '02'
+  const seasonPhase = '02'
   const defaultProfileId = 0
   const defaultUsername = 'Guest'
   const [season, setSeason] = useState('20252026')
@@ -49,7 +49,7 @@ function App() {
     try {
       const nextGames = await fetchGameRecommendations(
         season,
-        seasonType,
+        seasonPhase,
         showWatched,
         showUnwatched,
         team,
@@ -67,7 +67,7 @@ function App() {
     } finally {
       setIsLoading(false)
     }
-  }, [season, seasonType, showWatched, showUnwatched, team, dateWindow, page, pageSize])
+  }, [season, seasonPhase, showWatched, showUnwatched, team, dateWindow, page, pageSize])
 
   function handleSeasonChange(value: string) {
     setSeason(value)
@@ -100,11 +100,7 @@ function App() {
   }
 
   useEffect(() => {
-    void loadGames()
-  }, [loadGames])
-
-  useEffect(() => {
-    async function restoreCurrentProfile() {
+    async function restoreCurrentProfileAndLoadGames() {
       try {
         const profile = await fetchCurrentProfile()
         if (profile !== null) {
@@ -115,10 +111,12 @@ function App() {
         setProfileId(defaultProfileId)
         setUsername(null)
       }
+
+      await loadGames()
     }
 
-    void restoreCurrentProfile()
-  }, [])
+    void restoreCurrentProfileAndLoadGames()
+  }, [loadGames])
 
   async function handleToggleWatched(gameId: string) {
     if (profileId === defaultProfileId) {
@@ -131,7 +129,7 @@ function App() {
     setError(null)
 
     try {
-      await toggleGameWatched(season, seasonType, gameId)
+      await toggleGameWatched(season, seasonPhase, gameId)
       await loadGames(1)
     } catch (err) {
       setError(

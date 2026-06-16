@@ -3,8 +3,6 @@ from dataclasses import dataclass
 import sqlite3
 
 
-DEFAULT_GUEST_ID = 0
-
 @dataclass(frozen=True)
 class ProfileRecord:
     id: int

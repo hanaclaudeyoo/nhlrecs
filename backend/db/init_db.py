@@ -1,6 +1,4 @@
 from backend.db.connection import get_connection
-from backend.core.metrics import ALL_METRIC_KEYS
-from backend.api.auth import hash_password
 
 
 def init_db() -> None:

@@ -22,7 +22,7 @@ async function requestJson<T>(url: string, init?: RequestInit): Promise<T> {
 
 export function fetchGameRecommendations(
   season: string,
-  seasonType: string,
+  seasonPhase: string,
   showWatched: boolean,
   showUnwatched: boolean,
   team: string | null,
@@ -32,7 +32,7 @@ export function fetchGameRecommendations(
 ): Promise<GameRecommendationsPage> {
   const params = new URLSearchParams({
     season,
-    season_phase: seasonType,
+    season_phase: seasonPhase,
     show_watched: String(showWatched),
     show_unwatched: String(showUnwatched),
     date_window: dateWindow,
@@ -49,11 +49,11 @@ export function fetchGameRecommendations(
 
 export function toggleGameWatched(
   season: string,
-  seasonType: string,
+  seasonPhase: string,
   gameId: string,
 ): Promise<ToggleWatchedResponse> {
   return requestJson<ToggleWatchedResponse>(
-    `/api/games/${encodeURIComponent(season)}/${encodeURIComponent(seasonType)}/${encodeURIComponent(gameId)}/watched/toggle`,
+    `/api/games/${encodeURIComponent(season)}/${encodeURIComponent(seasonPhase)}/${encodeURIComponent(gameId)}/watched/toggle`,
     { method: 'POST' },
   )
 }

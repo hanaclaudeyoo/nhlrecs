@@ -1,5 +1,6 @@
 import time
 import requests
+import argparser
 from backend.db.game_store import game_exists, save_game
 from backend.scraper.scoresheet_htm_fetcher import fetch_game
 from backend.scraper.scoresheet_htm_parser import parse_game
@@ -36,3 +37,15 @@ def update_season_games(
         game_id += 1
     
     return num_games_updated
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("season")
+    parser.add_argument("season_phase")
+
+    args = parser.parse_args()
+
+    num_updated = update_season_games(args.season, args.season_phase)
+    print(f"Added {num_updated} games.")
