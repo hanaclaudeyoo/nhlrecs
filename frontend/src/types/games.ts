@@ -28,7 +28,3 @@ export type ToggleWatchedResponse = {
     game_id: string;
     watched: boolean;
 }
-
-export type UpdateSeasonResponse = {
-    num_games_added: number;
-}

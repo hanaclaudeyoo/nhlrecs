@@ -7,7 +7,6 @@ import {
   logoutProfile,
   signupProfile,
   toggleGameWatched,
-  updateSeason,
 } from './api/games'
 import { GameFilters } from './components/GameFilters'
 import { GameTable } from './components/GameTable'
@@ -140,20 +139,6 @@ function App() {
     }
   }
 
-  async function handleUpdateSeason() {
-    setIsLoading(true)
-    setError(null)
-
-    try {
-      await updateSeason(season)
-      await loadGames(1)
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to update season')
-    } finally {
-      setIsLoading(false)
-    }
-  }
-
   async function handleLogin(nextUsername: string, password: string) {
     setIsLoading(true)
     setError(null)
@@ -244,7 +229,6 @@ function App() {
         onDateWindowChange={handleDateWindowChange}
         onShowWatchedChange={handleShowWatchedChange}
         onShowUnwatchedChange={handleShowUnwatchedChange}
-        onUpdateSeason={handleUpdateSeason}
       />
       <StatusBar isLoading={isLoading} error={error} />
       <GameTable

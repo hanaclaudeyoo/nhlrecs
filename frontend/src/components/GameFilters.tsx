@@ -16,7 +16,6 @@ type GameFiltersProps = {
   onDateWindowChange: (value: DateWindow) => void
   onShowWatchedChange: (value: boolean) => void
   onShowUnwatchedChange: (value: boolean) => void
-  onUpdateSeason: () => void
 }
 
 export function GameFilters({
@@ -31,7 +30,6 @@ export function GameFilters({
   onDateWindowChange,
   onShowWatchedChange,
   onShowUnwatchedChange,
-  onUpdateSeason,
 }: GameFiltersProps) {
   return (
     <div className="game-filters">
@@ -62,14 +60,6 @@ export function GameFilters({
               onShowUnwatchedChange={onShowUnwatchedChange}
             />
           </div>
-          <button
-            type="button"
-            className="toolbar-load-button"
-            onClick={onUpdateSeason}
-            disabled={isLoading}
-          >
-            Load new games
-          </button>
         </div>
       </section>
     </div>

@@ -3,7 +3,6 @@ import type {
   GameRecommendationsPage,
   Profile,
   ToggleWatchedResponse,
-  UpdateSeasonResponse,
 } from '../types/games'
 
 async function requestJson<T>(url: string, init?: RequestInit): Promise<T> {
@@ -55,15 +54,6 @@ export function toggleGameWatched(
   return requestJson<ToggleWatchedResponse>(
     `/api/games/${encodeURIComponent(season)}/${encodeURIComponent(seasonPhase)}/${encodeURIComponent(gameId)}/watched/toggle`,
     { method: 'POST' },
-  )
-}
-
-export function updateSeason(season: string): Promise<UpdateSeasonResponse> {
-  return requestJson<UpdateSeasonResponse>(
-    `/api/seasons/${encodeURIComponent(season)}/update`,
-    {
-      method: 'POST',
-    },
   )
 }
 

@@ -6,7 +6,6 @@ from backend.api.services import (
     get_all_game_recommendations,
     get_current_profile,
     get_current_profile_id,
-    load_new_games,
     login_to_profile_with_session,
     logout_current_session,
     signup_to_profile_with_session,
@@ -85,15 +84,6 @@ def post_toggle_game_watched(
     return {
         "game_id": game_id,
         "watched": watched
-    }
-
-
-@app.post("/api/seasons/{season}/update")
-def post_update_season(
-    season: str
-):
-    return {
-        "num_games_added": load_new_games(season, "02") # HOTFIX
     }
 
 

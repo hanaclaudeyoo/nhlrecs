@@ -1,6 +1,7 @@
 import time
+from datetime import date
 import requests
-import argparser
+import argparse
 from backend.db.game_store import game_exists, save_game
 from backend.scraper.scoresheet_htm_fetcher import fetch_game
 from backend.scraper.scoresheet_htm_parser import parse_game
@@ -39,13 +40,28 @@ def update_season_games(
     return num_games_updated
 
 
+def current_season(today: date | None = None) -> str:
+    if today is None:
+        today = date.today()
+
+    if today.month >= 9: # NHL season rolls over around September
+        start_year = today.year
+    else:
+        start_year = today.year - 1
+
+    return f"{start_year}{start_year + 1}"
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
 
-    parser.add_argument("season")
-    parser.add_argument("season_phase")
+    parser.add_argument(
+        "--season",
+        default=current_season(),
+        help="Season formatted <yr1><yr2>, i.e. 20252026"
+    )
 
     args = parser.parse_args()
 
-    num_updated = update_season_games(args.season, args.season_phase)
+    num_updated = update_season_games(args.season, "02") # HOTFIX: hardcoded to regular season
     print(f"Added {num_updated} games.")
