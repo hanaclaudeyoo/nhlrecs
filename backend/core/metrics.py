@@ -99,8 +99,6 @@ class MaxTimeBetweenGoalsMetric(Metric):
             prev_time = goal.time_elapsed_seconds
 
         # consider time between last goal and end of game
-        if len(game.goals) < 1:
-            print(game)
         if game.goals[-1].time_elapsed_seconds < PERIOD_LENGTH_SECONDS: # exclude overtime
             gap = PERIOD_LENGTH_SECONDS - game.goals[-1].time_elapsed_seconds
             if gap > max_time_btwn:

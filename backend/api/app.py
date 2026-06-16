@@ -1,14 +1,16 @@
 from fastapi import FastAPI, Query, HTTPException, Request, Response
 import math
-from backend.api.schemas import AuthRequest, GameRecommendationsPage, ProfileResponse
+from backend.api.schemas import AuthRequest, GameRecommendationsPage, MetricWeightsRequest, MetricWeightsResponse, ProfileResponse
 from backend.api.rate_limit import check_auth_rate_limit
 from backend.api.services import (
     DateWindow,
     get_all_game_recommendations,
     get_current_profile,
     get_current_profile_id,
+    get_metric_weights_for_profile,
     login_to_profile_with_session,
     logout_current_session,
+    save_metric_weights_for_profile,
     signup_to_profile_with_session,
     toggle_game_watched,
 )
@@ -144,3 +146,26 @@ def get_auth_me(
     request: Request
 ):
     return get_current_profile(request)
+
+
+@app.get("/api/metric-weights", response_model=MetricWeightsResponse)
+def get_metric_weights(
+    request: Request
+):
+    profile_id = get_current_profile_id(request)
+    return get_metric_weights_for_profile(profile_id)
+
+
+@app.put("/api/metric-weights", response_model=MetricWeightsResponse)
+def put_metric_weights(
+    request: Request,
+    metric_weights: MetricWeightsRequest
+):
+    profile_id = get_current_profile_id(request)
+    if profile_id == 0:
+        raise HTTPException(
+            status_code=403,
+            detail="Log in to save metric weights"
+        )
+
+    return save_metric_weights_for_profile(profile_id, metric_weights)

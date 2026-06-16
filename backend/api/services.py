@@ -6,8 +6,9 @@ from backend.db.game_store import read_season_games
 from backend.db.watched_store import read_watched_game_ids, insert_watched_game, remove_watched_game
 from backend.db.profile_store import create_profile, read_profile_by_username
 from backend.db.session_store import create_session, delete_session
+from backend.db.metric_weights_store import read_metric_weights, write_metric_weights
 from backend.core.scorer import Scorer
-from backend.api.schemas import GameRecommendation, ProfileResponse
+from backend.api.schemas import GameRecommendation, MetricWeightsRequest, MetricWeightsResponse, ProfileResponse
 from backend.api.auth import (
     SESSION_COOKIE_NAME,
     SESSION_MAX_AGE_SECONDS,
@@ -220,3 +221,29 @@ def get_current_profile_id(
         return 0
 
     return profile.id
+
+
+def get_metric_weights_for_profile(profile_id: int) -> MetricWeightsResponse:
+    metric_weights = read_metric_weights(profile_id)
+    weights_by_key = {
+        metric.key: weight * 100
+        for metric, weight in metric_weights.items()
+    }
+
+    return MetricWeightsResponse(**weights_by_key)
+
+
+def save_metric_weights_for_profile(
+    profile_id: int,
+    metric_weights: MetricWeightsRequest
+) -> MetricWeightsResponse:
+    weights_by_key = metric_weights.model_dump()
+    write_metric_weights(
+        profile_id,
+        {
+            metric_key: weight / 100
+            for metric_key, weight in weights_by_key.items()
+        }
+    )
+
+    return MetricWeightsResponse(**weights_by_key)

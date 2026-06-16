@@ -5,6 +5,15 @@ export type Profile = {
     username: string;
 }
 
+export type MetricWeightKey =
+    | 'total_goals'
+    | 'final_goal_diff'
+    | 'lead_changes'
+    | 'max_lead'
+    | 'max_time_between_goals'
+
+export type MetricWeights = Record<MetricWeightKey, number>
+
 export type GameRecommendation = {
     rank: number;
     season: string;

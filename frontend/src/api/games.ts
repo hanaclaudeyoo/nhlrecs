@@ -1,6 +1,7 @@
 import type {
   DateWindow,
   GameRecommendationsPage,
+  MetricWeights,
   Profile,
   ToggleWatchedResponse,
 } from '../types/games'
@@ -97,4 +98,20 @@ export function logoutProfile(): Promise<{ status: string }> {
 
 export function fetchCurrentProfile(): Promise<Profile | null> {
   return requestJson<Profile | null>('/api/auth/me')
+}
+
+export function fetchMetricWeights(): Promise<MetricWeights> {
+  return requestJson<MetricWeights>('/api/metric-weights')
+}
+
+export function saveMetricWeights(
+  metricWeights: MetricWeights,
+): Promise<MetricWeights> {
+  return requestJson<MetricWeights>('/api/metric-weights', {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(metricWeights),
+  })
 }

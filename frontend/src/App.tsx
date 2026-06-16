@@ -3,8 +3,10 @@ import './styles/app.css'
 import {
   fetchCurrentProfile,
   fetchGameRecommendations,
+  fetchMetricWeights,
   loginProfile,
   logoutProfile,
+  saveMetricWeights,
   signupProfile,
   toggleGameWatched,
 } from './api/games'
@@ -14,7 +16,11 @@ import { PageHeader } from './components/PageHeader'
 import { PaginationControls } from './components/PaginationControls'
 import { StatusBar } from './components/StatusBar'
 import { ProfileModal } from './components/ProfileModal'
-import type { DateWindow, GameRecommendation } from './types/games'
+import {
+  defaultMetricWeights,
+  MetricWeightsModal,
+} from './components/MetricWeightsModal'
+import type { DateWindow, GameRecommendation, MetricWeightKey } from './types/games'
 
 function App() {
   const seasonPhase = '02'
@@ -35,9 +41,15 @@ function App() {
   const [profileId, setProfileId] = useState(defaultProfileId)
   const [username, setUsername] = useState<string | null>(null)
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false)
+  const [isMetricWeightsModalOpen, setIsMetricWeightsModalOpen] =
+    useState(false)
+  const [metricWeights, setMetricWeights] = useState(defaultMetricWeights)
   const [profileModalError, setProfileModalError] = useState<string | null>(
     null,
   )
+  const [metricWeightsModalError, setMetricWeightsModalError] = useState<
+    string | null
+  >(null)
   const displayUsername = username ?? defaultUsername
 
   const loadGames = useCallback(async (pageOverride?: number) => {
@@ -96,6 +108,64 @@ function App() {
   function handlePageSizeChange(value: number) {
     setPageSize(value)
     setPage(1)
+  }
+
+  function handleMetricWeightChange(metricKey: MetricWeightKey, value: number) {
+    setMetricWeightsModalError(null)
+    setMetricWeights((weights) => ({
+      ...weights,
+      [metricKey]: value,
+    }))
+  }
+
+  const loadMetricWeights = useCallback(async () => {
+    try {
+      const nextMetricWeights = await fetchMetricWeights()
+      setMetricWeights(nextMetricWeights)
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : 'Failed to load metric weights',
+      )
+    }
+  }, [])
+
+  async function handleOpenMetricWeightsModal() {
+    setMetricWeightsModalError(null)
+    setIsMetricWeightsModalOpen(true)
+    await loadMetricWeights()
+  }
+
+  async function handleCancelMetricWeightsModal() {
+    setMetricWeightsModalError(null)
+    setIsMetricWeightsModalOpen(false)
+    await loadMetricWeights()
+  }
+
+  async function handleSaveMetricWeights() {
+    if (profileId === defaultProfileId) {
+      setMetricWeightsModalError('Log in to customize metric weights')
+      return
+    }
+
+    setIsLoading(true)
+    setError(null)
+    setMetricWeightsModalError(null)
+
+    try {
+      const savedMetricWeights = await saveMetricWeights(metricWeights)
+      setMetricWeights(savedMetricWeights)
+      setIsMetricWeightsModalOpen(false)
+      setPage(1)
+      await loadGames(1)
+    } catch (err) {
+      setMetricWeightsModalError(
+        err instanceof Error && err.message.includes('Log in to save metric weights')
+          ? 'Log in to customize metric weights'
+          : 'Failed to save metric weights',
+      )
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   useEffect(() => {
@@ -212,6 +282,7 @@ function App() {
       <PageHeader
         displayUsername={displayUsername}
         isLoggedIn={username !== null}
+        onSettingsClick={() => void handleOpenMetricWeightsModal()}
         onProfileClick={() => {
           setProfileModalError(null)
           setIsProfileModalOpen(true)
@@ -256,6 +327,15 @@ function App() {
           onLogin={handleLogin}
           onSignup={handleSignup}
           onLogout={handleLogout}
+        />
+      )}
+      {isMetricWeightsModalOpen && (
+        <MetricWeightsModal
+          weights={metricWeights}
+          error={metricWeightsModalError}
+          onCancel={() => void handleCancelMetricWeightsModal()}
+          onDone={() => void handleSaveMetricWeights()}
+          onWeightChange={handleMetricWeightChange}
         />
       )}
     </main>

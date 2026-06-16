@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from backend.core.teams import Team
 
 
@@ -43,4 +43,32 @@ class GameRecommendationsPage(BaseModel):
 class ProfileResponse(BaseModel):
     id: int
     username: str
+
+class MetricWeightsResponse(BaseModel):
+    total_goals: float
+    final_goal_diff: float
+    lead_changes: float
+    max_lead: float
+    max_time_between_goals: float
+
+class MetricWeightsRequest(BaseModel):
+    total_goals: float = Field(ge=0, le=100)
+    final_goal_diff: float = Field(ge=0, le=100)
+    lead_changes: float = Field(ge=0, le=100)
+    max_lead: float = Field(ge=0, le=100)
+    max_time_between_goals: float = Field(ge=0, le=100)
+
+    @model_validator(mode="after")
+    def validate_total_weight(self):
+        total_weight = (
+            self.total_goals
+            + self.final_goal_diff
+            + self.lead_changes
+            + self.max_lead
+            + self.max_time_between_goals
+        )
+        if abs(total_weight - 100) > 0.001:
+            raise ValueError("Metric weights must sum to 100")
+
+        return self
     
