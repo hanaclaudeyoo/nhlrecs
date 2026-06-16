@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from typing import Literal
 from fastapi import Request, Response
 
@@ -11,6 +11,7 @@ from backend.core.scorer import Scorer
 from backend.api.schemas import GameRecommendation, ProfileResponse
 from backend.api.auth import (
     SESSION_COOKIE_NAME,
+    SESSION_MAX_AGE_SECONDS,
     clear_session_cookie,
     create_session_token,
     get_current_profile_for_cookie,
@@ -153,7 +154,14 @@ def login_to_profile_with_session(
         return None
 
     token = create_session_token()
-    create_session(hash_session_token(token), profile_response.id)
+    created_at = datetime.now(timezone.utc)
+    expires_at = created_at + timedelta(seconds=SESSION_MAX_AGE_SECONDS)
+    create_session(
+        hash_session_token(token),
+        profile_response.id,
+        created_at,
+        expires_at
+    )
     set_session_cookie(response, token)
 
     return profile_response
@@ -175,7 +183,14 @@ def signup_to_profile_with_session(
     )
 
     token = create_session_token()
-    create_session(hash_session_token(token), profile_response.id)
+    created_at = datetime.now(timezone.utc)
+    expires_at = created_at + timedelta(seconds=SESSION_MAX_AGE_SECONDS)
+    create_session(
+        hash_session_token(token),
+        profile_response.id,
+        created_at,
+        expires_at
+    )
     set_session_cookie(response, token)
 
     return profile_response

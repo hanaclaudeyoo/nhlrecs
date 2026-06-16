@@ -5,16 +5,6 @@ from backend.api.auth import hash_password
 
 def init_db() -> None:
     with get_connection() as conn:
-        # TESTING ONLY
-        conn.executescript(
-            """
-            DROP TABLE IF EXISTS sessions;
-            DROP TABLE IF EXISTS watched;
-            DROP TABLE IF EXISTS metric_weights;
-            DROP TABLE IF EXISTS profiles;
-            """
-        )
-
         # create tables
         conn.executescript(
             """
@@ -63,6 +53,8 @@ def init_db() -> None:
             CREATE TABLE IF NOT EXISTS sessions (
                 token_hash TEXT PRIMARY KEY,
                 profile_id INTEGER NOT NULL,
+                created_at TEXT NOT NULL,
+                expires_at TEXT NOT NULL,
                 FOREIGN KEY (profile_id) REFERENCES profiles(id) ON DELETE CASCADE
             );
             """
@@ -73,39 +65,6 @@ def init_db() -> None:
             """                   
             INSERT OR IGNORE INTO profiles (id, username)
             VALUES (0, "Guest");
-            """
-        )
-
-        # create test profiles
-        test_password_hash: str = hash_password("password")
-        conn.execute(
-            """
-            INSERT OR IGNORE INTO profiles (id, username, password_hash)
-            VALUES (1, "Test1", ?);
-            """,
-            (test_password_hash,)
-        )
-        conn.execute(
-            """
-            INSERT OR IGNORE INTO profiles (username, password_hash)
-            VALUES ("Test2", ?);
-            """,
-            (test_password_hash,)
-        )
-        # insert test values for metric keys
-        for mk in ALL_METRIC_KEYS:
-            conn.execute(
-                """
-                INSERT OR IGNORE INTO metric_weights (profile_id, metric_key, weight)
-                VALUES (1, ?, 0);
-                """,
-                (mk,)
-            )
-        conn.execute(
-            """
-            UPDATE metric_weights
-            SET weight = 1
-            WHERE profile_id = 1 AND metric_key = "total_goals";
             """
         )
 
