@@ -33,7 +33,7 @@ To run a one-time fetch and parse of new games, run:
 $ python -m backend.scraper.update_pipeline
 ```
 
-After running docker container, run host cron job:
+To continuously fetch and parse new games, after running docker container, run host cron job:
 
 ```
 $ 0 6 * 9-12,1-4 * docker exec nhlrecs python -m backend.scraper.update_pipeline

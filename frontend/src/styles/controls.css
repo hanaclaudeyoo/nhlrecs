@@ -1,0 +1,128 @@
+.header-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 auto;
+  padding: 0;
+}
+
+.profile-menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  height: 40px;
+  flex: 0 0 auto;
+  padding: 7px 12px;
+}
+
+.profile-menu-button span {
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip-label {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 8px);
+  z-index: 20;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%);
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltip-label,
+.tooltip:focus-within .tooltip-label {
+  opacity: 1;
+}
+
+button {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  padding: 7px 12px;
+}
+
+select {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 600;
+  padding: 7px 12px;
+}
+
+input[type='number'] {
+  width: 80px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 600;
+  padding: 7px 12px;
+}
+
+input[type='text'],
+input[type='password'] {
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-weight: 600;
+  padding: 7px 12px;
+}
+
+button:hover:not(:disabled) {
+  background: var(--color-surface-subtle);
+  border-color: var(--color-border-hover);
+}
+
+.toolbar-load-button {
+  margin-left: auto;
+  border-color: var(--color-border-strong);
+  background: var(--color-highlight);
+  color: var(--color-text);
+}
+
+.toolbar-load-button:hover:not(:disabled) {
+  background: var(--color-highlight);
+  border-color: var(--color-text-muted);
+}
+
+button:disabled,
+select:disabled,
+input[type='number']:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-border-soft);
+}

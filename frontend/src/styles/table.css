@@ -1,0 +1,47 @@
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--color-border-soft);
+  text-align: center;
+  white-space: nowrap;
+}
+
+th {
+  background: var(--color-surface-subtle);
+  color: var(--color-text-heading);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+.watched-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 0;
+  padding: 0;
+}
+
+.watched-icon-button:hover:not(:disabled) {
+  background: var(--color-surface-subtle);
+  border-color: transparent;
+}

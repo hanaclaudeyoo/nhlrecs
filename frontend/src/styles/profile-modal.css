@@ -1,0 +1,38 @@
+.profile-login-field {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.profile-login-field input {
+  width: 100%;
+  color: var(--color-text);
+}
+
+.profile-modal-error {
+  margin-top: 12px;
+  color: var(--color-error);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.profile-mode-switch-button {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+}
+
+.profile-mode-switch-button:hover:not(:disabled) {
+  border-color: var(--color-border-hover);
+  background: var(--color-surface-subtle);
+  color: var(--color-text);
+}
+
+.profile-submit-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
